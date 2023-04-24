@@ -1,0 +1,382 @@
+/* hoja de estilo de las paginas */
+/*es conveniente armar los estilos para mobile primero, porque se usa menos codigo */
+*{
+    box-sizing: border-box; /*no crece mas alla del tamaño*/
+    /*margin: 0; le saca el margen a todo*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+    margin: 0; /*margen*/
+}
+
+/*gerarquias de los titulos*/
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;} /*le saca los puntos de la lista*/
+li{font-size: 1.25em;}
+
+button{ /*estetica de los botones*/
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    color: white;
+    background-color: rgb(43, 144, 226);
+}
+
+button:hover{
+    background-color: rgb(9, 37, 59);
+}
+
+/*hasta aca estan definida los estilos  generales de la web*/
+.container {
+    max-width: 1400px; /*margen maximo*/
+    margin: auto; /*margenes automaticos*/ 
+}
+
+header{
+    background-color: rgb(245,245,245);  
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(43, 144, 226);
+    font-size: 1.5em;
+}
+
+
+header .container{
+    display: flex;
+    flex-direction: column; /*se ordenan en una columna*/
+    align-items: center;   
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(43, 144, 226);
+}
+
+#hero{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/assets/img/miami.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#quienes-somos .container{
+    text-align: center;
+    padding: 50px 30px;
+}
+
+#quienes-somos .color-acento{
+    color: rgb(43, 144, 226);      
+}
+
+#quienes-somos .texto{
+    margin-top: 50px;
+    
+}
+
+
+#nuestros-viajes{
+    background-color: rgb(10, 60, 224);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-viajes .container{
+    padding: 40px 12px;
+}
+
+#nuestros-viajes .titulo{
+    margin-top: 25px;
+    font-size: 1.2em;
+}
+
+#nuestros-viajes p{
+    display: none;  
+}
+
+#nuestros-viajes .carta{
+    background-position: center center; 
+    background-size: cover;   
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("assets/img/viajes-grupales.jpg");
+}    
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("assets/img/salto-grupo-surf.jpg")
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("assets/img/viajes-negocios.jpg");
+}
+
+
+table {
+    width: 50%;
+    margin-block-end: 30px;
+}
+
+th, td {
+    border: solid 1px black;
+    padding: 5px;
+    margin: 10px;
+}
+
+th {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: rgb(233, 228, 226);
+}
+
+tr:hover {
+    background-color: rgb(163, 234, 236);
+    cursor: pointer;
+}
+
+.container {
+    margin: 10px 10px;
+}
+.container h4{
+    text-align: center;
+}
+#tabla .container{
+    padding-block-end: 15px;
+}
+
+.tabla_titulo table{
+    align-items: center;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: auto;
+     
+}
+
+footer {
+    background-color: rgb(219, 215, 215);
+    
+}
+#content-footer .logo-footer{
+    margin-left: 20px;
+}
+
+footer .redes{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    margin: 0;
+    padding: 10px;
+    align-items: colums;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+
+/* ******************************************************************** */
+/*version para escritorio*/
+
+@media (min-width: 720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+
+    }
+     
+    /*header .menu{
+        flex-direction: row;
+    }*/
+
+    #hero h1 { 
+        font-size: 3.5em;
+    }
+
+    #quienes-somos .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #quienes-somos h2 {
+        margin-top: 50px;
+    }
+    
+    #quienes-somos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+   
+
+    #quienes-somos .img-container {
+        background-image: url("/assets/img/lisboa.jpeg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+        margin: 10px 30px 10px 30px;
+    }
+
+    #nuestros-viajes .container{ 
+        display: flex; /*deja las cartas una al lado de la otra */
+        justify-content: center; /*se centran los programas*/
+    }
+
+    
+    #nuestros-viajes h2 {
+        font-size: 3em;
+        display: block;
+        margin-bottom: 0px;
+    }    
+       
+    #nuestros-viajes h3 {
+        margin-top: 30px;
+    }
+
+    #nuestros-viajes .carta {
+        padding: 50px;
+        background-size: 150% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(50,50,50, 0.5);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/assets/img/viajes-grupales.jpg");
+    }
+    
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/assets/img/salto-grupo-surf.jpg");
+    
+    }
+    
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/assets/img/viajes-negocios.jpg");
+    }
+
+    footer .container{
+        justify-content: flex;
+    }
+    
+
+
+@media (min-width: 1200px) {
+    #contacto{
+        background-position-x: calc(100wv - 800px);
+    }
+}
+
+
+
+

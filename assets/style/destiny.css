@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box; /*no crece mas alla del tamaño*/
+    /*margin: 0; le saca el margen a todo*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+    margin: 0; /*margen*/
+}
+
+
+/*hasta aca estan definida los estilos  generales de la web*/
+
+.container{
+    max-width: 1400px; /*margen maximo*/
+    margin: auto; /*margenes automaticos*/
+}
+
+header{
+    background-color: rgb(245,245,245);  
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px;
+    font-weight: bold;
+    color: rgb(43, 144, 226);
+    font-size: 1.35em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column; /*se ordenan en una columna*/
+    align-items: center;   
+}
+
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(43, 144, 226);
+}
+
+
+#destinos .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#destinos h2 {
+    margin-top: 30px;
+}
+
+#destinos .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+#destinos .img-destinos {
+    background-image: url("/assets/img/mapamundi.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    width: 400px;
+    margin: auto;
+}
+
+
+footer {
+    background-color: rgb(219, 215, 215);
+    
+}
+#content-footer .logo-footer{
+    margin-left: 20px;
+}
+
+footer .redes{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    margin: 0;
+    padding: 10px;
+    align-items: colums;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+
+
+/*Version para escritorio*/
+
+@media (min-width: 720px){
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+    }
+
+    .destinos {
+        margin-left: 150px;
+        width: 700px;
+        height: 600px;
+    } 
+
+}

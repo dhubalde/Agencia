@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box; /*no crece mas alla del tamaño*/
+    /*margin: 0; le saca el margen a todo*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+    margin: 0; /*margen*/
+}
+
+
+/*hasta aca estan definida los estilos  generales de la web*/
+
+.container{
+    max-width: 1400px; /*margen maximo*/
+    margin: auto; /*margenes automaticos*/
+}
+
+header{
+    background-color: rgb(245,245,245);  
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px;
+    font-weight: bold;
+    color: rgb(43, 144, 226);
+    font-size: 1.35em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column; /*se ordenan en una columna*/
+    align-items: center;   
+}
+
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(43, 144, 226);
+}
+
+.form{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position:relative;
+}
+
+.form_titulo {
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0,0,0,0.7);
+}
+
+.form_input, .form_label, .form_enviar {
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+    border-radius: 5px;
+}
+
+.form_input{
+    padding: 20px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+}
+
+.form_input:focus{
+    outline: 1px solid rgba(0,0,0,0.7);
+}
+.form_input:focus + .form_label{
+    margin-top: -135px;
+}
+
+.form_label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    z-index: -20px;
+    color:rgba(0,0,0,0.5);
+    transition: all 0.2s;
+}
+
+.form_legend {
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.form_enviar {
+    background-color: rgb(43, 144, 226);
+    color: white;
+    padding: 10px 10px;   
+    cursor: pointer;
+}
+
+.form_enviar:hover{
+    background-color: rgb(9, 37, 59);
+}
+
+.fijar {
+    margin-top: -135px;
+}
+
+/*Version para escritorio*/
+
+@media (min-width: 720px){
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+
+    }
+
+}
+
+
+
+
+
+
+
