@@ -124,6 +124,36 @@ header a:hover{
     margin-top: -135px;
 }
 
+footer {
+    background-color: rgb(219, 215, 215);
+    
+}
+#content-footer .logo-footer{
+    margin-left: 20px;
+}
+
+footer .redes{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    margin: 0;
+    padding: 10px;
+    align-items: colums;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+
+
 /*Version para escritorio*/
 
 @media (min-width: 720px){

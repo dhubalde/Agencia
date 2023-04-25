@@ -26,19 +26,20 @@
     
     <section>   
         <!-- aqui formulario de contacto y consulta -->
-        <form action="" class="form">
+        <!-- Se activa la pagina que envia el mail -->
+            <form action="https://formsubmit.co/9ec76a5d36afc60db58eda0b46ef40ce" class="form"  method="POST">
             <h1 class="form_titulo">Contáctenos</h1>
            
-            <input type="text" class="form_input" required>
+            <input type="text" class="form_input" name="name" required>
             <label for="" class="form_label">Nombre y Apellido</label>
             
-            <input type="email" id="correoelectronico" class="form_input" required>
+            <input type="email" id="correoelectronico" class="form_input" name="email" required>
             <label for="" class="form_label">Correo Electrónico</label>
             
-            <input type="tel" class="form_input" required>
+            <input type="tel" class="form_input" name="tel"required>
             <label for="" class="form_label">Teléfono</label>
             
-            <input type="text" class="form_input" required>
+            <input type="text" class="form_input" name="text" required>
             <label for="" class="form_label">Mensaje</label>
             
             <fieldset class="form_legend">
@@ -64,20 +65,34 @@
             <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de nuestros Viajes?</label>                
             
             <input type="submit" value="Enviar formulario" class="form_enviar">
-
+            <!--Esto es para que no se vea la confirmacion del envio del formulario-->
+            <input type="hidden" name="_next" value="http://localhost:127.0.0.1:5500/">
+            <input type="hidden" name="_captcha" value="false">
         </form>
         <script src="/assets/js/form.js"></script>    
     </section>
 
     <footer>
+
         <div id="content-footer">
 
+            <!-- logo del foooter redirecciona a home -->
             <div class="logo-footer">
-                <a href="index.html"><img src="#" alt="logo-footer"></a>
+                <a href="index.html">Volver<img src="/assets/img/icons8-índice-y-pulgar-16.png" 
+                    alt="logo-footer"></a>
+                    
+            </div>
+            <div class="redes">
+                <img src="/assets/img/icons8-instagram-30.png" alt="instagram">
+                <a href="www.intagram.com">Instagram</a>
+                <img src="/assets/img/icons8-whatsapp.gif" alt="whatsapp">
+                <a href="www.intagram.com">Whatsapp</a>
+                <p>&copy; Grupo 17! </p>
             </div>
 
 
         </div>
+
     </footer>
 </body>
 </html>
