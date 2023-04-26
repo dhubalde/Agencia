@@ -69,9 +69,9 @@ header a:hover{
 }
 
 #destinos .texto{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -82,10 +82,10 @@ header a:hover{
 
 #destinos .img-destinos {
     background-image: url("/assets/img/mapamundi.jpg");
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center center;
-    height: 600px;
-    width: 400px;
+    height: 50%;
+    width: 100%;
     margin: auto;
 }
 
@@ -135,7 +135,7 @@ footer p{
         padding-right: 30px;
     }
 
-    .destinos {
+    #destinos .container {
         margin-left: 150px;
         width: 700px;
         height: 600px;
