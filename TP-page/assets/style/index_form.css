@@ -58,7 +58,9 @@ header a:hover{
     color: rgb(43, 144, 226);
 }
 
-.form{
+/* formulario contacto */
+
+/* .form{
     width: 500px;
     max-width: 100%;
     margin: auto;
@@ -150,7 +152,7 @@ footer p{
     margin: 0;
     padding: 12px;
     color: rgb(100,100,100);
-}
+} */
 
 
 
@@ -174,7 +176,45 @@ footer p{
 
 
 
+.error{
+    font-size: 10px;
+    color: red;
+    
+}
+
+/* .back{
+    height: 75vh;
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+ */
 
 
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0;
+    background-color: aqua;
+}
 
 
+.back-form{
+    width: 500px;
+    height: 500px;
+
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg);
+    background-position: center;
+    background-size: cover;
+   
+}
+
+
+.content-form{
+    width: 500px;
+    height: 500px;
+    background-color:white;
+    margin: 0;
+}
