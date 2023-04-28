@@ -13,3 +13,26 @@ for(var i=0; i < inputs.length; i++ ){
         }
     });
 }
+
+/**
+ * escript de botones, pagina destiny.html
+ */
+
+ const cards = document.querySelector(".cards");
+ const prevButton = document.querySelector(".prev-button");
+ const nextButton = document.querySelector(".next-button");
+ let position = 0;
+ 
+ nextButton.addEventListener("click", () => {
+   if (position > -(cards.scrollWidth - cards.offsetWidth)) {
+     position -= 1000;
+     cards.style.transform = `translateX(${position}px)`;
+   }
+ });
+ 
+ prevButton.addEventListener("click", () => {
+   if (position < 0) {
+     position += 1000;
+     cards.style.transform = `translateX(${position}px)`;
+   }
+ });

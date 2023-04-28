@@ -1,63 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/destiny.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <title>Grupo 17!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style/destiny.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <title>Grupo 17!</title>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <!-- ir a home con click al logo -->
-            <p class="logo">Grupo 17!</p>
-            <!-- nav bar no conviene usar lista para que el reposive-->
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="destiny.html">Destinos</a>
-                <a href="packages.html">Paquetes</a>
-                <a href="contact.html">Contacto</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <!-- ir a home con click al logo -->
+      <p class="logo">Grupo 17!</p>
+      <!-- nav bar no conviene usar lista para que el reposive-->
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="destiny.html">Destinos</a>
+        <a href="packages.html">Paquetes</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <!--  -->
 
-    <main>
+  <main>
+
+    <div class="container-form">
+
+      <form class="form-destino">
+
+        <h2>¿Adonde vas a ir?</h2>
+
+        <div class="form-group">
+          <label for="origen">Origen:</label>
+          <select id="origen" name="origen">
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="valencia">Valencia</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="destino">Destino:</label>
+          <select id="destino" name="destino">
+            <option value="paris">París</option>
+            <option value="roma">Roma</option>
+            <option value="londres">Londres</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha:Ida</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha:Vuelta</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div class="form-group">
+          <label for="pasajeros">Pasajeros:</label>
+          <input type="number" id="pasajeros" name="pasajeros">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-form">Buscar</button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- *********************** -->
+
     <section id="destinos">
-       <!-- en esta pagina se enumera los destinos de la agencia de viajes -->
-       <div class="container">
-            <div class="img-destinos"></div>
-                <div class="texto">
-                    <h2> Elije tu Destino! </h2>
-                    <p> Aprovechá nuestras oportunidades de paquetes turísticos. Llegamos a todo el planeta: Argentina, Brasil, Caribe, Estados Unidos, Europa y miles de destinos más. Empezá a disfrutar ahora de tu viaje comprando con el mejor precio y la mejor financiación.        
-                    </p>
-                </div>
+
+      <div class="title-destino">
+      <span>NUESTROS DESTINOS: ¿CUAL ES EL TUYO?</span>
+      </div>
+
+      <div class="container-cards">
+
+        <div class="gallery">
+
+          <div class="cards">
+
+            <div class="card-1">
+              <h2>CHILE</h2>
+              <p>tarjeta 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga necessitatibus aut nulla
+                voluptatum obcaecati sapiente velit nam dicta optio a ullam, odio nemo voluptates eum. Ipsa ea cum ab
+                veritatis?
+              </p>
+            </div>
+
+            <div class="card-2">
+              <h2>BRASIL</h2>
+              <p>
+                tarjeta 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sint consequuntur sequi
+                quae dolore ipsam totam nihil sit illo ipsa sunt, saepe, reprehenderit velit inventore eveniet, earum
+                error ducimus consectetur!
+              </p>
+            </div>
+
+
+            <div class="card-3">
+              <h2>MIAMI,ESTADOS UNIDOS</h2>
+              <p>
+                tarjeta 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aspernatur inventore dolores
+                quos laboriosam harum iste quas esse veritatis nam maiores consequuntur a mollitia minima est placeat
+                aliquid, explicabo quam.
+              </p>
+            </div>
+            <div class="card-4">
+              <h2>MEXICO</h2>
+              <p>
+                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
+                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
+                voluptates sed natus dicta nam?
+              </p>
+            </div>
+
+            <div class="card-5">
+              <h2>BARCELONA, ESPAÑA</h2>
+              <p>
+                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
+                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
+                voluptates sed natus dicta nam?
+              </p>
+            </div>
+
+            <div class="card-6">
+              <h2>PARIS, FRANCIA</h2>
+              <p>
+                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
+                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
+                voluptates sed natus dicta nam?
+              </p>
+            </div>
+
+            <div class="card-7">
+              <h2>LISBOA, PORTUGAL</h2>
+              <p>
+                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
+                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
+                voluptates sed natus dicta nam?
+              </p>
+            </div>
+
+            <div class="card-8">
+              <h2>ROMA, ITALIA</h2>
+              <p>
+                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
+                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
+                voluptates sed natus dicta nam?
+              </p>
+            </div>
+          </div>
+
+          <button class="prev-button">&#8249;</button>
+          <button class="next-button">&#8250;</button>
         </div>
-        
+      </div>
+
+
     </section>
-    </main>
 
-    <footer>
-
-        <div id="content-footer">
-
-            <!-- logo del foooter redirecciona a home -->
-            <div class="logo-footer">
-                <a href="index.html">Volver<img src="/assets/img/icons8-índice-y-pulgar-16.png" alt="logo-footer"></a>
-            </div>
-            <div class="redes">
-                <img src="/assets/img/icons8-instagram-30.png" alt="instagram">
-                <a href="www.intagram.com">Instagram</a>
-                <img src="/assets/img/icons8-whatsapp.gif" alt="whatsapp">
-                <a href="www.intagram.com">Whatsapp</a>
-                <p>&copy; Grupo 17! </p>
-            </div>
+  </main>
 
 
-        </div>
+  
+  <!--  -->
+  <footer>
+    <div id="content-footer">
+      <!-- <div class="logo-footer">
+        <a href="index.html">Volver<img src="/TP-page/assets/img/icons8-índice-y-pulgar-16.png" alt="logo-footer"></a>
 
-    </footer>
+      </div> -->
+
+      <div class="redes">
+        <img src="/TP-page/assets/img/icons8-instagram-30.png" alt="instagram">
+        <a href="www.intagram.com">Instagram</a>
+        <img src="/TP-page/assets/img/icons8-whatsapp.gif" alt="whatsapp">
+        <a href="www.intagram.com">Whatsapp</a>
+        <p>&copy; Grupo 17! </p>
+      </div>
+
+
+    </div> -->
+    <!--  -->
+  </footer> 
+
+  <script src="assets/js/form.js"></script>
 </body>
+
 </html>

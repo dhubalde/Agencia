@@ -1,3 +1,6 @@
+/* fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap');
+
 *{
     box-sizing: border-box; /*no crece mas alla del tamaño*/
     /*margin: 0; le saca el margen a todo*/
@@ -8,8 +11,19 @@ html{
 }
 
 body{
-    font-family: 'roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+    /* font-family: 'roboto', sans-serif; */
     margin: 0; /*margen*/
+
+}
+
+:root{
+
+  --color-primary: #270570;
+  --second-color:#d32771;
+  --color-white:#eeeeee;
+  --other-color:#ffce00;
+  --principal-font:'Montserrat', sans-serif;
 }
 
 
@@ -21,14 +35,15 @@ body{
 }
 
 header{
-    background-color: rgb(245,245,245);  
+    background-color: #270570;  
+    height: 50%;
 }
 
 header .logo{
     margin: 0;
     padding: 25px;
     font-weight: bold;
-    color: rgb(43, 144, 226);
+    color: cornsilk;
     font-size: 1.35em;
 }
 
@@ -51,47 +66,104 @@ header a{
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: cornsilk;
 }
 
 header a:hover{
-    color: rgb(43, 144, 226);
+
+    color:var(--second-color);
 }
 
 
-#destinos .container{
+
+/* estilo de formulario destino */
+
+.container-form {
     display: flex;
-    justify-content: space-evenly;
-}
+    justify-content: center;
+    align-items: center;
+    /* height: 40vh; */
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(90deg, #ed6151 0%, #f14053 100%);
 
-#destinos h2 {
-    margin-top: 30px;
-}
+    background-position: center;
+    background-size: cover;
+   
 
-#destinos .texto{
-    width: 100%;
-    max-width: 720px;
-    text-align: center;
-    padding-left: 30px;
+    padding: 20px 0 20px 0;
+
+  }
+
+  .form-destino {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+
+    background-image: url(https://images.unsplash.com/photo-1504473247222-c670cdfed081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    height: 15vh;
+
+    border-radius: 10px;
+
+  }
+
+
+  .form-destino h2{
+    font-size: 35px;
+    margin-right: 20px;
+    color:var(--second-color);
+  }
+  
+
+  .form-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 5px 5px 0 5px;
+
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+  
+  select, input {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid var(--color-white);
+    font-size: 16px;
+  }
+  
+
+  .btn-form {
+    background-color:var(--color-primary);
+    color:var(--color-white);
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .btn-form:hover{
+
+    background-color:var(--second-color);
+    color:var(--color-white);
     
-}
+
+  }
 
 
-#destinos .img-destinos {
-    background-image: url("/assets/img/mapamundi.jpg");
-    /* background-size: cover; */
-    background-position: center center;
-    height: 50%;
-    width: 100%;
-    margin: auto;
-}
+  /* En este ejemplo, utilizamos display: flex en el contenedor principal para centrar el formulario en la página y justify-content: center y align-items: center para alinearlo horizontal y verticalmente. Luego, aplicamos display: flex y flex-direction: column al formulario y display: flex y flex-direction: row a cada grupo de elementos para alinearlos vertical y horizontalmente, respectivamente. */
 
 
 footer {
-    background-color: rgb(219, 215, 215);
+    background-color:var(--color-primary)
     
 }
 #content-footer .logo-footer{
@@ -115,7 +187,7 @@ footer img{
 footer p{
     margin: 0;
     padding: 12px;
-    color: rgb(100,100,100);
+    color:var(--color-white)
 }
 
 
@@ -133,12 +205,202 @@ footer p{
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 30px;
+
     }
 
-    #destinos .container {
-        margin-left: 150px;
-        width: 700px;
-        height: 600px;
-    } 
-
 }
+
+
+/*tarjetas de destinos*/
+
+#destinos  .title-destino{
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 60px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+
+
+.container-cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 10px;
+    background-color:var(--second-color);
+}
+
+
+.gallery {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-1 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f7/05/33/valle-de-la-muerte.jpg?w=1200&h=-1&s=1);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .card-2 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/fc/b4/ca/brasil.jpg?w=1200&h=-1&s=1);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .card-3 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/d4/2f/ce/port-everglades-transfers.jpg?w=1200&h=-1&s=1);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .card-4 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5e/a0/64/caption.jpg?w=800&h=-1&s=1);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .card-5 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://viajes.nationalgeographic.com.es/medio/2017/06/19/gettyimages-565927847_5b95bede.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+
+  .card-6 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2013/04/Paris.jpg?w=1024&quality=50&strip=all&ssl=1);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .card-7 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://prismic-io.s3.amazonaws.com/siestacampers/5e394358-0de7-48d3-87e1-c392e6cd762f_torre-de-belem-puesta-de-sol.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .card-8 {
+    width: 350px;
+    height: 350px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-image: url(https://www.viajaraitalia.com/wp-content/uploads/2012/05/Coliseo-de-Roma-abril-2007-760x500.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+  }
+
+  .cards h2{
+    text-align: center;
+    color: var(--color-white);
+    font-size: 50px;
+  }
+
+.prev-button,
+.next-button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 40px;
+height: 40px;
+background-color:var(--color-white);
+border: 1px solid var(--color-white);
+border-radius: 50%;
+font-size: 24px;
+line-height: 1;
+cursor: pointer;
+z-index: 1;
+}
+
+.prev-button {
+left: 10px;
+}
+
+.next-button {
+right: 10px;
+}
+
+
+
