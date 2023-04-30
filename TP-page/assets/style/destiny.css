@@ -1,6 +1,9 @@
 /* fuente principal */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap');
 
+/* letra titulo form destino */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 *{
     box-sizing: border-box; /*no crece mas alla del tamaño*/
     /*margin: 0; le saca el margen a todo*/
@@ -20,10 +23,11 @@ body{
 :root{
 
   --color-primary: #270570;
-  --second-color:#d32771;
+  --second-color:#FC2947;
   --color-white:#eeeeee;
   --other-color:#ffce00;
   --principal-font:'Montserrat', sans-serif;
+  --second-font:'Anton', sans-serif;
 }
 
 
@@ -37,8 +41,9 @@ body{
 
 
 header{
-    background-color: #270570;  
-    height: 50%;
+    background-color: var(--color-primary);  
+
+    /* height: 200px; */
 }
 
 header .logo{
@@ -152,9 +157,15 @@ header a:hover{
 
 
   .form-destino h2{
-    font-size: 35px;
-    margin-right: 20px;
-    color:var(--second-color);
+    font-family: var(--second-font);
+    /* font-family: 'Monoton', cursive; */
+    font-size: 55px;
+    margin-right: 25px;
+    /* color:var(--color-white); */
+
+    -webkit-text-stroke: 0.5px var(--color-white);
+    color: transparent;
+
   }
   
 
@@ -202,13 +213,6 @@ header a:hover{
 
   /*tarjetas de destinos*/
 
-/* #destinos  span{
-  text-align: center;
-  font-size: 50px;
-  border-bottom: 2px solid var(--color-primary);
-} */
-
-
 
 .container-cards{
     display: flex;
@@ -231,6 +235,7 @@ header a:hover{
     display: flex;
     flex-wrap: nowrap;
     transition: transform 0.3s ease-in-out;
+    font-family: var(--principal-font)
   }
 
 
@@ -247,7 +252,7 @@ header a:hover{
     background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f7/05/33/valle-de-la-muerte.jpg?w=1200&h=-1&s=1);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+   
   }
 
   .card-2 {
@@ -262,7 +267,7 @@ header a:hover{
     background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/fc/b4/ca/brasil.jpg?w=1200&h=-1&s=1);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+   
 
   }
 
@@ -278,7 +283,7 @@ header a:hover{
     background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/d4/2f/ce/port-everglades-transfers.jpg?w=1200&h=-1&s=1);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+   
 
   }
 
@@ -294,7 +299,7 @@ header a:hover{
     background-image: url(https://content.r9cdn.net/rimg/dimg/c1/ce/f9cd2e90-city-35003-167377d30d0.jpg?width=1366&height=768&xhint=2806&yhint=2135&crop=true);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+    
 
   }
 
@@ -310,7 +315,7 @@ header a:hover{
     background-image: url(https://viajes.nationalgeographic.com.es/medio/2017/06/19/gettyimages-565927847_5b95bede.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+    
 
   }
 
@@ -327,8 +332,7 @@ header a:hover{
     background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2013/04/Paris.jpg?w=1024&quality=50&strip=all&ssl=1);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
-
+    
   }
 
   .card-7 {
@@ -343,7 +347,7 @@ header a:hover{
     background-image: url(https://prismic-io.s3.amazonaws.com/siestacampers/5e394358-0de7-48d3-87e1-c392e6cd762f_torre-de-belem-puesta-de-sol.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+    
 
   }
 
@@ -359,20 +363,24 @@ header a:hover{
     background-image: url(https://www.viajaraitalia.com/wp-content/uploads/2012/05/Coliseo-de-Roma-abril-2007-760x500.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0.9;
+    
 
   }
 
   .cards h2{
     text-align: center;
-    color: var(--second-color);
-    font-size: 50px;
+    /* color: #FC2947; */
+    font-size: 55px;
+    background-color: #00000059;
+    -webkit-text-stroke: 0.5px var(--color-white);
+    color: transparent;
 
   }
 
   .list-card{
     color: var(--color-white);
     font-size: 25px;
+    background-color: #00000059;
   }
 
 .prev-button,

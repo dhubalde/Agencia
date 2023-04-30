@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="assets/style/index_form.css">
     <title>Grupo 17</title>
 </head>
@@ -27,99 +27,66 @@
             </nav>
         </div>
     </header>
-
-
+<!-- ************************ -->
     <main class="back">
-
-
         <div class="back-form"></div>
-
-     <div class="content-form">
-
-        <!-- aqui formulario de contacto y consulta -->
-        <!-- Uso de FormSubmit -->
-        <!-- fix
-         -->
-        <form id="contact" action="https://formsubmit.co/googlerax@gmail.com" method="POST">
-            
-            <h1 class="form_titulo">Contáctenos</h1>
-            
-            <label for="nombre" class="form_label">Nombre</label>
-            
-            <!-- nombre -->
-            <input type="text" class="form_input" name="nombre" placeholder="Ingrese Nombre" id="nombre">
-            
-            <!-- apellido -->
-            <label for="apellido" class="form_label">Apellido</label>
-
-            <input type="text" class="form_input" name="apellido" placeholder="Ingrese apellido" id="apellido">
-
-            <label for="email" class="form_label">Correo Electrónico</label>
-            <!-- email -->
-            <input type="email" id="correoelectronico" class="form_input" name="email" placeholder="Dirección de correo electrónico
+        <div class="content-form">
+            <!-- aqui formulario de contacto y consulta -->
+            <!-- Uso de FormSubmit -->
+            <form id="contact" action="https://formsubmit.co/googlerax@gmail.com" method="POST">
+                <h1 class="form_titulo">Contáctenos</h1>
+                <label for="nombre" class="form_label">Nombre</label>
+                <!-- nombre -->
+                <input type="text" class="form_input" name="nombre" placeholder="Ingrese Nombre" id="nombre">
+                <!-- apellido -->
+                <label for="apellido" class="form_label">Apellido</label>
+                <input type="text" class="form_input" name="apellido" placeholder="Ingrese apellido" id="apellido">
+                <label for="email" class="form_label">Correo Electrónico</label>
+                <!-- email -->
+                <input type="email" id="correoelectronico" class="form_input" name="email" placeholder="Dirección de correo electrónico
             " id="email">
-            
-            <label for="tel" class="form_label">Teléfono</label>
-            <!-- telefono -->
-            <input type="tel" class="form_input" name="tel" placeholder="Número de teléfono (Cod. Area sin 0)
+                <label for="tel" class="form_label">Teléfono</label>
+                <!-- telefono -->
+                <input type="tel" class="form_input" name="tel" placeholder="Número de teléfono (Cod. Area sin 0)
             " id="tel">
-            
-            <fieldset class="form_legend">
-                <legend>Motivo de tu contacto</legend>
-
-                <select id="select" name="select">
-                    <option value="">--seleccione--</option>
-                    <option value="1">Quiero contratar un paquete</option>
-                    <option value="2">Realizar consulta sobre un destino</option>
-                    <option value="3">Consulta sobre pasaporte y/o documentacion</option>
-                    <option value="4">Otro</option>
-                </select>
-
-            </fieldset>
-
-            <div class="form_legend">
-                
-                <legend>¿Cómo le gustaría que lo contactemos?</legend>
-                
-                <label for="contacto"><input type="checkbox" name="contacto" value="email" id="check-email" class="form-check">Email</label>
-                
-                <label for="contacto"> <input type="checkbox" name="contacto" value="telefono" id="check-telefono" class="form-check"> Teléfono
-                </label>
-
-                <label for="contacto"><input type="checkbox" name="contacto" value="whatsapp" id="check-whatsapp" class="form-check">WhatsApp</label>
-                
-            </div>
-            
-            
-            <!-- <label for="texto" class="form_label">Dejanos tu comentarios</label> -->
-            <input type="text" class="form_input" name="texto" placeholder="Dejanos tus Comentarios">
-            
-            <label class="checkbox"><input type="checkbox">¿Le gustaría recibir novedades de nuestros
-                Viajes?</label>
-
-            <label class="checkbox"><input type="checkbox" name="acept" id="acept">Acepto los terminos y <a href="#">condiciones</a></label>
-            
-
+                <fieldset class="form_legend">
+                    <legend>Motivo de tu contacto</legend>
+                    <select id="select" name="select">
+                        <option value="">--seleccione--</option>
+                        <option value="1">Quiero contratar un paquete</option>
+                        <option value="2">Realizar consulta sobre un destino</option>
+                        <option value="3">Consulta sobre pasaporte y/o documentacion</option>
+                        <option value="4">Otro</option>
+                    </select>
+                </fieldset>
+                <div class="form_legend">
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                    <label for="contacto"><input type="checkbox" name="contacto" value="email" id="check-email"
+                            class="form-check">Email</label>
+                    <label for="contacto"> <input type="checkbox" name="contacto" value="telefono" id="check-telefono"
+                            class="form-check"> Teléfono
+                    </label>
+                    <label for="contacto"><input type="checkbox" name="contacto" value="whatsapp" id="check-whatsapp"
+                            class="form-check">WhatsApp</label>
+                </div>
+                <!-- <label for="texto" class="form_label">Dejanos tu comentarios</label> -->
+                <input type="text" class="form_input" name="texto" placeholder="Dejanos tus Comentarios">
+                <label class="checkbox"><input type="checkbox">¿Le gustaría recibir novedades de nuestros
+                    Viajes?</label>
+                <label class="checkbox"><input type="checkbox" name="acept" id="acept">Acepto los terminos y <a
+                        href="#">condiciones</a></label>
                 <!-- boton  -->
-            <input type="submit" value="Enviar" class="form_enviar">
-            
-            
-            <!--Esto es para que no se vea la confirmacion del envio del formulario-->
-            <input type="hidden" name="_next" value="http://index.html/">
-            <input type="hidden" name="_captcha" value="false">
-        </form>
-
-    </div>
-
-    
-    
-    
-    
-</main>
-    
+                <input type="submit" value="Enviar" class="form_enviar">
+                <!--Esto es para que no se vea la confirmacion del envio del formulario-->
+                <input type="hidden" name="_next" value="http://index.html/">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </main>
+    <!-- ******** -->
     <!--  -->
     <footer>
-        
+
         <div id="content-footer">
 
             <!-- logo del foooter redirecciona a home -->
@@ -140,7 +107,7 @@
 
     </footer>
 
-    <script src="/TP-page/assets/js/app.js"></script>
+    <script src="../TP-page/assets/js/app.js"></script>
 </body>
 
 </html>
