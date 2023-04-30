@@ -34,6 +34,8 @@ body{
     margin: auto; /*margenes automaticos*/
 }
 
+
+
 header{
     background-color: #270570;  
     height: 50%;
@@ -78,15 +80,52 @@ header a:hover{
 
 /* estilo de formulario destino */
 
+.content-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+}
+
+.content-title span{
+  text-align: center;
+  width: 100%;
+  height: 50px;
+
+  font-size: 40px;
+
+
+}
+
+.hr{
+
+  width: 400px;
+  height: 5px;
+  margin: 20px;
+
+  border-bottom:1px solid var(--second-color);
+
+}
+
+
+
+
 .container-form {
     display: flex;
     justify-content: center;
     align-items: center;
     /* height: 40vh; */
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(90deg, #ed6151 0%, #f14053 100%);
+    /* background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(90deg, #ed6151 0%, #f14053 100%); */
+
+    /* background-position: center;
+    background-size: cover; */
+
+    background-image: url(https://images.unsplash.com/photo-1504473247222-c670cdfed081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 
     background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size:cover;
    
 
     padding: 20px 0 20px 0;
@@ -99,11 +138,11 @@ header a:hover{
     align-items: center;
     padding: 20px;
 
-    background-image: url(https://images.unsplash.com/photo-1504473247222-c670cdfed081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    /* background-image: url(https://images.unsplash.com/photo-1504473247222-c670cdfed081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:cover; */
 
     height: 15vh;
 
@@ -158,76 +197,27 @@ header a:hover{
 
   }
 
-
   /* En este ejemplo, utilizamos display: flex en el contenedor principal para centrar el formulario en la página y justify-content: center y align-items: center para alinearlo horizontal y verticalmente. Luego, aplicamos display: flex y flex-direction: column al formulario y display: flex y flex-direction: row a cada grupo de elementos para alinearlos vertical y horizontalmente, respectivamente. */
 
 
-footer {
-    background-color:var(--color-primary)
-    
-}
-#content-footer .logo-footer{
-    margin-left: 20px;
-}
+  /*tarjetas de destinos*/
 
-footer .redes{
-    height: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-footer img{
-    margin: 0;
-    padding: 10px;
-    align-items: colums;
-}
-
-footer p{
-    margin: 0;
-    padding: 12px;
-    color:var(--color-white)
-}
-
-
-
-/*Version para escritorio*/
-
-@media (min-width: 720px){
-
-    header .container{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 30px;
-
-    }
-
-}
-
-
-/*tarjetas de destinos*/
-
-#destinos  .title-destino{
+/* #destinos  span{
   text-align: center;
-  margin-top: 10vh;
-  font-size: 60px;
+  font-size: 50px;
   border-bottom: 2px solid var(--color-primary);
-}
+} */
 
 
 
 .container-cards{
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
-    margin-bottom: 10px;
-    background-color:var(--second-color);
+    margin-top: 10vh;
+   /* margin-bottom: 20vh; */
+    /* background-color:var(--second-color); */
+    width: 100%;
+    height: 600px;
 }
 
 
@@ -242,6 +232,8 @@ footer p{
     flex-wrap: nowrap;
     transition: transform 0.3s ease-in-out;
   }
+
+
   
   .card-1 {
     width: 350px;
@@ -256,7 +248,6 @@ footer p{
     background-size: cover;
     background-position: center;
     opacity: 0.9;
-
   }
 
   .card-2 {
@@ -300,7 +291,7 @@ footer p{
     padding: 20px;
     box-sizing: border-box;
 
-    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5e/a0/64/caption.jpg?w=800&h=-1&s=1);
+    background-image: url(https://content.r9cdn.net/rimg/dimg/c1/ce/f9cd2e90-city-35003-167377d30d0.jpg?width=1366&height=768&xhint=2806&yhint=2135&crop=true);
     background-size: cover;
     background-position: center;
     opacity: 0.9;
@@ -374,23 +365,29 @@ footer p{
 
   .cards h2{
     text-align: center;
-    color: var(--color-white);
+    color: var(--second-color);
     font-size: 50px;
+
+  }
+
+  .list-card{
+    color: var(--color-white);
+    font-size: 25px;
   }
 
 .prev-button,
 .next-button {
 position: absolute;
 top: 50%;
-transform: translateY(-50%);
-width: 40px;
-height: 40px;
-background-color:var(--color-white);
-border: 1px solid var(--color-white);
-border-radius: 50%;
-font-size: 24px;
-line-height: 1;
-cursor: pointer;
+transform: translateY(160px);
+width: 150px;
+height: 10px;
+background-color:var(--second-color);
+border: 1px solid var(--second-color);
+/* border-radius: 50%; */
+/* font-size: 24px; */
+/* line-height: 1; */
+/* cursor: pointer; */
 z-index: 1;
 }
 
@@ -402,5 +399,54 @@ left: 10px;
 right: 10px;
 }
 
+/* ------------------ */
+
+footer {
+    background-color:var(--color-primary)
+    
+}
+#content-footer .logo-footer{
+    margin-left: 20px;
+}
+
+footer .redes{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    margin: 0;
+    padding: 10px;
+    align-items: colums;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color:var(--color-white)
+}
+
+
+
+/*Version para escritorio*/
+
+@media (min-width: 720px){
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+
+    }
+
+}
 
 

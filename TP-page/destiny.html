@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style/destiny.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
   <title>Grupo 17!</title>
 </head>
 
@@ -32,137 +34,145 @@
 
       <form class="form-destino">
 
-        <h2>¿Adonde vas a ir?</h2>
-
-        <div class="form-group">
-          <label for="origen">Origen:</label>
+        <h2>¿ADONDE VAS A IR?</h2>
+        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Origen:</label>
           <select id="origen" name="origen">
-            <option value="madrid">Madrid</option>
-            <option value="barcelona">Barcelona</option>
-            <option value="valencia">Valencia</option>
+            <option value="madrid">Santiago de chile (Chile)</option>
+            <option value="barcelona">Valparaiso (Chile)</option>
+            <option value="valencia">Antofogasta(Chile)</option>
+            <option value="valencia">Punta Arenas(Chile)</option>
+            <option value="valencia">San Pablo(Brasil)</option>
+            <option value="valencia">Rio de Janeiro(Brasil)</option>
+            <option value="valencia">Brasilia(Brasil)</option>
+            <option value="valencia">Puerto de Santos(Brasil)</option>
+            <option value="valencia">Miami, Florida(EEUU)</option>
+            <option value="valencia">Guadalajara(Mexico)</option>
+            <option value="valencia">Acapulco, Guerrero(Mexico)</option>
+            <option value="valencia">Ciudad de Mexico(Mexico)</option>
+            <option value="valencia">Barcelona(España)</option>
+            <option value="valencia">Paris(Francia)</option>
+            <option value="valencia">Liaboa(Portugal)</option>
+            <option value="valencia">Roma(Italia)</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="destino">Destino:</label>
+          <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Destino:</label>
           <select id="destino" name="destino">
-            <option value="paris">París</option>
-            <option value="roma">Roma</option>
-            <option value="londres">Londres</option>
+            <option value="madrid">Santiago de chile (Chile)</option>
+            <option value="barcelona">Valparaiso (Chile)</option>
+            <option value="valencia">Antofogasta(Chile)</option>
+            <option value="valencia">Punta Arenas(Chile)</option>
+            <option value="valencia">San Pablo(Brasil)</option>
+            <option value="valencia">Rio de Janeiro(Brasil)</option>
+            <option value="valencia">Brasilia(Brasil)</option>
+            <option value="valencia">Puerto de Santos(Brasil)</option>
+            <option value="valencia">Miami, Florida(EEUU)</option>
+            <option value="valencia">Guadalajara(Mexico)</option>
+            <option value="valencia">Acapulco, Guerrero(Mexico)</option>
+            <option value="valencia">Ciudad de Mexico(Mexico)</option>
+            <option value="valencia">Barcelona(España)</option>
+            <option value="valencia">Paris(Francia)</option>
+            <option value="valencia">Liaboa(Portugal)</option>
+            <option value="valencia">Roma(Italia)</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="fecha">Fecha:Ida</label>
+          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Ida</label>
           <input type="date" id="fecha" name="fecha">
         </div>
-
         <div class="form-group">
-          <label for="fecha">Fecha:Vuelta</label>
+          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Vuelta</label>
           <input type="date" id="fecha" name="fecha">
         </div>
-
         <div class="form-group">
-          <label for="pasajeros">Pasajeros:</label>
+          <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #270570"></i> Pasajeros:</label>
           <input type="number" id="pasajeros" name="pasajeros">
         </div>
-
         <div class="form-group">
           <button type="submit" class="btn-form">Buscar</button>
         </div>
-
       </form>
-
     </div>
 
     <!-- *********************** -->
 
+    <div class="content-title">
+      <div class="hr"></div>
+      <span>Nuestros destinos, ¿Cual es el tuyo?</span>
+      <div class="hr"></div>
+    </div>
+
+
+
     <section id="destinos">
-
-      <div class="title-destino">
-      <span>NUESTROS DESTINOS: ¿CUAL ES EL TUYO?</span>
-      </div>
-
       <div class="container-cards">
-
         <div class="gallery">
-
           <div class="cards">
-
             <div class="card-1">
               <h2>CHILE</h2>
-              <p>tarjeta 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga necessitatibus aut nulla
-                voluptatum obcaecati sapiente velit nam dicta optio a ullam, odio nemo voluptates eum. Ipsa ea cum ab
-                veritatis?
-              </p>
+              <ul class="list-card">
+              <li>Santiago de Chile</li>
+                <li>Valparaiso</li>
+                <li>Antofagasta</li>
+                <li>Punta Arenas</li>
+              </ul>
+
             </div>
 
             <div class="card-2">
               <h2>BRASIL</h2>
-              <p>
-                tarjeta 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sint consequuntur sequi
-                quae dolore ipsam totam nihil sit illo ipsa sunt, saepe, reprehenderit velit inventore eveniet, earum
-                error ducimus consectetur!
-              </p>
+
+              <ul class="list-card">
+              <li>São Paulo</li>
+                <li>Rio de Janeiro</li>
+                <li>Brasília</li>
+                <li>Puerto de Santos</li>
+              </ul>
+
             </div>
 
 
             <div class="card-3">
               <h2>MIAMI,ESTADOS UNIDOS</h2>
-              <p>
-                tarjeta 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aspernatur inventore dolores
-                quos laboriosam harum iste quas esse veritatis nam maiores consequuntur a mollitia minima est placeat
-                aliquid, explicabo quam.
-              </p>
+<ul class="list-card">
+  <li>Florida</li>
+</ul>
             </div>
             <div class="card-4">
               <h2>MEXICO</h2>
-              <p>
-                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
-                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
-                voluptates sed natus dicta nam?
-              </p>
+              <ul class="list-card">
+                <li>Guadalajara</li>
+                <li>Ciudad de México</li>
+                <li>Acapulco, Guerrero</li>
+                <li></li>
+              </ul>
             </div>
 
             <div class="card-5">
               <h2>BARCELONA, ESPAÑA</h2>
-              <p>
-                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
-                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
-                voluptates sed natus dicta nam?
-              </p>
+
             </div>
 
             <div class="card-6">
               <h2>PARIS, FRANCIA</h2>
-              <p>
-                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
-                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
-                voluptates sed natus dicta nam?
-              </p>
+
             </div>
 
             <div class="card-7">
               <h2>LISBOA, PORTUGAL</h2>
-              <p>
-                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
-                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
-                voluptates sed natus dicta nam?
-              </p>
+
             </div>
 
             <div class="card-8">
               <h2>ROMA, ITALIA</h2>
-              <p>
-                tarjeta 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione expedita doloribus non
-                recusandae earum incidunt velit corrupti eum esse. Unde nostrum cupiditate temporibus! Praesentium, quod
-                voluptates sed natus dicta nam?
-              </p>
+
             </div>
           </div>
 
-          <button class="prev-button">&#8249;</button>
-          <button class="next-button">&#8250;</button>
+          <button class="prev-button"></button>
+          <button class="next-button"></button>
         </div>
       </div>
 

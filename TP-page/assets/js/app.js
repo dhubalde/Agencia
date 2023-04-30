@@ -18,31 +18,31 @@
  * script de botones, pagina destiny.html
  */
 
-//  const cards = document.querySelector(".cards");
-//  const prevButton = document.querySelector(".prev-button");
-//  const nextButton = document.querySelector(".next-button");
-//  let position = 0;
+ const cards = document.querySelector(".cards");
+ const prevButton = document.querySelector(".prev-button");
+ const nextButton = document.querySelector(".next-button");
+ let position = 0;
  
-//  nextButton.addEventListener("click", () => {
-//    if (position > -(cards.scrollWidth - cards.offsetWidth)) {
-//      position -= 1000;
-//      cards.style.transform = `translateX(${position}px)`;
-//    }
-//  });
+ nextButton.addEventListener("click", () => {
+   if (position > -(cards.scrollWidth - cards.offsetWidth)) {
+     position -= 1000;
+     cards.style.transform = `translateX(${position}px)`;
+   }
+ });
  
-//  prevButton.addEventListener("click", () => {
-//    if (position < 0) {
-//      position += 1000;
-//      cards.style.transform = `translateX(${position}px)`;
-//    }
-//  });
+ prevButton.addEventListener("click", () => {
+   if (position < 0) {
+     position += 1000;
+     cards.style.transform = `translateX(${position}px)`;
+   }
+ });
 
 /**------------------------------------------------------------------ */
 // funcion que impide el envio del formulario, solo para usar en desarrollo
-jQuery.validator.setDefaults({
-  debug: true,
-  success: "valid",
-});
+// jQuery.validator.setDefaults({
+//   debug: true,
+//   success: "valid",
+// });
 
 
 // validacion del formulario con jquery.validation

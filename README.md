@@ -15,3 +15,8 @@
 * Trabajando en:  *validacion de formularios, paquetes de viajes, otras correcciones.*
 
 ---
+### 30/04 -Griselda-
+
+* Cambios de estilos y correcciones en pagina destiny.html.
+* Se valida formulario de contacto con jquery.validations.
+* Se realiza cambio de estilo en formulario.
