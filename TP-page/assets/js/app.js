@@ -27,6 +27,9 @@
 // validacion del formulario con jquery.validation
 $(document).ready(function() {
     $("#contact").validate({
+        // errorPlacement: function(error, element) {
+        //     error.appendTo("#error-messages");
+        //   },
     //reglas:
     rules:{
         nombre:{
@@ -107,11 +110,13 @@ $(document).ready(function() {
         },
 
         },
+        errorElement: "spa",
+
         //hace foco en el campo invalido
     focusInvalid: true,
     //funcion de jquery validation que se ejecuta cuando se envia el form
     // submitHandler: function(form) {
-    //   // Aquí puedes agregar tu código para enviar el formulario
+    //   // agregar código para enviar el formulario
     //   alert("Formulario enviado con exito")
     // }
     });

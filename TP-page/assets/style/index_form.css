@@ -17,7 +17,19 @@ body{
 
 }
 
+:root{
+
+    --color-primary: #270570;
+    --second-color:#FC2947;
+    --color-white:#eeeeee;
+    --other-color:#2b90e2;
+    --principal-font:'Montserrat', sans-serif;
+    --second-font:'Anton', sans-serif;
+  }
+
 /*hasta aca estan definida los estilos  generales de la web*/
+
+/* *****header******* */
 
 .container{
     max-width: 1400px; /*margen maximo*/
@@ -25,14 +37,17 @@ body{
 }
 
 header{
-    background-color: rgb(245,245,245);  
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(90deg, var(--second-color) 0%, var(--color-primary) 100%);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
 }
 
 header .logo{
     margin: 0;
     padding: 25px;
     font-weight: bold;
-    color: rgb(43, 144, 226);
+    color: cornsilk;
     font-size: 1.35em;
 }
 
@@ -55,16 +70,19 @@ header a{
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color:var(--color-white);
 }
 
 header a:hover{
-    color: rgb(43, 144, 226);
+    color:var(--other-color);
 }
 
 /* formulario contacto */
 
 /* --cotenedor del fomulario-- */
+
+
+
 .back{
     display: flex;
     justify-content: center;
@@ -72,31 +90,36 @@ header a:hover{
     height: 80vh;
     padding: 0;
     /* background-color: aqua; */
-
+    box-sizing: content-box;
 }
 
 
 .back-form{
-    width: 421.797px;
-    height: 600.481px;
-
+    width: 650px;
+    height: 100%;
     background-image: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg);
     background-position: center;
     background-size: cover;
-}
 
+    opacity: 0.9;
+
+}
 
 
 /* --------- */
 /* estilo del formulario */
+
+.content-form{
+    width: 100%;
+    height: auto;
+}
 
 .error{
 
     color: red;
     font-style: italic;
     padding: 5px;
-    font-size: 10px;
-    
+    font-size: 12px;
 }
 
 #contact{
@@ -104,11 +127,17 @@ header a:hover{
     flex-direction: column;
     height: 100%;
     justify-content:space-around;
-
     align-items: center;
+   margin-left: 5px;
 }
 
-#contact h1, legend{
+#contact h1{
+    font-size:40px;
+    color: white;
+    text-align: center;
+}
+
+#contact legend{
     text-align: center;
     margin-top: 0;
     color: rgba(0,0,0,0.7);
