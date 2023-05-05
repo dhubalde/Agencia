@@ -6,6 +6,8 @@
 
 *{
     margin: 0; /*le saca el margen a todo*/
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -16,7 +18,24 @@ body{
   font-family: 'Montserrat', sans-serif;
     /* font-family: 'roboto', sans-serif; */
     margin: 0; /*margen*/
-    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 :root{
@@ -39,20 +58,20 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    height: 100px;
+    height: 150px;
 
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(90deg, var(--second-color) 0%, var(--color-primary) 100%);
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
     background-position: center;
     background-size: cover;
+    
   }
-
 
   .logo{
     display: flex;
     flex-direction: column;
    align-items: center;
   }
-  
+
   .logo p{
     margin-top: -220px; /* Espacio entre el logo y el texto */
     /* font-size: 25px; */
@@ -82,11 +101,15 @@ header {
   }
   
   nav a {
-    padding: 5px 12px;
+    /* padding: 5px 12px; */
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--color-white);
     /* font-size: 15px; */
+
+    font-weight: 300;
+    /* margin-bottom: 30px; */
+    letter-spacing: 1px;
   }
 
   header a{
@@ -100,9 +123,7 @@ header a:hover{
     color:var(--other-color);
 }
 
-/* ************** */
-
-
+/* ***main*** */
 
 /* estilo de formulario destino */
 
@@ -132,7 +153,6 @@ header a:hover{
 
 }
 
-
 .container-form {
     display: flex;
     justify-content: center;
@@ -146,7 +166,6 @@ header a:hover{
    
 
     padding: 20px 0 20px 0;
-
     opacity: 0.8;
 
   }
@@ -251,8 +270,6 @@ header a:hover{
     font-family: var(--principal-font)
   }
 
-
-  
   .card-1 {
     width: 350px;
     height: 350px;
@@ -265,7 +282,6 @@ header a:hover{
     background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f7/05/33/valle-de-la-muerte.jpg?w=1200&h=-1&s=1);
     background-size: cover;
     background-position: center;
-   
   }
 
   .card-2 {
@@ -420,41 +436,59 @@ left: 10px;
 right: 10px;
 }
 
+/* ***main*** */
+
 /* ------------------ */
+/* ***footer*** */
 
 footer {
-    background-color:var(--color-primary)
-    
-}
-#content-footer .logo-footer{
-    margin-left: 20px;
-}
-
-footer .redes{
-    height: 150px;
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    color: aliceblue;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
+    background-position: center;
+    background-size: cover;
 }
 
-footer img{
-    margin: 0;
-    padding: 10px;
-    align-items: colums;
+footer div{
+  text-align: center;
 }
 
-footer p{
-    margin: 0;
-    padding: 12px;
-    color:var(--color-white)
+footer div h3{
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
+.col-1 a, .col-2 a, .col-3 a{
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  margin:10px 0 10px 0;
+}
 
+.col-2{
+  flex-grow: 1;
+}
 
-/*Version para escritorio*/
+.social-icons{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 
-/* responsibidad en construccion*/
+}
+
+.social-icons a i{
+ 
+  font-size: 45px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* ******** */
 
 /* header */
 
@@ -482,3 +516,4 @@ footer p{
       margin: 10px 0;
     }
   }
+

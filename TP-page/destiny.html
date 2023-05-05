@@ -37,7 +37,6 @@
     <div class="container-form">
 
       <form class="form-destino">
-
         <h2>¿ADONDE VAS A IR?</h2>
         <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Origen:</label>
           <select id="origen" name="origen">
@@ -164,21 +163,29 @@
     </section>
   </main>
   <!--********-->
-  <footer>
-    <div id="content-footer">
-      <!-- <div class="logo-footer">
-        <a href="index.html">Volver<img src="/TP-page/assets/img/icons8-índice-y-pulgar-16.png" alt="logo-footer"></a>
-      </div> -->
-      <div class="redes">
-        <img src="/TP-page/assets/img/icons8-instagram-30.png" alt="instagram">
-        <a href="www.intagram.com">Instagram</a>
-        <img src="/TP-page/assets/img/icons8-whatsapp.gif" alt="whatsapp">
-        <a href="www.intagram.com">Whatsapp</a>
-        <p>&copy; Grupo 17! </p>
+
+  <footer class="footer">
+    <div class="col-1">
+      <h3>LINKS</h3>
+      <a href="index.html">Inicio</a>
+      <a href="destiny.html">Destinos</a>
+      <a href="packages.html">Paquetes</a>
+      <a href="contact.html">Contacto</a>
+    </div>
+    <div class="col-2">
+      <h3>NUESTRAS REDES</h3>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #1877f2;"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #5b5a5a;"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-whatsapp fa-xl" style="color: #1bd741;"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
       </div>
-    </div> -->
-    <!--  -->
-  </footer> 
+    </div>
+    <div class="col-3">
+      <h3>DIRECCION</h3>
+      <p>Calle falsa 123,<br>CABA, Argentina</p>
+      <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
+    </div>
 
   <script>
  //script de botones, pagina destiny.html
@@ -199,8 +206,7 @@ prevButton.addEventListener("click", () => {
     position += 1000;
     cards.style.transform = `translateX(${position}px)`}
 });
-
-  </script>
+</script>
 
 </body>
 </html>
