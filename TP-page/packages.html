@@ -5,57 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/packages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    
     <title>Grupo 17</title>
 </head>
-<body>
 
-    <body>
-        <header>
-            <div class="container">
-                <!-- ir a home con click al logo -->
-                <p class="logo">Grupo 17!</p>
-                <!-- nav bar no conviene usar lista para que el reposive-->
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="destiny.html">Destinos</a>
-                    <a href="packages.html">Paquetes</a>
-                    <a href="contact.html">Contacto</a>
-                </nav>
-            </div>
-        </header>
+
+<body>
+    <header>
+    <div class="logo">
+        <a href="index.html">
+        <img src="./assets/img/logo.png"  alt="Grupo-17">
+        </a>
+        <p>Viva World Travel</p>
+    </div>
+    <nav>
+        <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house fa-sm" style="color: white"></i> Home</a></li>
+        <li><a href="destiny.html"><i class="fa-solid fa-plane fa-sm" style="color: #ffffff;"></i> Destinos</a></li>
+        <li><a href="packages.html"><i class="fa-solid fa-suitcase fa-sm" style="color: #ffffff;"></i> Paquetes</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i> Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+
     <main>
         <!-- aqui se muestra los distintos paquetes de viajes -->
-        <section id="grupales">
-            <div class="container_grupales">
-                <h3> Paquetes Grupales</h3>
-                <h4>Promoción Europa</h4>
-                <h4>   u$s 2.500  All Inclusive  </h4>
-                <h4>Promoción Uruguay <br>Colonia de Sacramento</h4>
-                <h4>   u$s 500 con desayuno   </h4>
+        <div class="titulo">
+            <h2>Paquetes Turisticos</h2> 
+        </div>
+        <section class="sectionPackage">
+            <h3>Grupales</h3>  
+            <div class="packages">
+                <div class="promocion europa">
+                    <p>PAQUETE GRUPAL</p><br>
+                    <p>EUROPA</p>
+                    <p>21 días visistando 5 paises</p><br><br><br><br>
+                    <p>u$s 4.200  All Inclusive</p>          
+                </div>
+                <div class="promocion mediooriente">
+                    <p>PAQUETE GRUPAL</p><br>
+                    <p>MEDIO ORIENTE</p>
+                    <p>27 días visitando 4 paises</p><br><br><br><br>
+                    <p>u$s 5.350  All Inclusive</p>
+                </div>
+            </div>
+            <div class="vermas">
+                <button type="button">Ver mas</button>
+            </div>              
+        </section>
+        <section class="sectionPackage">
+            <h3>Deportivos</h3>
+            <div class="packages">
+                <div class="promocion fortaleza">
+                    <p>PAQUETE DEPORTIVO</p><br>
+                    <p>FORTALEZA</p>
+                    <p>10 días a puro Kite-Surf</p><br><br><br><br>
+                    <p>u$s 2.500  All Inclusive</p> 
+                </div>
+                <div class="promocion nepal">
+                    <p>PAQUETE DEPORTIVO</p><br>
+                    <p>NEPAL</p>
+                    <p>10 días de Ciclismo en la montaña</p><br><br><br><br>
+                    <p>u$s 2.500 Media Pension</p>
+                </div>
+            </div>
+            <div class="vermas">
+                <button class="boton" type="button">Ver mas</button>
             </div>
         </section>
-
-        <section id="deportivos">
-            <div class="container_deportivos">
-                <h3> Paquetes Deportivos</h3>
-                <h4>Promoción Europa</h4>
-                <h4>   u$s 2.500  All Inclusive</h4>
-            </div>
+        <section class="sectionPackage">
+            <h3>Ejecutivos</h3>
+            <div class="packages">
+                <div class="promocion lasvegas">
+                    <p>PAQUETE EJECUTIVO</p><br>
+                    <p>LAS VEGAS</p>
+                    <p>7 dias en la Exposición #CES2024</p><br><br><br><br>
+                    <p>u$s 3800 C/Desayuno</p>
+                </div>
+                <div class="promocion tokio">
+                    <p>PAQUETE EJECUTIVO</p><br>
+                    <p>TOKIO</p>
+                    <p>14 dias en Convensión de Finanzas</p><br><br><br><br>
+                    <p>u$s 3800 C/Desayuno</p>
+                </div>   
+            </div>  
+            <div class="vermas">
+                <button type="button">Ver mas</button>
+            </div> 
         </section>
-
-        <section id="ejecutivos">
-            <div class="container_ejecutivos">
-                <h3> Paquetes Ejecutivos</h3>
-            </div>
-        </section>
-
-
-
-            
-            
-
-        
     </main>
+
 
     <footer>
 
