@@ -1,5 +1,9 @@
-/* hoja de estilo de las paginas */
-/*es conveniente armar los estilos para mobile primero, porque se usa menos codigo */
+/* fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap');
+
+/* letra titulo form destino */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 *{
     box-sizing: border-box; /*no crece mas alla del tamaño*/
     /*margin: 0; le saca el margen a todo*/
@@ -12,7 +16,33 @@ html{
 body{
     font-family: 'roboto', sans-serif;
     margin: 0; /*margen*/
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+:root{
+
+    --color-primary: #270570;
+    --second-color:#FC2947;
+    --color-white:#fff8dc;
+    --other-color:#2b90e2;
+    --principal-font:'Montserrat', sans-serif;
+    --second-font:'Anton', sans-serif;
+  }
 
 /*gerarquias de los titulos*/
 h1{font-size: 3.5em;}
@@ -38,50 +68,91 @@ button:hover{
 }
 
 /*hasta aca estan definida los estilos  generales de la web*/
-.container {
-    max-width: 1400px; /*margen maximo*/
-    margin: auto; /*margenes automaticos*/ 
-}
-
-header{
-    background-color: rgb(245,245,245);  
-}
-
-header .logo{
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    color: rgb(43, 144, 226);
-    font-size: 1.5em;
-}
-
-
-header .container{
+header {
     display: flex;
-    flex-direction: column; /*se ordenan en una columna*/
-    align-items: center;   
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 150px;
 
-header nav{
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
+    background-position: center;
+    background-size: cover;
+    
+  }
+
+.logo{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding-bottom: 25px;
+    align-items: center;
+  }
+
+.logo p{
+    margin-top: -220px; /* Espacio entre el logo y el texto */
+    /* font-size: 25px; */
+    font-weight: bold;
+    color: #d66bee;
+    font-size: 1em;
+    text-shadow: 2px 2px 2px #1d5fd0;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+    margin-top: -108px;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+
+}
+
+nav a {
+    /* padding: 5px 12px; */
+    text-decoration: none;
+    /* font-weight: bold; */
+    color: var(--color-white);
+    /* font-size: 15px; */
+
+    font-weight: 300;
+    /* margin-bottom: 30px; */
+    letter-spacing: 1px;
 }
 
 header a{
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: var(--color-white);
 }
 
 header a:hover{
-    color: rgb(43, 144, 226);
+    color:var(--other-color);
+}
+
+.container {
+    max-width: 1400px; 
+    margin: auto;  
+}
+
+header{
+    background-color: rgb(245,245,245);  
+}
+header .container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
 }
 
 #hero{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +167,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("/TP-page/assets/img/miami.jpg");
+    ,url("/assets/img/miami.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -181,7 +252,9 @@ header a:hover{
 
 
 table {
-    width: 50%;
+    width: 100%;
+    height: 50%;
+    margin-block-start: 100px;
     margin-block-end: 30px;
 }
 
@@ -224,64 +297,51 @@ tr:hover {
      
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
-    background-color: rgb(219, 215, 215);
-    
-}
-#content-footer .logo-footer{
-    margin-left: 20px;
-}
-
-footer .redes{
-    height: 150px;
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    color: aliceblue;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
+    background-position: center;
+    background-size: cover;
 }
 
-footer img{
-    margin: 0;
-    padding: 10px;
-    align-items: colums;
+footer div{
+  text-align: center;
 }
 
-footer p{
-    margin: 0;
-    padding: 12px;
-    color: rgb(100,100,100);
+footer div h3{
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a, .col-2 a, .col-3 a{
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  margin:10px 0 10px 0;
+}
+
+.col-2{
+  flex-grow: 1;
+}
+
+.social-icons{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.social-icons a i{
+ 
+  font-size: 45px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 
@@ -336,7 +396,7 @@ footer p{
    
 
     #quienes-somos .img-container {
-        background-image: url("/TP-page/assets/img/lisboa.jpeg");
+        background-image: url("/assets/img/lisboa.jpeg");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -375,7 +435,7 @@ footer p{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("/TP-page/assets/img/viajes-grupales.jpg");
+        ,url("/assets/img/viajes-grupales.jpg");
     }
     
     .carta:nth-child(2){
@@ -384,7 +444,7 @@ footer p{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("/TP-page/assets/img/salto-grupo-surf.jpg");
+        ,url("/assets/img/salto-grupo-surf.jpg");
     
     }
     
@@ -394,7 +454,7 @@ footer p{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("/TP-page/assets/img/viajes-negocios.jpg");
+        ,url("/assets/img/viajes-negocios.jpg");
     }
 
     footer .container{

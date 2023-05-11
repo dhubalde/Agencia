@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
     <title>Grupo 17!</title>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <!-- ir a home con click al logo -->
-            <p class="logo">Grupo 17!</p>
-            <!-- nav bar no conviene usar lista para que el reposive-->
-            <nav class="menu">
-                <a href="#quienes-somos">Quienes Somos</a>
-                <a href="destiny.html">Destinos</a>
-                <a href="packages.html">Paquetes</a>
-                <a href="#tabla">Equipo</a>
-                <a href="contact.html">Contacto</a>
-            </nav>
+        <div class="logo">
+            <a href="index.html">
+            <img src="./assets/img/logo.png"  alt="Grupo-17">
+            </a>
+            <p>Viva World Travel</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos"><i class="fa-solid fa-person fa-sm" style="color: white"></i> Quienes Somos</a></li>
+                <li><a href="destiny.html"><i class="fa-solid fa-plane fa-sm" style="color: #ffffff;"></i> Destinos</a></li>
+                <li><a href="packages.html"><i class="fa-solid fa-suitcase fa-sm" style="color: #ffffff;"></i> Paquetes</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i> Contacto</a></li>
+                <li><a href="us.html"><i class="fa-solid fa-user-group fa-sm" style="color: #ffffff;"></i> Nosotros</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        
         <section id="hero">
             <!--secciones de la web-->
             <h1>Contrata los mejores <br> paquetes para tus viajes</h1>
@@ -40,7 +45,7 @@
             <div class="container">
                 <div class="img-container"></div>
                     <div class="texto">
-                        <h2>Somos <span class="color-acento">Grupo 17!</span></h2>
+                        <h2>Somos <span class="color-acento">Viva Wold Travel</span></h2>
                         <p>
                             Somos una agencia de viajes con rutas a tu medida, nuestra agencia
                             nació en 2017, con la idea de entender los viajes como una forma de 
@@ -81,7 +86,7 @@
             <!-- </div> -->
         </section>
 
-        <section id="tabla">
+        <!-- <section id="tabla">
             <div class="container">
                 <h4>NUESTRO EQUIPO DE TRABAJO</h4>
                 <div class="tabla_titulo">
@@ -89,52 +94,55 @@
                         <thead>
                             <tr>
                                 <th>Nombre y Apellido</th>
-                                <th>Cargo</th>
+                                <th>Sector</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Griselda Sanchez</td>
-                                <td>HTML y GIT</td>
+                                <td>Diseño y Programación</td>
                             </tr>
                             <tr>
                                 <td>Gonzalo Demarchi</td>
-                                <td>CSS</td>
+                                <td>Diseño y Programación</td>
                             </tr>
                             <tr> 
                                 <td>Dalila Hubalde</td>
-                                <td>CSS y JS</td>
+                                <td>Diseño y Programación</td>
                             </tr>
                             <tr>
                                 <td>Ignacio Mercado</td>
-                                <td>CSS</td>
+                                <td>Diseño y Programación</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section> 
+        </section>  -->
     </main>
 
-    <footer>
-
-        <div id="content-footer">
-
-            <!-- logo del foooter redirecciona a home -->
-            <div class="logo-footer">
-                <a href="index.html">Volver<img src="/TP-page/assets/img/icons8-índice-y-pulgar-16.png" 
-                    alt="logo-footer"></a>
-                    
+    <footer class="footer">
+        <div class="col-1">
+            <h3>LINKS</h3>
+            <a href="index.html">Inicio</a>
+            <a href="destiny.html">Destinos</a>
+            <a href="packages.html">Paquetes</a>
+            <a href="contact.html">Contacto</a>
+            <a href="us.html">Nosotros</a>
+        </div>
+        <div class="col-2">
+            <h3>NUESTRAS REDES</h3>
+            <div class="social-icons">
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #1877f2;"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #5b5a5a;"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-whatsapp fa-xl" style="color: #1bd741;"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
             </div>
-            <div class="redes">
-                <img src="/TP-page/assets/img/icons8-instagram-30.png" alt="instagram">
-                <a href="www.intagram.com">Instagram</a>
-                <img src="/TP-page/assets/img/icons8-whatsapp.gif" alt="whatsapp">
-                <a href="www.intagram.com">Whatsapp</a>
-                <p>&copy; Grupo 17! </p>
-            </div>
-
-
+        </div>
+        <div class="col-3">
+            <h3>DIRECCION</h3>
+            <p>Calle falsa 123,<br>CABA, Argentina</p>
+            <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
         </div>
 
     </footer>
