@@ -16,11 +16,11 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="./assets/img/logo.png"  alt="Grupo-17">
+        <img src="./assets/img/logo.png" alt="Grupo-17">
       </a>
       <p>Viva World Travel</p>
     </div>
-    <nav>
+    <nav class="nav-header">
       <ul>
         <li><a href="index.html"><i class="fa-solid fa-house fa-sm" style="color: white"></i> Home</a></li>
         <li><a href="destiny.html"><i class="fa-solid fa-plane fa-sm" style="color: #ffffff;"></i> Destinos</a></li>
@@ -37,8 +37,9 @@
     <div class="container-form">
 
       <form class="form-destino">
-        <h2>¿ADONDE VAS A IR?</h2>
-        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Origen:</label>
+        <!-- <h2>¿ADONDE VAS A IR?</h2> -->
+        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i>
+            Origen:</label>
           <select id="origen" name="origen">
             <option value="madrid">Santiago de chile (Chile)</option>
             <option value="barcelona">Valparaiso (Chile)</option>
@@ -98,6 +99,72 @@
         </div>
       </form>
     </div>
+    <br>
+    <!-- ******medios de pago******************* -->
+
+    <div class="pagos-container" onclick="mostrarModal()">
+
+      <div class="title-medios">
+        <h2>Pagá tus viajes en cuotas ✈</h2>
+        <p>Conocé nuestros medios de pago.</p>
+      </div>
+
+      <div class="medios-pagos">
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/visa.png" alt=""></span>
+          <p>12 cuotas</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/mastercard.png" alt=""></span>
+          <p>12 cuotas</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/amex.png" alt=""></span>
+          <p>12 cuotas</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/diners.png" alt=""></span>
+          <p>12 cuotas</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/cabal.png" alt=""></span>
+          <p>12 cuotas</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/transferencias-ban.png" alt=""
+              style="width: 40px;"></span>
+          <p style="margin-left: -8px;">Transferencias</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/pagofacil.png" alt=""></span>
+          <p>Pago Fácil</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/pagomiscuentas.png" alt=""></span>
+          <p style="margin-left: -8px;">PagoMisCuentas</p>
+        </div>
+
+        <div class="pago-logo">
+          <span class="altura-logos"><img src="../TP-page/assets/img/mercadopago.png" alt=""></span>
+          <p>MercadoPago</p>
+        </div>
+
+        <div class="btn-pagos">
+          <button>Ver medios de pago</button>
+        </div>
+
+      </div>
+
+    </div>
+
 
     <!-- ***********tarjetas destinos************ -->
 
@@ -113,7 +180,7 @@
             <div class="card-1">
               <h2>CHILE</h2>
               <ul class="list-card">
-              <li>Santiago de Chile</li>
+                <li>Santiago de Chile</li>
                 <li>Valparaiso</li>
                 <li>Antofagasta</li>
                 <li>Punta Arenas</li>
@@ -122,7 +189,7 @@
             <div class="card-2">
               <h2>BRASIL</h2>
               <ul class="list-card">
-              <li>São Paulo</li>
+                <li>São Paulo</li>
                 <li>Rio de Janeiro</li>
                 <li>Brasília</li>
                 <li>Puerto de Santos</li>
@@ -130,9 +197,9 @@
             </div>
             <div class="card-3">
               <h2>MIAMI,ESTADOS UNIDOS</h2>
-<ul class="list-card">
-  <li>Florida</li>
-</ul>
+              <ul class="list-card">
+                <li>Florida</li>
+              </ul>
             </div>
             <div class="card-4">
               <h2>MEXICO</h2>
@@ -161,6 +228,150 @@
         </div>
       </div>
     </section>
+    <!--  -->
+    <!-- pagina oculta de medios de pagos -->
+
+    <div id="modal" class="oculto">
+
+      <!-- cruz de cierre -->
+      <span class="cerrar" onclick="cerrarModal()"><i class="fa-regular fa-rectangle-xmark fa-xl"
+          style="color: #000000;"></i></span>
+
+      <div class="nue-medio">
+
+        <div class="titulos-pago">
+          <h3>Medios de Pago</h3>
+          <hr>
+        </div>
+
+        <div class="medio-pago">
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/visa.png" alt="visa">
+              </span>
+              <span class="textomedios">
+                <h5><b>Tarjetas Visa </b></h5>
+                <p>Hasta 24 cuotas fijas</p>
+              </span>
+              <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/mastercard.png" alt="mastercard">
+              </span>
+              <span class="textomedios">
+                <h5><b>Tarjeta MasterCard</b></h5>
+                <p>Hasta 24 cuotas fijas</p>
+              </span> <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/amex.png" alt="American">
+              </span> <span class="textomedios">
+                <h5><b>Tarjeta American Express</b></h5>
+                <p>Hasta 24 cuotas fijas</p>
+              </span> <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/cabal.png" alt="Cabal">
+              </span>
+              <span class="textomedios">
+                <h5><b>Tarjeta Cabal</b></h5>
+                <p>Hasta 24 cuotas Fijas</p>
+              </span> <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/nativa.jpg" alt="Nativa">
+              </span>
+              <span class="textomedios">
+                <h5><b>Tarjeta Nativa</b></h5>
+                <p>Hasta 24 cuotas fijas </p>
+              </span> <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/pagofacil.png" alt="Pago-facil">
+              </span>
+              <span class="textomedios">
+                <h5><b>Pago Facil</b></h5>
+                <p>Red Pago Facil de todo el país!</p>
+              </span> <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/mercadopago.png" alt="Mercado-pago">
+              </span>
+              <span class="textomedios">
+                <h5><b>MercadoPago</b></h5>
+                <p>MercadoPago</p>
+              </span>
+              <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+          <div class="md-pago">
+            <div class="fila-pago">
+              <span class="logos-bancos">
+                <img src="../TP-page/assets/img/transferencias-ban.png" alt="transfer">
+              </span>
+              <span class="textomedios">
+                <h5><b>Transferencias Bancarias</b></h5>
+                <p>Transferencias Bancarias</p>
+              </span>
+              <span class="vercondicion">
+                <p>Ver condiciones</p>
+              </span>
+            </div>
+            <hr>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </main>
   <!--********-->
 
@@ -186,27 +397,46 @@
       <p>Calle falsa 123,<br>CABA, Argentina</p>
       <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
     </div>
+  </footer>
+
+
+
 
   <script>
- //script de botones, pagina destiny.html
-const cards = document.querySelector(".cards");
-const prevButton = document.querySelector(".prev-button");
-const nextButton = document.querySelector(".next-button");
-let position = 0;
- 
-nextButton.addEventListener("click", () => {
-    if (position > -(cards.scrollWidth - cards.offsetWidth)) {
-      position -= 1000;
-     cards.style.transform = `translateX(${position}px)`;
-    }
-})
- 
-prevButton.addEventListener("click", () => {
-  if (position < 0) {
-    position += 1000;
-    cards.style.transform = `translateX(${position}px)`}
-});
-</script>
+    //script de botones, pagina destiny.html
+    const cards = document.querySelector(".cards");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+    let position = 0;
+
+    nextButton.addEventListener("click", () => {
+      if (position > -(cards.scrollWidth - cards.offsetWidth)) {
+        position -= 1000;
+        cards.style.transform = `translateX(${position}px)`;
+      }
+    })
+
+    prevButton.addEventListener("click", () => {
+      if (position < 0) {
+        position += 1000;
+        cards.style.transform = `translateX(${position}px)`
+      }
+    });
+
+    // para pagina oculta de medios de pagos
+    //funcion que muestra la pagina oculta
+    let mostrarModal = () => {
+      var modal = document.getElementById("modal");
+      modal.classList.remove("oculto");
+    };
+
+    let cerrarModal = () => {
+      var modal = document.getElementById("modal");
+      modal.classList.add("oculto");
+    };
+
+  </script>
 
 </body>
+
 </html>

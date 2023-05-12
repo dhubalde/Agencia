@@ -3,11 +3,13 @@
 
 /* letra titulo form destino */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/*letras carteles*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 
 *{
     margin: 0; /*le saca el margen a todo*/
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 html{
@@ -16,12 +18,11 @@ html{
 
 body{
   font-family: 'Montserrat', sans-serif;
-    /* font-family: 'roboto', sans-serif; */
-    margin: 0; /*margen*/
+  margin: 0;
     /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+	background-size: 100%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
@@ -54,8 +55,9 @@ body{
 
 
 header {
+
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 20px;
     height: 150px;
@@ -70,6 +72,7 @@ header {
     display: flex;
     flex-direction: column;
    align-items: center;
+
   }
 
   .logo p{
@@ -101,15 +104,11 @@ header {
   }
   
   nav a {
-    /* padding: 5px 12px; */
+    padding: 5px 12px;
     text-decoration: none;
-    /* font-weight: bold; */
+    font-weight: bold;
     color: var(--color-white);
     /* font-size: 15px; */
-
-    font-weight: 300;
-    /* margin-bottom: 30px; */
-    letter-spacing: 1px;
   }
 
   header a{
@@ -155,24 +154,20 @@ header a:hover{
 
 .container-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-image: url(https://images.unsplash.com/photo-1504473247222-c670cdfed081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80); */
     background-image: url(https://plus.unsplash.com/premium_photo-1679830513990-82a4280f41b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
 
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
    
-
-    padding: 20px 0 20px 0;
+    padding: 25px 0 20px 0;
     opacity: 0.8;
 
   }
 
   .form-destino {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     height: 15vh;
@@ -181,24 +176,10 @@ header a:hover{
 
   }
 
-
-  .form-destino h2{
-    font-family: var(--second-font);
-    /* font-family: 'Monoton', cursive; */
-    font-size: 55px;
-    margin-right: 25px;
-    /* color:var(--color-white); */
-
-    -webkit-text-stroke: 0.5px var(--color-white);
-    color: transparent;
-
-  }
-  
-
   .form-group {
     display: flex;
     flex-direction: column;
-    margin: 5px 5px 0 5px;
+    margin: 10px 150px 0 10px;
 
   }
 
@@ -242,6 +223,91 @@ header a:hover{
 
   /* En este ejemplo, utilizamos display: flex en el contenedor principal para centrar el formulario en la página y justify-content: center y align-items: center para alinearlo horizontal y verticalmente. Luego, aplicamos display: flex y flex-direction: column al formulario y display: flex y flex-direction: row a cada grupo de elementos para alinearlos vertical y horizontalmente, respectivamente. */
 
+
+  /*----medios de pago*/
+
+  .pagos-container{
+    width: 75%;
+    background-color:var(--color-white);
+    display: flex;
+
+    padding: 0px;
+    padding-bottom: 5px;
+    box-shadow: 0 1px 2px 0 rgba(23,35,44,0.24), 0 -1px 5px 0 rgba(23,35,44,0.2);
+
+
+    flex-direction: column;
+    justify-content: center;
+
+    margin: auto;
+
+  }
+
+  .medios-pagos{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 10px;
+
+  
+  }
+
+  .title-medios{
+    padding: 15px 15px;
+  }
+
+  .title-medios h2{
+    font-size: 27px;
+    color: var(--second-color);
+    display: inline-block;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  .title-medios p{
+    font-size: 15px;
+    color: #484848;
+    float: right;
+    margin: 0px;
+    padding-top: 10px;
+    font-style: italic;
+  }
+
+
+  .altura-logo{
+    display: block;
+    height: 30px;
+}
+
+.pago-logo img{
+  width: 60px;
+  margin: auto;
+  display: block;
+}
+
+.pago-logo p{
+  text-align: center;
+  display: block;
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+.btn-pagos{
+  margin: 10px 0px 25px 0px;
+}
+  
+.btn-pagos button{
+  color: var(--second-color);
+  background: #fff;
+  padding: 12px 20px;
+  border: 1px solid var(--second-color);
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  padding-top: 10px;
+}
 
   /*tarjetas de destinos*/
 
@@ -442,57 +508,75 @@ right: 10px;
 /* ***footer*** */
 
 footer {
-    margin-top: 150px;
-    width: 100%;
-    padding: 100px 15%;
-    color: aliceblue;
-    display: flex;
+  margin-top: 150px;
+   width: 100%;
+   height: 40vh;
+  color: aliceblue;
+  display: flex;
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
+  background-position: center;
+  background-size: cover;
 
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
-    background-position: center;
-    background-size: cover;
 }
+
 
 footer div{
-  text-align: center;
+text-align: center;
+margin-top: 15vh;
 }
+
 
 footer div h3{
-  font-weight: 300;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-.col-1 a, .col-2 a, .col-3 a{
-  display: block;
-  text-decoration: none;
-  color: aliceblue;
-  margin:10px 0 10px 0;
+font-weight: 300;
+letter-spacing: 1px;
+margin-bottom: 20px;
 }
 
 .col-2{
   flex-grow: 1;
 }
 
-.social-icons{
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
+.col-1 a, .col-2 a, .col-3 a{
+display: block;
+text-decoration: none;
+color: aliceblue;
+margin:10px 0 10px 0;
+}
+
+.col-1{
+  margin-left: 30vh;
 
 }
+
+.col-1 a:hover{
+  color: var(--other-color);
+}
+
+.col-3{
+  margin-right: 30vh;
+}
+
+
+.social-icons{
+margin-top: 40px;
+display: flex;
+justify-content: center;
+
+}
+
 
 .social-icons a i{
- 
-  font-size: 45px;
-  margin: 10px;
-  cursor: pointer;
-}
+
+font-size: 45px;
+margin: 10px;
+cursor: pointer;
+} 
 
 /* ******** */
 
 /* header */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     header {
       flex-direction: column;
       align-items: center;
@@ -515,5 +599,107 @@ footer div h3{
     nav li {
       margin: 10px 0;
     }
+  } */
+
+  /* pagina oculta de medios de pagos */
+
+  #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    z-index: 9999;
+    text-align: center;
+
+    color: #484848;
+  }
+  
+  #modal.oculto {
+    display: none;
+  }
+  
+
+  .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .cerrar:hover,
+  .cerrar:focus {
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
   }
 
+.titulos-pago h3{
+  color: #05a08d;
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 600;
+    margin: 30px 0 30px 0;
+}
+
+.md-pago{
+
+  margin-bottom: 50px;
+
+}
+
+.medio-pago{
+
+     margin: 0px;
+    padding: 0px !important;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+.fila-pago{
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-left:15%;
+}
+
+.fila-pago hr{
+  border: 1px solid var(--second-color);
+  margin: 10px 0;
+}
+
+
+.logos-bancos{
+  display: inline-block;
+    width: 100px;
+}
+
+.logos-bancos img{
+  width: 80px;
+}
+
+.textomedios h5 {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.vercondicion {
+  float: right;
+  cursor: pointer;
+  position: relative;
+}
+
+.vercondicion p{
+  text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
