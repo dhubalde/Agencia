@@ -1,30 +1,12 @@
-// array con todos los elementos del formulario //
-// var inputs = document.getElementsByClassName('form_input');
+//validacion con jquery.validation 
 
-//se recorre el array//
-// desde el elemento 0, chequea la cantidad de elementos, contador acumula//
-//keyup: es cuando se suelta una tecla, evalua que el input este lleno//
-// for(var i=0; i < inputs.length; i++ ){
-//     inputs[i].addEventListener('keyup', function(){ 
-//         if (this.value.length>=1) {
-//             this.nextElementSibling.classList.add('fijar')
-//         }else {
-//             this.nextElementSibling.classList.remove('fijar')
-//         }
-//     });
-// }
-
-
-
-/**------------------------------------------------------------------ */
 // funcion que impide el envio del formulario, solo para usar en desarrollo
-
 // jQuery.validator.setDefaults({
 //   debug: true,
 //   success: "valid",
 // });
 
-// validacion del formulario con jquery.validation
+// funcion de jquery.validation
 $(document).ready(function() {
     $("#contact").validate({
         // errorPlacement: function(error, element) {
@@ -123,9 +105,6 @@ $(document).ready(function() {
 });
 
 
-
-
-
 //
 /* funcion jquery que permite la seleccion solo de un check */
 $(document).ready(function () {
@@ -134,3 +113,4 @@ $(document).ready(function () {
     $(".form-check").not(this).prop("checked", false);
   });
 });
+
