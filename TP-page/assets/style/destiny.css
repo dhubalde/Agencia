@@ -12,19 +12,16 @@
     box-sizing:border-box;
 }
 
-html{
+/* html{
     scroll-behavior: smooth;
-}
+} */
 
 body{
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
-
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 100%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+  background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+	background-size: 500%;
+	animation: gradient 10s infinite;
+	/* height: 100vh; */
 }
 
 @keyframes gradient {
@@ -126,7 +123,7 @@ header a:hover{
 
 /* estilo de formulario destino */
 
-.content-title{
+/* .content-title{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -219,7 +216,7 @@ header a:hover{
     color:var(--color-white);
     
 
-  }
+  } */
 
   /* En este ejemplo, utilizamos display: flex en el contenedor principal para centrar el formulario en la página y justify-content: center y align-items: center para alinearlo horizontal y verticalmente. Luego, aplicamos display: flex y flex-direction: column al formulario y display: flex y flex-direction: row a cada grupo de elementos para alinearlos vertical y horizontalmente, respectivamente. */
 
@@ -313,195 +310,167 @@ header a:hover{
 
   /*tarjetas de destinos*/
 
-.container-cards{
-    /* display: flex;
-    justify-content: center;
-    margin-top: 10vh; */
-   /* margin-bottom: 20vh; */
-    /* background-color:var(--second-color); */
-    /* width: 100%;
-    height: 600px; */
+  .img-slider{
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 50px auto;
+  background: #1d212b7f;
+
 }
 
+.img-slider .slide{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
 
-/* .gallery {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  } */
-  
-  .cards {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: transform 0.3s ease-in-out;
-    font-family: var(--principal-font)
+.img-slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.img-slider .slide img{
+  width: 800px;
+  height: 500px;
+  z-index: 1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-slider .slide .info{
+  position: absolute;
+  top: 0;
+  padding: 15px 30px;
+}
+
+.img-slider .slide .info h2{
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.img-slider .slide .info p{
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.img-slider .navigation{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn{
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.img-slider .navigation .btn.active{
+  background: #2696E9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 820px){
+  .img-slider{
+    width: 600px;
+    height: 375px;
   }
 
-  .card-1 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f7/05/33/valle-de-la-muerte.jpg?w=1200&h=-1&s=1);
-    background-size: cover;
-    background-position: center;
+  .img-slider .slide .info{
+    padding: 10px 25px;
   }
 
-  .card-2 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/fc/b4/ca/brasil.jpg?w=1200&h=-1&s=1);
-    background-size: cover;
-    background-position: center;
-   
-
+  .img-slider .slide .info h2{
+    font-size: 35px;
   }
 
-  .card-3 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/d4/2f/ce/port-everglades-transfers.jpg?w=1200&h=-1&s=1);
-    background-size: cover;
-    background-position: center;
-   
-
+  .img-slider .slide .info p{
+    width: 70%;
+    font-size: 15px;
   }
 
-  .card-4 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://content.r9cdn.net/rimg/dimg/c1/ce/f9cd2e90-city-35003-167377d30d0.jpg?width=1366&height=768&xhint=2806&yhint=2135&crop=true);
-    background-size: cover;
-    background-position: center;
-    
-
+  .img-slider .navigation{
+    bottom: 25px;
   }
 
-  .card-5 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
+  .img-slider .navigation .btn{
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+  }
+}
 
-    background-image: url(https://viajes.nationalgeographic.com.es/medio/2017/06/19/gettyimages-565927847_5b95bede.jpg);
-    background-size: cover;
-    background-position: center;
-    
-
+@media (max-width: 620px){
+  .img-slider{
+    width: 400px;
+    height: 250px;
   }
 
-
-  .card-6 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2013/04/Paris.jpg?w=1024&quality=50&strip=all&ssl=1);
-    background-size: cover;
-    background-position: center;
-    
+  .img-slider .slide .info{
+    padding: 10px 20px;
   }
 
-  .card-7 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://prismic-io.s3.amazonaws.com/siestacampers/5e394358-0de7-48d3-87e1-c392e6cd762f_torre-de-belem-puesta-de-sol.jpg);
-    background-size: cover;
-    background-position: center;
-    
-
+  .img-slider .slide .info h2{
+    font-size: 30px;
   }
 
-  .card-8 {
-    width: 350px;
-    height: 350px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-image: url(https://www.viajaraitalia.com/wp-content/uploads/2012/05/Coliseo-de-Roma-abril-2007-760x500.jpg);
-    background-size: cover;
-    background-position: center;
-    
-
+  .img-slider .slide .info p{
+    width: 80%;
+    font-size: 13px;
   }
 
-  .cards h2{
-    text-align: center;
-    /* color: #FC2947; */
-    font-size: 55px;
-    background-color: #00000059;
-    -webkit-text-stroke: 0.5px var(--color-white);
-    color: transparent;
-
+  .img-slider .navigation{
+    bottom: 15px;
   }
 
-  .list-card{
-    color: var(--color-white);
+  .img-slider .navigation .btn{
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 420px){
+  .img-slider{
+    width: 320px;
+    height: 200px;
+  }
+
+  .img-slider .slide .info{
+    padding: 5px 10px;
+  }
+
+  .img-slider .slide .info h2{
     font-size: 25px;
-    background-color: #00000059;
   }
 
-.prev-button,
-.next-button {
-position: absolute;
-top: 50%;
-transform: translateY(160px);
-width: 150px;
-height: 10px;
-background-color:var(--second-color);
-border: 1px solid var(--second-color);
-/* border-radius: 50%; */
-/* font-size: 24px; */
-/* line-height: 1; */
-/* cursor: pointer; */
-z-index: 1;
-}
+  .img-slider .slide .info p{
+    width: 90%;
+    font-size: 11px;
+  }
 
-.prev-button {
-left: 10px;
+  .img-slider .navigation{
+    bottom: 10px;
+  }
 }
+      
 
-.next-button {
-right: 10px;
-}
 
 /* ***main*** */
 

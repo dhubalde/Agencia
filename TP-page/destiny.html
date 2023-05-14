@@ -167,7 +167,7 @@
 
     <!-- ***********tarjetas destinos************ -->
 
-    <div class="content-title">
+    <!-- <div class="content-title">
       <div class="hr"></div>
       <span>Nuestros destinos, ¿Cual es el tuyo?</span>
       <div class="hr"></div>
@@ -236,10 +236,92 @@
           <button class="next-button"></button>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--  -->
-    <!-- pagina oculta de medios de pagos -->
 
+    <div class="img-slider">
+
+      <div class="slide active">
+        <img src="/TP-page/assets/img/brasil800x500.jpg" alt="Brasil">
+        <div class="info">
+          <h2>BRASIL</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/chile800x500.jpg" alt="Chile">
+        <div class="info">
+          <h2>CHILE</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/miami800x500.jpg" alt="Miami">
+
+        <div class="info">
+          <h2>miami, Estados unidos</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/mexico800x500.jpg" alt="Mexico">
+        <div class="info">
+          <h2>Mexico</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/barcelona800x500.jpg" alt="Barcelona">
+        <div class="info">
+          <h2>Barcelona</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/paris800x500.jpg" alt="Paris">
+        <div class="info">
+          <h2>Paris</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/lisboa800x500.jpg" alt="lisboa">
+        <div class="info">
+          <h2>Lisboa, Portugal</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/TP-page/assets/img/roma800x500.jpg" alt="Roma">
+        <div class="info">
+          <h2>Roma, Italia</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- pagina oculta de medios de pagos -->
     <div id="modal" class="oculto">
 
       <!-- cruz de cierre -->
@@ -380,7 +462,6 @@
         </div>
       </div>
     </div>
-
   </main>
   <!--********-->
 
@@ -408,40 +489,60 @@
     </div>
   </footer>
 
-  <script>
-    //script de botones, pagina destiny.html
-    const cards = document.querySelector(".cards");
-    const prevButton = document.querySelector(".prev-button");
-    const nextButton = document.querySelector(".next-button");
-    let position = 0;
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
 
-    nextButton.addEventListener("click", () => {
-      if (position > -(cards.scrollWidth - cards.offsetWidth)) {
-        position -= 1000;
-        cards.style.transform = `translateX(${position}px)`;
-      }
-    })
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
 
-    prevButton.addEventListener("click", () => {
-      if (position < 0) {
-        position += 1000;
-        cards.style.transform = `translateX(${position}px)`
-      }
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
     });
 
-    // para pagina oculta de medios de pagos
-    //funcion que muestra la pagina oculta
-    let mostrarModal = () => {
-      var modal = document.getElementById("modal");
-      modal.classList.remove("oculto");
-    };
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
 
-    let cerrarModal = () => {
-      var modal = document.getElementById("modal");
-      modal.classList.add("oculto");
-    };
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
 
-  </script>
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
 
 </body>
 
