@@ -14,13 +14,22 @@
 
 * Trabajando en:  *validacion de formularios, paquetes de viajes, otras correcciones.*
 
----
-### 30/04 -Griselda-
+### 30/04 
 
 * Cambios de estilos y correcciones en pagina destiny.html.
 * Se valida formulario de contacto con jquery.validations.
 * Se realiza cambio de estilo en formulario.
+
+### 14/05 
+
+* Se agrega banner de medios de pagos version 0.1
+* Se cambia tarjetas de destinos por un slideshow 
+* se repara footer en destiny.html
+* Cambios menores en background de body.
+* Trabajando en: *finalizacion del banner de medios de pagos, slideshow, fuentes,formulario de destino, otras correcciones*
+
 ---
+
 ### 11/05 - Dalila -
 * Actualizacion y correciones de menu y footer index.html
 * Actualizacion y correciones de menu y footer main.css
