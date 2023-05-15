@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style/destiny.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
   <title>Grupo 17!</title>
 </head>
-
 <body>
   <header>
     <div class="logo">
@@ -37,9 +35,13 @@
     <div class="container-form">
 
       <form class="form-destino">
-        <!-- <h2>¿ADONDE VAS A IR?</h2> -->
-        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i>
-            Origen:</label>
+
+        <div class="form-group">
+
+          <label for="origen">
+            <i class="fa-solid fa-location-dot fa-lg" style="color:#ba2334"></i>
+            Origen:
+          </label>
           <select id="origen" name="origen">
             <option value="madrid">Santiago de chile (Chile)</option>
             <option value="barcelona">Valparaiso (Chile)</option>
@@ -61,7 +63,7 @@
         </div>
 
         <div class="form-group">
-          <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Destino:</label>
+          <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#ba2334"></i> Destino:</label>
           <select id="destino" name="destino">
             <option value="madrid">Santiago de chile (Chile)</option>
             <option value="barcelona">Valparaiso (Chile)</option>
@@ -83,20 +85,21 @@
         </div>
 
         <div class="form-group">
-          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Ida</label>
+          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#ba2334"></i> Fecha:Ida</label>
           <input type="date" id="fecha" name="fecha">
         </div>
         <div class="form-group">
-          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Vuelta</label>
+          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#ba2334"></i> Fecha:Vuelta</label>
           <input type="date" id="fecha" name="fecha">
         </div>
         <div class="form-group">
-          <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #270570"></i> Pasajeros:</label>
+          <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #ba2334"></i> Pasajeros:</label>
           <input type="number" id="pasajeros" name="pasajeros">
         </div>
         <div class="form-group">
           <button type="submit" class="btn-form">Buscar</button>
         </div>
+
       </form>
     </div>
     <br>
@@ -112,221 +115,169 @@
       <div class="medios-pagos">
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/visa.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/visa.png" alt="visa"></span>
           <p>12 cuotas</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/mastercard.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/mastercard.png" alt="martercard"></span>
           <p>12 cuotas</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/amex.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/amex.png" alt="amexpress"></span>
           <p>12 cuotas</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/diners.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/diners.png" alt="diners"></span>
           <p>12 cuotas</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/cabal.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/cabal.png" alt="cabal"></span>
           <p>12 cuotas</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/transferencias-ban.png" alt=""
+          <span class="altura-logos"><img src="/assets/img/transferencias-ban.png" alt="transferencia"
               style="width: 40px;"></span>
           <p style="margin-left: -8px;">Transferencias</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/pagofacil.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/pagofacil.png" alt="pago-facil"></span>
           <p>Pago Fácil</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/pagomiscuentas.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/pagomiscuentas.png" alt="pagomiscuenta"></span>
           <p style="margin-left: -8px;">PagoMisCuentas</p>
         </div>
 
         <div class="pago-logo">
-          <span class="altura-logos"><img src="../TP-page/assets/img/mercadopago.png" alt=""></span>
+          <span class="altura-logos"><img src="/assets/img/mercadopago.png" alt="mercadopago"></span>
           <p>MercadoPago</p>
         </div>
-
+        
         <div class="btn-pagos">
           <button>Ver medios de pago</button>
         </div>
 
       </div>
-
     </div>
 
     <!-- ***********tarjetas destinos************ -->
 
-    <!-- <div class="content-title">
-      <div class="hr"></div>
-      <span>Nuestros destinos, ¿Cual es el tuyo?</span>
-      <div class="hr"></div>
+    <div class="slider">
+      <!-- fade css -->
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>BRASIL</h1>
+          <ul class="list-card">
+            <li>São Paulo</li>
+            <li>Rio de Janeiro</li>
+            <li>Brasília</li>
+            <li>Puerto de Santos</li>
+          </ul>
+        </div>
+        <img src="/assets/img/brasil800x500.jpg" style="width: 100%; height: 100%;" alt="brasil">
+      </div>
+      
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>CHILE</h1>
+          <ul class="list-card">
+            <li>Santiago de Chile</li>
+            <li>Valparaiso</li>
+            <li>Antofagasta</li>
+            <li>Punta Arenas</li>
+</div>
+        <img src="/assets/img/chile800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+      
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>MEXICO</h1>
+          <ul class="list-card">
+            <li>Guadalajara</li>
+            <li>Ciudad de México</li>
+            <li>Acapulco, Guerrero</li>
+          </ul>
+          
+        </div>
+        <img src="/assets/img/mexico800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+      
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>MIAMI, Estados Unidos</h1>
+          <ul class="list-card">
+            <li>Florida</li>
+          </ul>
+        </div>
+        <img src="/assets/img/miami800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+      
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>BARCELONA, ESPAÑA</h1>
+          <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+        </div>
+        <img src="/assets/img/barcelona800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+  
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>ROMA, ITALIA</h1>
+          <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+        </div>
+        <img src="/assets/img/roma800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+  
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>PARIS, FRANCIA</h1>
+          <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+        </div>
+        <img src="/assets/img/paris800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+  
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>LISBOA, PORTUGAL</h1>
+          <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+        </div>
+        <img src="/assets/img/lisboa800x500.jpg" style="width: 100%; height: 100%;">
+      </div>
+  
+      <!-- /fade css -->
+      
+      <!-- onclick js -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      <div class="dotsbox" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div>
+      <!-- /onclick js -->
     </div>
 
-    <section id="destinos">
-      <div class="container-cards">
-        <div class="gallery">
-          <div class="cards">
-
-            <div class="card-1">
-              <h2>CHILE</h2>
-              <ul class="list-card">
-                <li>Santiago de Chile</li>
-                <li>Valparaiso</li>
-                <li>Antofagasta</li>
-                <li>Punta Arenas</li>
-              </ul>
-            </div>
-
-            <div class="card-2">
-              <h2>BRASIL</h2>
-              <ul class="list-card">
-                <li>São Paulo</li>
-                <li>Rio de Janeiro</li>
-                <li>Brasília</li>
-                <li>Puerto de Santos</li>
-              </ul>
-            </div>
-
-            <div class="card-3">
-              <h2>MIAMI,ESTADOS UNIDOS</h2>
-              <ul class="list-card">
-                <li>Florida</li>
-              </ul>
-            </div>
-
-            <div class="card-4">
-              <h2>MEXICO</h2>
-              <ul class="list-card">
-                <li>Guadalajara</li>
-                <li>Ciudad de México</li>
-                <li>Acapulco, Guerrero</li>
-                <li></li>
-              </ul>
-            </div>
-
-            <div class="card-5">
-              <h2>BARCELONA, ESPAÑA</h2>
-            </div>
-
-            <div class="card-6">
-              <h2>PARIS, FRANCIA</h2>
-            </div>
-
-            <div class="card-7">
-              <h2>LISBOA, PORTUGAL</h2>
-            </div>
-
-            <div class="card-8">
-              <h2>ROMA, ITALIA</h2>
-            </div>
-
-        </div>
-          <button class="prev-button"></button>
-          <button class="next-button"></button>
-        </div>
-      </div>
-    </section> -->
-    <!--  -->
-
-    <div class="img-slider">
-
-      <div class="slide active">
-        <img src="/TP-page/assets/img/brasil800x500.jpg" alt="Brasil">
-        <div class="info">
-          <h2>BRASIL</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/chile800x500.jpg" alt="Chile">
-        <div class="info">
-          <h2>CHILE</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/miami800x500.jpg" alt="Miami">
-
-        <div class="info">
-          <h2>miami, Estados unidos</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/mexico800x500.jpg" alt="Mexico">
-        <div class="info">
-          <h2>Mexico</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/barcelona800x500.jpg" alt="Barcelona">
-        <div class="info">
-          <h2>Barcelona</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/paris800x500.jpg" alt="Paris">
-        <div class="info">
-          <h2>Paris</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/lisboa800x500.jpg" alt="lisboa">
-        <div class="info">
-          <h2>Lisboa, Portugal</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/TP-page/assets/img/roma800x500.jpg" alt="Roma">
-        <div class="info">
-          <h2>Roma, Italia</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-
-      <div class="navigation">
-        <div class="btn active"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- pagina oculta de medios de pagos -->
+    <!--**ventana modal de medios de pagos** -->
+    
     <div id="modal" class="oculto">
 
       <!-- cruz de cierre -->
       <span class="cerrar" onclick="cerrarModal()"><i class="fa-regular fa-rectangle-xmark fa-xl"
-          style="color: #000000;"></i></span>
+          style="color: #000000;"></i>
+      </span>
 
       <div class="nue-medio">
 
@@ -340,14 +291,16 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/visa.png" alt="visa">
+                <img src="/assets/img/visa.png" alt="visa">
               </span>
               <span class="textomedios">
                 <h5><b>Tarjetas Visa </b></h5>
                 <p>Hasta 24 cuotas fijas</p>
               </span>
               <span class="vercondicion">
-                <p>Ver condiciones</p>
+
+                <a href="https://www.visa.com.ar/support/consumer/visa-rules.html" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
@@ -356,13 +309,15 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/mastercard.png" alt="mastercard">
+                <img src="assets/img/mastercard.png" alt="mastercard">
               </span>
               <span class="textomedios">
                 <h5><b>Tarjeta MasterCard</b></h5>
                 <p>Hasta 24 cuotas fijas</p>
-              </span> <span class="vercondicion">
-                <p>Ver condiciones</p>
+              </span>
+              <span class="vercondicion">
+                <a href="https://www.masterconsultas.com.ar/tarjetas.html" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
@@ -371,12 +326,14 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/amex.png" alt="American">
+                <img src="assets/img/amex.png" alt="American">
               </span> <span class="textomedios">
                 <h5><b>Tarjeta American Express</b></h5>
                 <p>Hasta 24 cuotas fijas</p>
-              </span> <span class="vercondicion">
-                <p>Ver condiciones</p>
+              </span>
+               <span class="vercondicion">
+                <a href="https://www.americanexpress.com/ar/ayuda/index.html?inav=ar_utility_contact" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
@@ -385,13 +342,15 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/cabal.png" alt="Cabal">
+                <img src="/assets/img/cabal.png" alt="Cabal">
               </span>
               <span class="textomedios">
                 <h5><b>Tarjeta Cabal</b></h5>
                 <p>Hasta 24 cuotas Fijas</p>
-              </span> <span class="vercondicion">
-                <p>Ver condiciones</p>
+              </span>
+               <span class="vercondicion">
+                <a href="https://www.cabal.coop/personas/tarjeta-de-credito" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
@@ -400,13 +359,14 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/nativa.jpg" alt="Nativa">
+                <img src="/assets/img/nativa.jpg" alt="Nativa">
               </span>
               <span class="textomedios">
                 <h5><b>Tarjeta Nativa</b></h5>
                 <p>Hasta 24 cuotas fijas </p>
               </span> <span class="vercondicion">
-                <p>Ver condiciones</p>
+                <a href="https://www.nativanacion.com.ar/" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
@@ -415,13 +375,15 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/pagofacil.png" alt="Pago-facil">
+                <img src="/assets/img/pagofacil.png" alt="Pago-facil">
               </span>
               <span class="textomedios">
                 <h5><b>Pago Facil</b></h5>
                 <p>Red Pago Facil de todo el país!</p>
-              </span> <span class="vercondicion">
-                <p>Ver condiciones</p>
+              </span>
+               <span class="vercondicion">
+                <a href="https://www.pagofacil.net/terminos-y-condiciones" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
@@ -430,35 +392,37 @@
           <div class="md-pago">
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/mercadopago.png" alt="Mercado-pago">
+                <img src="/assets/img/mercadopago.png" alt="Mercado-pago">
               </span>
               <span class="textomedios">
                 <h5><b>MercadoPago</b></h5>
                 <p>MercadoPago</p>
               </span>
               <span class="vercondicion">
-                <p>Ver condiciones</p>
+                <a href="https://www.mercadopago.com.ar/ayuda/terminos-y-condiciones-de-rendimientos_4070" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
           </div>
 
           <div class="md-pago">
+
             <div class="fila-pago">
               <span class="logos-bancos">
-                <img src="../TP-page/assets/img/transferencias-ban.png" alt="transfer">
+                <img src="/assets/img/transferencias-ban.png" alt="transfer">
               </span>
               <span class="textomedios">
                 <h5><b>Transferencias Bancarias</b></h5>
                 <p>Transferencias Bancarias</p>
               </span>
               <span class="vercondicion">
-                <p>Ver condiciones</p>
+                <a href="https://www.bcra.gob.ar/Saber_es_central/transferencias-bancarias-inmediatas-y-gratuitas.html" target="_blank">Ver condiciones</a>
+                <!-- <p>Ver condiciones</p> -->
               </span>
             </div>
             <hr>
           </div>
-
         </div>
       </div>
     </div>
@@ -489,60 +453,67 @@
     </div>
   </footer>
 
-  <script type="text/javascript">
-    var slides = document.querySelectorAll('.slide');
-    var btns = document.querySelectorAll('.btn');
-    let currentSlide = 1;
+  <script>
+  
+const myslide = document.querySelectorAll('.myslide'),
+dot = document.querySelectorAll('.dot');
+let counter = 1;
+slidefun(counter);
 
-    // Javascript for image slider manual navigation
-    var manualNav = function(manual){
-      slides.forEach((slide) => {
-        slide.classList.remove('active');
+let timer = setInterval(autoSlide, 8000);
+function autoSlide() {
+	counter += 1;
+	slidefun(counter);
+}
+function plusSlides(n) {
+	counter += n;
+	slidefun(counter);
+	resetTimer();
+}
+function currentSlide(n) {
+	counter = n;
+	slidefun(counter);
+	resetTimer();
+}
+function resetTimer() {
+	clearInterval(timer);
+	timer = setInterval(autoSlide, 8000);
+}
 
-        btns.forEach((btn) => {
-          btn.classList.remove('active');
-        });
-      });
+function slidefun(n) {
+	
+	let i;
+	for(i = 0;i<myslide.length;i++){
+		myslide[i].style.display = "none";
+	}
+	for(i = 0;i<dot.length;i++) {
+		dot[i].className = dot[i].className.replace(' active', '');
+	}
+	if(n > myslide.length){
+	   counter = 1;
+	   }
+	if(n < 1){
+	   counter = myslide.length;
+	   }
+	myslide[counter - 1].style.display = "block";
+	dot[counter - 1].className += " active";
+}
 
-      slides[manual].classList.add('active');
-      btns[manual].classList.add('active');
-    }
+/*apertura y cierre de de pagina oculta medios-de-pagos*/
 
-    btns.forEach((btn, i) => {
-      btn.addEventListener("click", () => {
-        manualNav(i);
-        currentSlide = i;
-      });
-    });
+var modal = document.getElementById('modal');
+var closeBtn = document.getElementsByClassName("cerrar")[0];
 
-    // Javascript for image slider autoplay navigation
-    var repeat = function(activeClass){
-      let active = document.getElementsByClassName('active');
-      let i = 1;
+//funcion que convierte display en block para que deje de ser oculto
+let mostrarModal=()=> modal.style.display = "block";
 
-      var repeater = () => {
-        setTimeout(function(){
-          [...active].forEach((activeSlide) => {
-            activeSlide.classList.remove('active');
-          });
+//funcion que vuelve a convertir el display del elemento en none, ocultandolo
+let cerrarModal=()=>modal.style.display = "none";
 
-        slides[i].classList.add('active');
-        btns[i].classList.add('active');
-        i++;
+//cierra la pagina oculta con click en cruz
+closeBtn.onclick = ()=>cerrarModal()
 
-        if(slides.length == i){
-          i = 0;
-        }
-        if(i >= slides.length){
-          return;
-        }
-        repeater();
-      }, 10000);
-      }
-      repeater();
-    }
-    repeat();
-    </script>
+</script>
 
 </body>
 
