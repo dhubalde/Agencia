@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style/destiny.css">
+  <!--  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
+  
   <title>Grupo 17!</title>
 </head>
 <body>
@@ -36,73 +39,47 @@
 
       <form class="form-destino">
 
-        <div class="form-group">
+        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i>
+          Origen:</label>
+        <select id="origen" name="origen">
+          <option value="none" selected disabled hidden>Seleccione Origen</option>
+        </select>
+      </div>
 
-          <label for="origen">
-            <i class="fa-solid fa-location-dot fa-lg" style="color:#ba2334"></i>
-            Origen:
-          </label>
-          <select id="origen" name="origen">
-            <option value="madrid">Santiago de chile (Chile)</option>
-            <option value="barcelona">Valparaiso (Chile)</option>
-            <option value="valencia">Antofogasta(Chile)</option>
-            <option value="valencia">Punta Arenas(Chile)</option>
-            <option value="valencia">San Pablo(Brasil)</option>
-            <option value="valencia">Rio de Janeiro(Brasil)</option>
-            <option value="valencia">Brasilia(Brasil)</option>
-            <option value="valencia">Puerto de Santos(Brasil)</option>
-            <option value="valencia">Miami, Florida(EEUU)</option>
-            <option value="valencia">Guadalajara(Mexico)</option>
-            <option value="valencia">Acapulco, Guerrero(Mexico)</option>
-            <option value="valencia">Ciudad de Mexico(Mexico)</option>
-            <option value="valencia">Barcelona(España)</option>
-            <option value="valencia">Paris(Francia)</option>
-            <option value="valencia">Liaboa(Portugal)</option>
-            <option value="valencia">Roma(Italia)</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Destino:</label>
+        <select id="destino" name="destino">
+          <option value="none" selected disabled hidden>Seleccione Destino</option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#ba2334"></i> Destino:</label>
-          <select id="destino" name="destino">
-            <option value="madrid">Santiago de chile (Chile)</option>
-            <option value="barcelona">Valparaiso (Chile)</option>
-            <option value="valencia">Antofogasta(Chile)</option>
-            <option value="valencia">Punta Arenas(Chile)</option>
-            <option value="valencia">San Pablo(Brasil)</option>
-            <option value="valencia">Rio de Janeiro(Brasil)</option>
-            <option value="valencia">Brasilia(Brasil)</option>
-            <option value="valencia">Puerto de Santos(Brasil)</option>
-            <option value="valencia">Miami, Florida(EEUU)</option>
-            <option value="valencia">Guadalajara(Mexico)</option>
-            <option value="valencia">Acapulco, Guerrero(Mexico)</option>
-            <option value="valencia">Ciudad de Mexico(Mexico)</option>
-            <option value="valencia">Barcelona(España)</option>
-            <option value="valencia">Paris(Francia)</option>
-            <option value="valencia">Liaboa(Portugal)</option>
-            <option value="valencia">Roma(Italia)</option>
-          </select>
-        </div>
+      
+      
+      <div class="form-group">
+        <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Ida</label>
+        <input type="date" id="fecha" name="fecha">
+      </div>
 
-        <div class="form-group">
-          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#ba2334"></i> Fecha:Ida</label>
-          <input type="date" id="fecha" name="fecha">
-        </div>
-        <div class="form-group">
-          <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#ba2334"></i> Fecha:Vuelta</label>
-          <input type="date" id="fecha" name="fecha">
-        </div>
-        <div class="form-group">
-          <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #ba2334"></i> Pasajeros:</label>
-          <input type="number" id="pasajeros" name="pasajeros">
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn-form">Buscar</button>
-        </div>
+      <div class="form-group">
+        <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Vuelta</label>
+        <input type="date" id="fecha" name="fecha">
+      </div>
 
-      </form>
-    </div>
-    <br>
+      <div class="form-group">
+        <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #270570"></i> Pasajeros:</label>
+        <input type="number" id="pasajeros" name="pasajeros" value="1">
+      </div>
+
+      <div class="form-group">
+        <button type="button" class="btn-search">Buscar</button>
+      </div>
+
+    </form>
+  </div>
+  <br>
+  <div id="ofertas">
+    <!-- Placeholder listado de ofertas-->
+  </div>
     <!-- ******medios de pago******************* -->
 
     <div class="pagos-container" onclick="mostrarModal()">
@@ -453,68 +430,8 @@
     </div>
   </footer>
 
-  <script>
-  
-const myslide = document.querySelectorAll('.myslide'),
-dot = document.querySelectorAll('.dot');
-let counter = 1;
-slidefun(counter);
 
-let timer = setInterval(autoSlide, 8000);
-function autoSlide() {
-	counter += 1;
-	slidefun(counter);
-}
-function plusSlides(n) {
-	counter += n;
-	slidefun(counter);
-	resetTimer();
-}
-function currentSlide(n) {
-	counter = n;
-	slidefun(counter);
-	resetTimer();
-}
-function resetTimer() {
-	clearInterval(timer);
-	timer = setInterval(autoSlide, 8000);
-}
-
-function slidefun(n) {
-	
-	let i;
-	for(i = 0;i<myslide.length;i++){
-		myslide[i].style.display = "none";
-	}
-	for(i = 0;i<dot.length;i++) {
-		dot[i].className = dot[i].className.replace(' active', '');
-	}
-	if(n > myslide.length){
-	   counter = 1;
-	   }
-	if(n < 1){
-	   counter = myslide.length;
-	   }
-	myslide[counter - 1].style.display = "block";
-	dot[counter - 1].className += " active";
-}
-
-/*apertura y cierre de de pagina oculta medios-de-pagos*/
-
-var modal = document.getElementById('modal');
-var closeBtn = document.getElementsByClassName("cerrar")[0];
-
-//funcion que convierte display en block para que deje de ser oculto
-let mostrarModal=()=> modal.style.display = "block";
-
-//funcion que vuelve a convertir el display del elemento en none, ocultandolo
-let cerrarModal=()=>modal.style.display = "none";
-
-//cierra la pagina oculta con click en cruz
-closeBtn.onclick = ()=>cerrarModal()
-
-</script>
-
+<script src="/TP-page/assets/js/destiny.js"></script>
 </body>
 
 </html>
