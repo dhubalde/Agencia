@@ -693,36 +693,38 @@ table:hover {
 }
 
 td {
-  padding: 20px;
-  text-align: center;
-}
-
-td.middle {
   vertical-align: middle;
-  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+    
 }
 
-td.middle div {
-  height: 30%;
-  margin-top: 5%;
-  border-radius: 10px;
+.ciudad {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-td.middle div.icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.tiempo {
+  font-size: 0.8em;
 }
 
-td.middle div.icon i {
-  font-size: 48px;
-  color: #007bff;
+.icon {
+  font-size: 1em;
 }
 
+.escalas {
+  font-size: 0.7em;
+}
+
+table tr td{
+  width: 100px;
+}
 @media screen and (max-width: 767px) {
   table {
     display: block;
+    width: 100%;
   }
 
   td {
@@ -754,7 +756,6 @@ td.middle div.icon i {
     margin-right: 10px;
   }
 }
-
 .offer-btn {
   background-color: #007bff;
   color: #ffffff;
@@ -764,6 +765,8 @@ td.middle div.icon i {
   margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  width: 100px;
+  
 }
 
 .offer-btn:hover {

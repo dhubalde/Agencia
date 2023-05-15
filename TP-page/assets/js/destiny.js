@@ -111,18 +111,18 @@ const listOffers = async () => {
       <tr>
         <td data-label="Columna 1">
           <div><p>Origen</p></div>
-          <div><p>${oferta.origen}</p></div>
+          <div class="ciudad">${oferta.origen}</div>
         </td>
-        <td data-label="Columna 2" class="middle">
-          <div>${oferta.tiempo}</div>
-          <div class="icon"></i></div>
-          <div>${oferta.escalas}</div>
+        <td data-label="Columna 2">
+          <div class="tiempo">${oferta.tiempo}</div>
+          <div class="icon">🛬</div>
+          <div class="escalas">${oferta.escalas}</div>
         </td>
-        <td data-label="Columna 3">
+        <td data-label="c3">
           <div><p>Destino</p></div>
-          <div><p>${oferta.destino}</p></div>
+          <div class="ciudad">${oferta.destino}</div>
         </td>
-        <td data-label="Columna 4">
+        <td data-label="c4">
           <p>${oferta.precio}</p>
           <button class="offer-btn">Ver oferta</button>
         </td>
