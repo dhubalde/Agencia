@@ -6,8 +6,9 @@
 //   success: "valid",
 // });
 
-// funcion de jquery.validation
+
 $(document).ready(function() {
+// funcion de jquery.validation
     $("#contact").validate({
         // errorPlacement: function(error, element) {
         //     error.appendTo("#error-messages");
@@ -102,15 +103,15 @@ $(document).ready(function() {
     //   alert("Formulario enviado con exito")
     // }
     });
+    
+    /* funcion jquery que permite la seleccion solo de un check */
+    $(".form-check").click(function () {
+        //cuando se selecciona un check ,prop("checked,false") deselecciona los demas
+        $(".form-check").not(this).prop("checked", false);
+      });
 });
 
 
-//
-/* funcion jquery que permite la seleccion solo de un check */
-$(document).ready(function () {
-  $(".form-check").click(function () {
-    //cuando se selecciona un check ,prop("checked,false") deselecciona los demas
-    $(".form-check").not(this).prop("checked", false);
-  });
-});
+
+
 

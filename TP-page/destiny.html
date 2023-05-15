@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style/destiny.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!---->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
   <title>Grupo 17!</title>
@@ -41,47 +43,19 @@
         <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i>
             Origen:</label>
           <select id="origen" name="origen">
-            <option value="madrid">Santiago de chile (Chile)</option>
-            <option value="barcelona">Valparaiso (Chile)</option>
-            <option value="valencia">Antofogasta(Chile)</option>
-            <option value="valencia">Punta Arenas(Chile)</option>
-            <option value="valencia">San Pablo(Brasil)</option>
-            <option value="valencia">Rio de Janeiro(Brasil)</option>
-            <option value="valencia">Brasilia(Brasil)</option>
-            <option value="valencia">Puerto de Santos(Brasil)</option>
-            <option value="valencia">Miami, Florida(EEUU)</option>
-            <option value="valencia">Guadalajara(Mexico)</option>
-            <option value="valencia">Acapulco, Guerrero(Mexico)</option>
-            <option value="valencia">Ciudad de Mexico(Mexico)</option>
-            <option value="valencia">Barcelona(España)</option>
-            <option value="valencia">Paris(Francia)</option>
-            <option value="valencia">Liaboa(Portugal)</option>
-            <option value="valencia">Roma(Italia)</option>
+            <option value="none" selected disabled hidden>Seleccione Origen</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Destino:</label>
           <select id="destino" name="destino">
-            <option value="madrid">Santiago de chile (Chile)</option>
-            <option value="barcelona">Valparaiso (Chile)</option>
-            <option value="valencia">Antofogasta(Chile)</option>
-            <option value="valencia">Punta Arenas(Chile)</option>
-            <option value="valencia">San Pablo(Brasil)</option>
-            <option value="valencia">Rio de Janeiro(Brasil)</option>
-            <option value="valencia">Brasilia(Brasil)</option>
-            <option value="valencia">Puerto de Santos(Brasil)</option>
-            <option value="valencia">Miami, Florida(EEUU)</option>
-            <option value="valencia">Guadalajara(Mexico)</option>
-            <option value="valencia">Acapulco, Guerrero(Mexico)</option>
-            <option value="valencia">Ciudad de Mexico(Mexico)</option>
-            <option value="valencia">Barcelona(España)</option>
-            <option value="valencia">Paris(Francia)</option>
-            <option value="valencia">Liaboa(Portugal)</option>
-            <option value="valencia">Roma(Italia)</option>
+            <option value="none" selected disabled hidden>Seleccione Destino</option>
           </select>
         </div>
 
+        
+        
         <div class="form-group">
           <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha:Ida</label>
           <input type="date" id="fecha" name="fecha">
@@ -92,7 +66,7 @@
         </div>
         <div class="form-group">
           <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #270570"></i> Pasajeros:</label>
-          <input type="number" id="pasajeros" name="pasajeros">
+          <input type="number" id="pasajeros" name="pasajeros" value="1">
         </div>
         <div class="form-group">
           <button type="submit" class="btn-form">Buscar</button>
@@ -100,6 +74,7 @@
       </form>
     </div>
     <br>
+
     <!-- ******medios de pago******************* -->
 
     <div class="pagos-container" onclick="mostrarModal()">
@@ -489,60 +464,8 @@
     </div>
   </footer>
 
-  <script type="text/javascript">
-    var slides = document.querySelectorAll('.slide');
-    var btns = document.querySelectorAll('.btn');
-    let currentSlide = 1;
+<script src="../TP-page/assets/js/destiny.js"></script>
 
-    // Javascript for image slider manual navigation
-    var manualNav = function(manual){
-      slides.forEach((slide) => {
-        slide.classList.remove('active');
-
-        btns.forEach((btn) => {
-          btn.classList.remove('active');
-        });
-      });
-
-      slides[manual].classList.add('active');
-      btns[manual].classList.add('active');
-    }
-
-    btns.forEach((btn, i) => {
-      btn.addEventListener("click", () => {
-        manualNav(i);
-        currentSlide = i;
-      });
-    });
-
-    // Javascript for image slider autoplay navigation
-    var repeat = function(activeClass){
-      let active = document.getElementsByClassName('active');
-      let i = 1;
-
-      var repeater = () => {
-        setTimeout(function(){
-          [...active].forEach((activeSlide) => {
-            activeSlide.classList.remove('active');
-          });
-
-        slides[i].classList.add('active');
-        btns[i].classList.add('active');
-        i++;
-
-        if(slides.length == i){
-          i = 0;
-        }
-        if(i >= slides.length){
-          return;
-        }
-        repeater();
-      }, 10000);
-      }
-      repeater();
-    }
-    repeat();
-    </script>
 
 </body>
 
