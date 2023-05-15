@@ -674,3 +674,98 @@ cursor: pointer;
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+/* listado de ofertas ARREGLAR ESTILOS TEXTOS Y TABLA */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 15px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+table:hover {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+}
+
+td.middle {
+  vertical-align: middle;
+  position: relative;
+}
+
+td.middle div {
+  height: 30%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+td.middle div.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+td.middle div.icon i {
+  font-size: 48px;
+  color: #007bff;
+}
+
+@media screen and (max-width: 767px) {
+  table {
+    display: block;
+  }
+
+  td {
+    display: block;
+    border: none;
+    margin: 0;
+    position: relative;
+  }
+
+  td:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+  }
+
+  td:last-child:after {
+    display: none;
+  }
+
+  td:before {
+    content: attr(data-label);
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
+
+.offer-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.offer-btn:hover {
+  background-color: #0062cc;
+}

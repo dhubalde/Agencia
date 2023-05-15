@@ -55,7 +55,6 @@
 
 
 $(document).ready(function() {
-
     // Cargar Drop down Origen/Destino mediante API
     $.ajax({
         type: 'GET',
@@ -94,9 +93,45 @@ $(document).ready(function() {
         $('#origen option[value="' + valorDestinoPrevio +'"]').prop('disabled', false);
         valorDestinoPrevio =$('#destino').val();
     });
-
+    
+    // Handler para el click del boton buscar ofertas
+    $('.btn-search').click(function () {
+      listOffers();
+    });
 });
 
+const listOffers = async () => {
+  const response = await fetch("https://mocki.io/v1/5e3c8ba8-8e88-4351-a132-ae8b3459b07b");
+  const data = await response.json();
+
+  let tableBody = ``;
+  data.data.forEach((oferta, index) => {
+      tableBody += `
+      <table>
+      <tr>
+        <td data-label="Columna 1">
+          <div><p>Origen</p></div>
+          <div><p>${oferta.origen}</p></div>
+        </td>
+        <td data-label="Columna 2" class="middle">
+          <div>${oferta.tiempo}</div>
+          <div class="icon"></i></div>
+          <div>${oferta.escalas}</div>
+        </td>
+        <td data-label="Columna 3">
+          <div><p>Destino</p></div>
+          <div><p>${oferta.destino}</p></div>
+        </td>
+        <td data-label="Columna 4">
+          <p>${oferta.precio}</p>
+          <button class="offer-btn">Ver oferta</button>
+        </td>
+      </tr>
+      </table>`;
+  });
+  // document.getElementById("tableBody_Users").innerHTML = tableBody;
+  ofertas.innerHTML = tableBody;
+};
 
 
 
