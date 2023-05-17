@@ -13,6 +13,7 @@
 * Se realiza algunos cambios de estilo de fuentes y colores.
 
 * Trabajando en:  *validacion de formularios, paquetes de viajes, otras correcciones.*
+  
 
 ### 30/04 
 
@@ -27,6 +28,16 @@
 * se repara footer en destiny.html
 * Cambios menores en background de body.
 * Trabajando en: *finalizacion del banner de medios de pagos, slideshow, fuentes,formulario de destino, otras correcciones*
+
+### 17/05/
+* Se cambia estilo de formulario de destino.
+* Se repara ventana modal de medios de pagos.
+* Se corrige posiciones de logos y estilos en ventana modal.
+* Se cambia icono de cierre en ventana modal.
+* Se cambia background de body.
+* Se cambia background de header y footer.
+* Se cambia las tarjetas de destino por slideshow animado.
+* trabajando en *pagina contact.html, responsividad, igualar estilos a todas las paginas, otros arreglos*
 
 ---
 
