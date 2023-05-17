@@ -39,6 +39,16 @@
 * Se cambia las tarjetas de destino por slideshow animado.
 * trabajando en *pagina contact.html, responsividad, igualar estilos a todas las paginas, otros arreglos*
 
+* Se elimina fuente Anton de destiny
+* Se realiza cambios en pagina contact.html y se unifica estilos
+* Se realiza cambios de estilos en formulario
+* Se aplica flexbox a contenedor #ofertas
+
+- trabajando en: 
+* boton de formulario
+* campos de .error
+* responsividad de pagina contact.html y destiny.html
+
 ---
 
 ### 11/05 - Dalila -

@@ -1,28 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap');
+/*letras carteles Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
 
 *{
-    margin: 0;/* le saca el margen a todo*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
 }
 
 html{
     scroll-behavior: smooth;
 }
 
-body{
-    /* font-family: 'roboto', sans-serif; */
-    font-family: 'Montserrat', sans-serif;
-    margin: 0; /*margen*/
-    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+/* La convención recomendada en CSS es colocar las reglas del selector :root al comienzo del archivo CSS, antes de cualquier otro selector, incluido el selector body. Esto se debe a que las variables CSS definidas en :root estarán disponibles para su uso en todo el archivo CSS, incluyendo las reglas que se apliquen al selector body y otros elementos. */
+:root{
 
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-
-    opacity: 0.9;
+  --color-primary: #270570;
+  --second-color:#FC2947;
+  --color-white:#eeeeee;
+  --other-color:#2b90e2;
+  --principal-font:'Montserrat', sans-serif;
+  --second-font:'Poppins', sans-serif;
+  --other-font: 'Raleway', sans-serif;
 }
 
-@keyframes gradient {
+body{
+  font-family: 'Montserrat', sans-serif;
+  /* NO TOCAR  */
+  /* background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+	background-size: 500%;
+	animation: gradient 10s infinite; */
+  
+  background-color: var(--color-white);
+
+}
+/* NO TOCAR */
+/* animacion background */
+/* @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -32,121 +48,274 @@ body{
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-:root{
-
-    --color-primary: #270570;
-    --second-color:#FC2947;
-    --color-white:#eeeeee;
-    --other-color:#2b90e2;
-    --principal-font:'Montserrat', sans-serif;
-    --second-font:'Anton', sans-serif;
-  }
+} */
 
 /*hasta aca estan definida los estilos  generales de la web*/
 
 /* *****header******* */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    height: 150px;
 
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
-    background-position: center;
-    background-size: cover;
-  }
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px;
+  height: 175px;
 
-  .logo{
-    display: flex;
-    flex-direction: column;
-   align-items: center;
-  }
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
   
-  .logo p{
-    margin-top: -220px; /* Espacio entre el logo y el texto */
-    /* font-size: 25px; */
-    font-weight: bold;
-    color: #d66bee;
-    font-size: 1em;
-    text-shadow: 2px 2px 2px #1d5fd0;
-  }
-
-  .logo img {
-    width: 250px;
-    height: auto;
-    margin-top: -108px;
-
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 0 10px;
-   
-  }
-  
-  nav a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--color-white);
-    /* font-size: 15px; */
-  }
-
-  header a{
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--color-white);
 }
 
-header a:hover{
-    color:var(--other-color);
+.logo{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ filter: contrast(10.5);
+
+}
+
+.logo p{
+  margin-top: -220px; /* Espacio entre el logo y el texto */
+  /* font-size: 25px; */
+  font-weight: bold;
+  color: #d66bee;
+  font-size: 1em;
+  text-shadow: 2px 2px 2px #1d5fd0;
+
+  position: relative;
+  left: 13vh;
+  top: 7vh;
+  filter: contrast(10.5);
+}
+
+
+.logo img {
+  width: 250px;
+  height: auto;
+  margin-top: -108px;
+
+}
+
+.nav-header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header li {
+  margin: 0 10px;
+ 
+}
+
+.nav-header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+header a:not(.logo-img){
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-white);
+
+  position: relative;
+  top: 13px;
+  right: 7px;
+}
+
+/* menos a de logo */
+header a:hover:not(.logo-img){
+  color:var(--other-color);
+  
 }
 
 /* ***main*** */
 
 /* formulario contacto */
 
-/* --cotenedor del formulario-- */
-
-.back{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    padding: 0;
-    /* background-color: aqua; */
-    box-sizing: content-box;
-}
+/* --contenedor del formulario-- */
 
 
-.back-form{
-    width: 650px;
-    height: 100%;
-    background-image: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg);
-    background-position: center;
-    background-size: cover;
 
-    opacity: 0.9;
-
-}
 
 /* estilo del formulario */
 
-.content-form{
-    width: 100%;
-    height: auto;
+/* definicion un contenedor flex con dos items */
+.contenedor-flex {
+  display: flex;
 }
+
+.img-form, .content-form {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* contenedor imagen y titulo */
+.img-form {
+  position: relative;
+  display: inline-block;
+
+}
+
+.img-form img{
+   width: 100%;
+    height: 123.3%;
+    opacity: 0.9;
+}
+
+.img-text-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 24px;
+}
+/* formulario */
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    font-family: var(--second-font);
+}
+
+#contact h6{
+  position: relative;
+  top: 70px;
+  right: 22%;
+  font-family: var(--second-font);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+
+
+/* inputs */
+.form_input{
+  position: relative;
+  width: 60%;
+  padding: 10px 5px;
+  margin: 0 0 30px 0;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  background: rgb(136 136 136 / 15%);
+  font-size: 1rem;
+  font-family: var(--second-font);
+  font-weight: 500;
+  opacity: 0.9;
+  border-radius: 10px;
+
+}
+
+.form_input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--other-color);
+}
+
+/* label de motivo de contacto */
+.form_label{
+  position: relative;
+    right: 20%;
+    font-family: var(--second-font);
+    font-size: 1em;
+    font-weight: 500;
+    opacity: 0.9;
+    color: #999;
+}
+
+/* selector */
+#select{
+  position: relative;
+    bottom: 30px;
+    left: 90px;
+    height: 35px;
+    border-radius: 10px;
+    background: rgb(136 136 136 / 15%);
+    width: 38%;
+}
+
+#select:focus{
+  outline: none;
+}
+
+.form_legend legend{
+  position: relative;
+  bottom: 13px;
+  font-size: 1em;
+  color: #999;
+}
+
+
+/* checkbox */
+.checkbox{
+  position: relative;
+  bottom: 20px;
+  font-size: 17px;
+  left: 5px;
+}
+
+/* boton envio */
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 25px 15px;
+  min-width: 150px;
+}
+.btn span {         
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+    
+  }
+/*
+  .btn-1::before {
+    background-color: rgb(28, 31, 30);
+    transition: 0.3s ease-out;
+  }
+  .btn-1 span {
+    color: rgb(255,255,255);
+    border: 1px solid rgb(28, 31, 30);
+    transition: 0.2s 0.1s;
+  }
+  .btn-1 span:hover {
+    color: rgb(28, 31, 30);
+    transition: 0.2s 0.1s;
+  }
+
+  .btn.hover-filled-opacity::before {
+    top:0; bottom: 0; right: 0;
+    height: 100%; width: 100%;
+    opacity: 1;
+  }
+  .btn.hover-filled-opacity:hover::before {
+    opacity: 0;
+  } */
+
+
+
+
 
 .error{
 
@@ -156,53 +325,47 @@ header a:hover{
     font-size: 12px;
 }
 
-#contact{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content:space-around;
-    align-items: center;
-   margin-left: 5px;
-}
-
+/*
 #contact h1{
     font-size:40px;
     color: white;
     text-align: center;
-}
-
+}*/
+/*
 #contact legend{
     text-align: center;
     margin-top: 0;
     color: rgba(0,0,0,0.7);
-}
+}*/
 
+/*
 .form_input, #select{
-    /* padding: 20px; */
+    
     background: transparent;
     border: 1px solid rgba(0,0,0,0.3);
-    /* margin-bottom: 40px; */
+   
     border-radius: 10px;
     width: 70%;
     height: 30px;
-}
+}*/
 
+/*
 .form_legend{
     width: 70%;
 
-}
+} */
 
 /* ***footer*** */
 
 footer {
-    margin-top: 150px;
-     width: 100%;
-     height: 40vh;
-    color: aliceblue;
-    display: flex;
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
-    background-position: center;
-    background-size: cover;
+  margin-top: 150px;
+   width: 100%;
+   height: 40vh;
+  color: aliceblue;
+  display: flex;
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
+  background-position: center;
+  background-size: cover;
 
 }
 
@@ -237,13 +400,12 @@ footer div h3{
 }
 
 .col-1 a:hover{
-    color: var(--other-color);
+    color: var(--second-color);
 }
 
 .col-3{
     margin-right: 30vh;
 }
-
 
 .social-icons{
   margin-top: 40px;
@@ -251,7 +413,6 @@ footer div h3{
   justify-content: center;
 
 }
-
 
 .social-icons a i{
  
@@ -261,7 +422,7 @@ footer div h3{
 } 
 
 
-
+/* ---responsividad AQUI---- */
 
 /*Version para escritorio*/
 
@@ -287,18 +448,10 @@ footer div h3{
 
 
 /*
-
 se renombro ha app.js
 se movio README.md a raiz
-
 se corrigio formulario de contacto
 se realizo la validacion del formulario con jquery.validation
-
 se creo estilo para formulario.
-
-
-
-
-
 
 */

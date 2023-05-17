@@ -1,10 +1,8 @@
 /* fuente principal */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Monserrat*/
-/* letra titulo form destino  Anto*/
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-/*letras carteles    Raleway*/
+/*letras carteles Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
-/* fuente secundaria */
+/* fuente secundaria Poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
 
 *{
@@ -17,7 +15,7 @@ html{
     scroll-behavior: smooth;
 }
 
-
+/* La convención recomendada en CSS es colocar las reglas del selector :root al comienzo del archivo CSS, antes de cualquier otro selector, incluido el selector body. Esto se debe a que las variables CSS definidas en :root estarán disponibles para su uso en todo el archivo CSS, incluyendo las reglas que se apliquen al selector body y otros elementos. */
 :root{
   --color-primary: #1d4d8b;
   --second-color:#DF2E38;
@@ -708,7 +706,22 @@ cursor: pointer;
 /* --------- */
 
 /* listado de ofertas ARREGLAR ESTILOS TEXTOS Y TABLA */
-/* Gonzalo */
+/* -Gonzalo- */
+
+/* aplique flex para distribuir las tarjetas -Griselda- */
+#ofertas{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #00000000; */
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  bottom: 19px;
+
+}
+
+
 table {
   border-collapse: collapse;
   width: 100%;
