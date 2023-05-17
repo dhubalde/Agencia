@@ -30,6 +30,7 @@ html{
 
 body{
   font-family: 'Montserrat', sans-serif;
+  /* NO TOCAR  */
   /* background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
 	background-size: 500%;
 	animation: gradient 10s infinite; */
@@ -37,7 +38,7 @@ body{
   background-color: var(--color-white);
 
 }
-
+/* NO TOCAR */
 /* animacion background */
 /* @keyframes gradient {
 	0% {
@@ -108,8 +109,6 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: var(--color-white);
-    /* font-size: 15px; */
-  
   }
 
   header a:not(.logo-img){
@@ -141,17 +140,12 @@ header a:hover:not(.logo-img){
     right: 28%;
 }
 
-
-
 .container-form {
     background-image: url(https://www.ola.com.ar/assets/gfx/back/panel-buscador.png);
     background-position: center;
-    background-repeat: no-repeat;
     background-size:cover;
-    /* background-color: var(--color-white); */
-    padding: 20px 16px;
+    padding: 40px 16px;
     text-align: center;
-    /* margin-top: 20px; */
     height: 340px;
   }
 
@@ -218,11 +212,8 @@ header a:hover:not(.logo-img){
 
   .pagos-container{
     width: 75%;
-    /* background-color:var(--color-white); */
     display: flex;
 
-    /* padding: 0px; */
-    /* padding-bottom: 5px; */
     box-shadow: 0 1px 2px 0 rgba(23,35,44,0.24), 0 -1px 5px 0 rgba(23,35,44,0.2);
     flex-direction: column;
     justify-content: center;
@@ -412,22 +403,21 @@ display: inline-block;
 
 /* ****************** */
 
-.titulo h1{
-
-  width: 100%;
-    margin: 80px 0 24px;
-    /* color: var(--tc-white); */
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
-
-}
-
 
   /*tarjetas de destinos*/
 
+.titulo-destiny{
+  position: relative;
+  top: 22vh;
+  left: 3px;
+}
+
+.titulo-destiny span{
+  font-family: var(--second-font);
+  font-size: 2em;
+  color: #313131;
+  font-weight: 400;
+}
 
 .slider{
 	position: relative;
@@ -480,8 +470,6 @@ display: inline-block;
   #list-card ul{
     list-style: none;
   }
-
-
 
 .txt p{
   /* ? */
