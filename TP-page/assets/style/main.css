@@ -17,7 +17,7 @@ body{
     font-family: 'roboto', sans-serif;
     margin: 0; /*margen*/
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+    background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
@@ -197,17 +197,38 @@ header .container{
 
 
 #nuestros-viajes{
-    background-color: rgb(10, 60, 224);
     color: white;
     text-align: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 170vh;
+}
+
+@keyframes gradient {
+	100% {
+		background-position: 0% 50%;
+	}
+    50% {
+		background-position: 100% 50%;
+	}
+    0% {
+		background-position: 0% 50%;
+	}
+	
+	
 }
 
 #nuestros-viajes .container{
     padding: 40px 12px;
 }
 
+#nuestros-viajes .color-acento{
+    color: rgb(43, 144, 226);
+}
+
 #nuestros-viajes .titulo{
-    margin-top: 25px;
+    margin-top: 35px;
     font-size: 1.2em;
 }
 
@@ -229,7 +250,7 @@ header .container{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("assets/img/viajes-grupales.jpg");
+    ,url("/assets/img/viajes-grupales.jpg");
 }    
 
 .carta:nth-child(2){
@@ -238,7 +259,7 @@ header .container{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("assets/img/salto-grupo-surf.jpg")
+    ,url("/assets/img/paquetes-deportivos.jpg")
 }
 
 .carta:nth-child(3){
@@ -247,62 +268,16 @@ header .container{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("assets/img/viajes-negocios.jpg");
-}
-
-
-table {
-    width: 100%;
-    height: 50%;
-    margin-block-start: 100px;
-    margin-block-end: 30px;
-}
-
-th, td {
-    border: solid 1px black;
-    padding: 5px;
-    margin: 10px;
-}
-
-th {
-    background-color: aquamarine;
-    text-align: center;
-}
-
-tr:nth-child(even){
-    background-color: rgb(233, 228, 226);
-}
-
-tr:hover {
-    background-color: rgb(163, 234, 236);
-    cursor: pointer;
-}
-
-.container {
-    margin: 10px 10px;
-}
-.container h4{
-    text-align: center;
-}
-#tabla .container{
-    padding-block-end: 15px;
-}
-
-.tabla_titulo table{
-    align-items: center;
-    text-align: center;
-    border: 1px solid;
-    border-radius: 5px;
-    margin: auto;
-     
+    ,url("/assets/img/viajes-negocios.jpg");
 }
 
 footer {
-    margin-top: 150px;
+    margin-top: 0px;
     width: 100%;
-    padding: 100px 15%;
+    padding: 60px 15%;
     color: aliceblue;
     display: flex;
+    height: 300px;
 
     background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
     background-position: center;
@@ -314,7 +289,7 @@ footer div{
 }
 
 footer div h3{
-  font-weight: 300;
+  font-weight: 300px;
   margin-bottom: 30px;
   letter-spacing: 1px;
 }
@@ -338,11 +313,12 @@ footer div h3{
 }
 
 .social-icons a i{
- 
   font-size: 45px;
   margin: 10px;
   cursor: pointer;
 }
+  
+
 
 
 /* ******************************************************************** */
@@ -367,9 +343,6 @@ footer div h3{
 
     }
      
-    /*header .menu{
-        flex-direction: row;
-    }*/
 
     #hero h1 { 
         font-size: 3.5em;
@@ -404,6 +377,10 @@ footer div h3{
         margin: 10px 30px 10px 30px;
     }
 
+    #nuestros-viajes{
+        height: 90vh;
+    }
+
     #nuestros-viajes .container{ 
         display: flex; /*deja las cartas una al lado de la otra */
         justify-content: center; /*se centran los programas*/
@@ -422,7 +399,7 @@ footer div h3{
 
     #nuestros-viajes .carta {
         padding: 50px;
-        background-size: 150% 150px;
+        background-size: 120% 150px;
         background-repeat: no-repeat;
         background-position-y: 0;
         background-color: rgb(50,50,50, 0.5);
@@ -444,7 +421,7 @@ footer div h3{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("/assets/img/salto-grupo-surf.jpg");
+        ,url("/assets/img/paquetes-deportivos.jpg");
     
     }
     
@@ -457,8 +434,9 @@ footer div h3{
         ,url("/assets/img/viajes-negocios.jpg");
     }
 
-    footer .container{
+    footer {
         justify-content: flex;
+        height: 300px;
     }
     
 
@@ -468,8 +446,7 @@ footer div h3{
         background-position-x: calc(100wv - 800px);
     }
 }
-
-
-
-
 }
+
+
+

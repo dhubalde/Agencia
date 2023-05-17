@@ -35,3 +35,14 @@
 * Actualizacion y correciones de menu y footer main.css
 * Armado de us.html (sujeto a modificaciones que sugieran)
 * Creacion de us.css
+
+### 15/05 - Gonzalo -
+*   Creación de destiny.js
+*   Modificación de Dropdown Origen/Destino para que se carguen valores mediante API
+*   Se deshabilita el destino seleccionado en Dropdown origen y viceversa
+*   Se cargan ofertas de viajes genericas de una APIfake
+
+### 15/05 - Dalila -
+* index.html Codigo comentado borrado 
+* main.css arreglo footer (mas chico), cambio de imagenes de "Nuetros viajes" animacion de colores
+* us.css arreglo footer (mas chico)
