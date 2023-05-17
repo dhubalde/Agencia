@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /*letras carteles    Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
 
 *{
     margin: 0; /*le saca el margen a todo*/
@@ -22,7 +24,7 @@ html{
   --color-white:#FAF7F0;
   --other-color:#2b90e2;
   --principal-font:'Montserrat', sans-serif;
-  --second-font:'Anton', sans-serif;
+  --second-font:'Poppins', sans-serif;
   --other-font: 'Raleway', sans-serif;
 }
 
@@ -452,6 +454,9 @@ display: inline-block;
   	animation-name: posi;
   	animation-duration: 2s;
 	z-index: 1;
+
+  font-size: 22px;
+  font-family: var(--other-font);
 }
 
 /* titulo con bordes y sombras: efecto doble */
@@ -461,17 +466,26 @@ display: inline-block;
     -webkit-text-stroke-width: 2px;
     -moz-text-stroke-color: #000000;
     -webkit-text-stroke-color: var(--second-color);
-    font-size: 70px;
+    font-size: 120px;
 	  margin-bottom: 20px;
+
+    position: relative;
+    bottom: 7vh;
   }
 
   .t-shadow {
     text-shadow: 7px 7px var(--color-primary);
   }
 
+  #list-card ul{
+    list-style: none;
+  }
 
-.txt-slide p{
-	font-size: 25px;
+
+
+.txt p{
+  /* ? */
+	font-size: 20px;
   position: relative;
   top: 20px;
 }
@@ -555,6 +569,10 @@ display: inline-block;
   from {left: 25%;}
   to {left: 15%;}
 }
+
+
+
+
 
 @-webkit-keyframes zoomin {
   from {transform: scale(1, 1);}
