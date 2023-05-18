@@ -10,9 +10,19 @@
 $(document).ready(function() {
 // funcion de jquery.validation
     $("#contact").validate({
-        // errorPlacement: function(error, element) {
-        //     error.appendTo("#error-messages");
-        //   },
+
+        errorClass: 'error',
+      errorPlacement: function(error, element) {
+        error.addClass('error-label');
+        error.insertAfter(element);
+      },
+      highlight: function(element) {
+        $(element).addClass('invalid-input');
+      },
+      unhighlight: function(element) {
+        $(element).removeClass('invalid-input');
+      },
+
     //reglas:
     rules:{
         nombre:{
@@ -89,7 +99,7 @@ $(document).ready(function() {
         },
 
         acept:{
-            required:'Requerido, Acepte los terminos y condiciones para continuar'
+            required:'Acepte los terminos y condiciones para continuar'
         },
 
         },

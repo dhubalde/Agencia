@@ -136,13 +136,6 @@ header a:hover:not(.logo-img){
 
 /* formulario contacto */
 
-/* --contenedor del formulario-- */
-
-
-
-
-/* estilo del formulario */
-
 /* definicion un contenedor flex con dos items */
 .contenedor-flex {
   display: flex;
@@ -198,7 +191,6 @@ header a:hover:not(.logo-img){
 }
 
 
-
 /* inputs */
 .form_input{
   position: relative;
@@ -221,6 +213,7 @@ header a:hover:not(.logo-img){
   outline: none;
   border-bottom: 2px solid var(--other-color);
 }
+
 
 /* label de motivo de contacto */
 .form_label{
@@ -255,7 +248,6 @@ header a:hover:not(.logo-img){
   color: #999;
 }
 
-
 /* checkbox */
 .checkbox{
   position: relative;
@@ -266,94 +258,110 @@ header a:hover:not(.logo-img){
 
 /* boton envio */
 
-.btn {
+.boton-env {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  width: auto; height: auto;
-  background-color: transparent;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+
+}
+
+.btn-3 {
+background: var(--second-color);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, var(--other-color) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
   border: none;
-  cursor: pointer;
-  margin: 0px 25px 15px;
-  min-width: 150px;
+  
 }
-.btn span {         
-    position: relative;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    top: 0; left: 0;
-    width: 100%;
-    padding: 15px 20px;
-    transition: 0.3s;
-    
-  }
-/*
-  .btn-1::before {
-    background-color: rgb(28, 31, 30);
-    transition: 0.3s ease-out;
-  }
-  .btn-1 span {
-    color: rgb(255,255,255);
-    border: 1px solid rgb(28, 31, 30);
-    transition: 0.2s 0.1s;
-  }
-  .btn-1 span:hover {
-    color: rgb(28, 31, 30);
-    transition: 0.2s 0.1s;
-  }
-
-  .btn.hover-filled-opacity::before {
-    top:0; bottom: 0; right: 0;
-    height: 100%; width: 100%;
-    opacity: 1;
-  }
-  .btn.hover-filled-opacity:hover::before {
-    opacity: 0;
-  } */
-
-
-
-
-
-.error{
-
-    color: red;
-    font-style: italic;
-    padding: 5px;
-    font-size: 12px;
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: var(--other-color);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: var(--other-color);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: var(--other-color);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
 }
 
-/*
-#contact h1{
-    font-size:40px;
-    color: white;
-    text-align: center;
-}*/
-/*
-#contact legend{
-    text-align: center;
-    margin-top: 0;
-    color: rgba(0,0,0,0.7);
-}*/
 
-/*
-.form_input, #select{
-    
-    background: transparent;
-    border: 1px solid rgba(0,0,0,0.3);
-   
-    border-radius: 10px;
-    width: 70%;
-    height: 30px;
-}*/
 
-/*
-.form_legend{
-    width: 70%;
+/* mensajes de error de validacion jquery validation */
 
-} */
+.error {
+  color: #dc3545;
+  font-size: 14px;
+}
+
+.error-label {
+  display: block;
+  margin-top: 5px;
+}
+
 
 /* ***footer*** */
 

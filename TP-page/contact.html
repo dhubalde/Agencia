@@ -41,7 +41,6 @@
   </header>
   <!-- ************************ -->
   <main class="contenedor-flex">
-
     <!-- imagen contenedor 1-->
     <div class="img-form">
       <img src="https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg" alt="airport">
@@ -50,24 +49,14 @@
 
     <!-- contenedor 2 -->
     <div class="content-form">
-      <form id="contact" action="https://formsubmit.co/googlerax@gmail.com" method="POST">
 
-        <!-- <label for="nombre" class="form_label">Nombre</label> -->
-        <!-- nombre -->
+      <form id="contact" action="https://formsubmit.co/googlerax@gmail.com" method="POST">
         <input type="text" class="form_input" name="nombre" placeholder="Ingrese Nombre*" id="nombre">
-        <!-- apellido -->
-        <!-- <label for="apellido" class="form_label">Apellido</label> -->
         <input type="text" class="form_input" name="apellido" placeholder="Ingrese apellido*" id="apellido">
-        <!-- <label for="email" class="form_label">Correo Electrónico</label> -->
-        <!-- email -->
         <input type="email" id="correoelectronico" class="form_input" name="email"
           placeholder="Dirección de correo electrónico*" id="email">
-        <!-- <label for="tel" class="form_label">Teléfono</label> -->
-        <!-- telefono -->
         <input type="tel" class="form_input" name="tel" placeholder="Número de teléfono* (Cod. Area sin 0)
             " id="tel">
-
-        <!-- <fieldset class="form_legend"> -->
         <label for="select" class="form_label">Motivo de tu contacto</label>
         <select id="select" name="select">
           <option value="">--seleccione--</option>
@@ -76,8 +65,6 @@
           <option value="3">Consulta sobre pasaporte y/o documentacion</option>
           <option value="4">Otro</option>
         </select>
-        <!-- </fieldset> -->
-
         <div class="form_legend">
           <legend>¿Cómo le gustaría que lo contactemos?*</legend>
           <label for="contacto">
@@ -95,39 +82,27 @@
             WhatsApp
           </label>
         </div>
-        <!-- <label for="texto" class="form_label">Dejanos tu comentarios</label> -->
         <input type="text" class="form_input" name="texto" placeholder="Dejanos tus Comentarios" style="height:85px;">
-
         <label class="checkbox">
           <input type="checkbox"> ¿Le gustaría recibir novedades de nuestros
           Viajes?</label>
         <label class="checkbox">
           <input type="checkbox" name="acept" id="acept"> *Acepto los terminos y <a href="#">condiciones</a>
         </label>
-
         <h6>*Campo obligatorio</h6>
-
-        <!-- boton  -->
-        <!-- <input type="submit" value="Enviar" class="form_enviar"> -->
-        <button class="btn btn-1 hover-filled-opacity" type="submit">
+        <!-- boton  enviar -->
+        <button class="boton-env btn-3" type="submit">
           <span>ENVIAR</span>
         </button>
-
-
-
-
-
         <!--Esto es para que no se vea la confirmacion del envio del formulario-->
         <input type="hidden" name="_next" value="http://index.html/">
         <input type="hidden" name="_captcha" value="false">
-
       </form>
-
     </div>
   </main>
   <!-- ***footer***** -->
-  <footer class="footer">
 
+  <footer class="footer">
     <div class="col-1">
       <h3>LINKS</h3>
       <a href="index.html">Inicio</a>
@@ -136,7 +111,6 @@
       <a href="contact.html">Contacto</a>
       <a href="us.html">Sobre nosotros</a>
     </div>
-
     <div class="col-2">
       <h3>NUESTRAS REDES</h3>
       <div class="social-icons">
@@ -146,13 +120,11 @@
         <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
       </div>
     </div>
-
     <div class="col-3">
       <h3>DIRECCION</h3>
       <p>Calle falsa 123,<br>CABA, Argentina</p>
       <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
     </div>
-
   </footer>
 
 
