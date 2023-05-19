@@ -52,6 +52,10 @@ body{
 
 /*hasta aca estan definida los estilos  generales de la web*/
 
+::-webkit-scrollbar-thumb {
+  background-color: var(--other-color); /* Color del pulgar */
+}
+
 /* *****header******* */
 
 header {
@@ -159,12 +163,6 @@ header a:hover:not(.logo-img){
 
 }
 
-/* .img-form img{
-   width: 100%;
-    height: 123.3%;
-    opacity: 0.9;
-} */
-
 .img-text-form {
   position: absolute;
   top: 80%;
@@ -172,9 +170,17 @@ header a:hover:not(.logo-img){
   transform: translate(-50%, -50%);
   z-index: 1;
   color: var(--color-white);
-  font-size: 77px;
-  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: .5em;
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  
 }
+
+
+
+
+
 
 /* formulario */
 
@@ -185,14 +191,11 @@ header a:hover:not(.logo-img){
   align-items: center;
 }
 
-
 #contact{
 
   width: 80%;
   padding: 20px;
   background-color: #f2f2f2;
-
-
     display: flex;
     flex-direction: column;
     align-content: center;
