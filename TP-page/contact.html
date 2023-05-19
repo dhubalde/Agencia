@@ -41,16 +41,17 @@
   </header>
   <!-- ************************ -->
   <main class="contenedor-flex">
+
     <!-- imagen contenedor 1-->
     <div class="img-form">
-      <img src="https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg" alt="airport">
+      <!-- <img src="https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg" alt="airport"> -->
       <span class="img-text-form">Contactate con nosotros</span>
     </div>
 
     <!-- contenedor 2 -->
     <div class="content-form">
-
       <form id="contact" action="https://formsubmit.co/googlerax@gmail.com" method="POST">
+        <ul id="errorList" class="error-list"></ul>
         <input type="text" class="form_input" name="nombre" placeholder="Ingrese Nombre*" id="nombre">
         <input type="text" class="form_input" name="apellido" placeholder="Ingrese apellido*" id="apellido">
         <input type="email" id="correoelectronico" class="form_input" name="email"

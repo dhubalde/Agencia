@@ -137,47 +137,71 @@ header a:hover:not(.logo-img){
 /* formulario contacto */
 
 /* definicion un contenedor flex con dos items */
+
 .contenedor-flex {
   display: flex;
-}
+  height: 100vh;
 
-.img-form, .content-form {
+/* .img-form, .content-form {
   flex-grow: 1;
   flex-basis: 0;
+} */
 }
 
 /* contenedor imagen y titulo */
 .img-form {
-  position: relative;
-  display: inline-block;
+  flex: 1;
+  background-image: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg);
+  background-size: cover;
+  background-position: center;
+
+  height: 116%;
 
 }
 
-.img-form img{
+/* .img-form img{
    width: 100%;
     height: 123.3%;
     opacity: 0.9;
-}
+} */
 
 .img-text-form {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 80%;
+  left: 25%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: white;
-  font-size: 24px;
+  color: var(--color-white);
+  font-size: 77px;
+  font-weight: 600;
 }
+
 /* formulario */
+
+.content-form{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #contact{
+
+  width: 80%;
+  padding: 20px;
+  background-color: #f2f2f2;
+
+
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
     position: relative;
-    top: 100px;
+    top: 5px;
     font-family: var(--second-font);
+    
 }
 
 #contact h6{
@@ -349,19 +373,22 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, var(--other-color) 100%)
 }
 
 
-
 /* mensajes de error de validacion jquery validation */
 
-.error {
-  color: #dc3545;
-  font-size: 14px;
+.error-list {
+    color: #dc3545;
+    font-size: 15px;
+    margin-top: 5px;
+    position: relative;
+    bottom: 50px;
+    font-style: italic;
+    list-style: circle;
 }
 
-.error-label {
-  display: block;
-  margin-top: 5px;
+.error-list-item {
+  margin-left: 20px;
+  padding: 5px;
 }
-
 
 /* ***footer*** */
 

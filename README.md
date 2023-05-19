@@ -49,6 +49,12 @@
 * campos de .error
 * responsividad de pagina contact.html y destiny.html
 
+
+### 18/05
+
+* fix formulario contacto. (validado con jquery.validation)
+
+
 ---
 
 ### 11/05 - Dalila -
@@ -67,3 +73,5 @@
 * index.html Codigo comentado borrado 
 * main.css arreglo footer (mas chico), cambio de imagenes de "Nuetros viajes" animacion de colores
 * us.css arreglo footer (mas chico)
+
+
