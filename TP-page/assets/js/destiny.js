@@ -108,10 +108,15 @@ $(document).ready(function() {
 });
 
 const listOffers = async () => {
+
+  
+
   const response = await fetch("https://mocki.io/v1/5e3c8ba8-8e88-4351-a132-ae8b3459b07b");
   const data = await response.json();
 
-  let tableBody = ``;
+  //- se agrega span con icono para cierre -Griselda-
+  let tableBody = `<span class="close"><i class="fa-solid fa-circle-xmark fa-lg" style="color: #0062cc;"></i>`;
+
   data.data.forEach((oferta, index) => {
       tableBody += `
       <table>
@@ -135,7 +140,19 @@ const listOffers = async () => {
         </td>
       </tr>
       </table>`;
-  });
+  },
+
+  tableBody += `</span>`
+  
+  );
   // document.getElementById("tableBody_Users").innerHTML = tableBody;
   ofertas.innerHTML = tableBody;
+
+  // - se agrega evento click a la cruz de cierre para cerrar div ofertas - Griselda
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', () => {
+  ofertas.style.display = 'none';
+});
+
 };
+

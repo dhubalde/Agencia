@@ -413,8 +413,7 @@ display: inline-block;
 
 .titulo-destiny{
   position: relative;
-  top: 22vh;
-  left: 3px;
+  top: 175px;
 }
 
 .titulo-destiny span{
@@ -817,4 +816,11 @@ table tr td{
 .offer-btn:hover {
   background-color: #0062cc;
 }
-  
+
+/* cruz de cierre */
+
+.close{
+  position: relative;
+  top: 20px;
+  left: 155vh;
+}
