@@ -74,4 +74,8 @@
 * main.css arreglo footer (mas chico), cambio de imagenes de "Nuetros viajes" animacion de colores
 * us.css arreglo footer (mas chico)
 
+### 20/05 - Dalila -
+* us.html se usan tarjetas con datos de los integrantes menu y footer nueva version
+* us.css menu y footer nueva version
+
 
