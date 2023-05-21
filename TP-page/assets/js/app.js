@@ -1,6 +1,6 @@
-//validacion con jquery.validation
+//validación con jquery.validation
 
-// funcion que impide el envio del formulario, solo para usar en desarrollo
+// función que impide el envió del formulario, solo para usar en desarrollo
 // jQuery.validator.setDefaults({
 //   debug: true,
 //   success: "valid",
@@ -89,25 +89,25 @@ $.validator.addMethod("noNumbers", function(value, element) {
       },
       //?
       tel: {
-        required: "Campo obligatorio, ingresa tu numero de telefono",
-        number: "Debe ser caracteres numericos",
-        minlength: "Minimo 10 numeros",
+        required: "Campo obligatorio, ingresa tu numero de teléfono",
+        number: "Debe ser caracteres numéricos, ingresa tu numero de teléfono",
+        minlength: "Mínimo 10 números, ingresa tu numero de teléfono",
       },
 
       contacto: {
-        required: "Seleccione una opcion",
+        required: "Seleccione una opción de contacto",
       },
 
       select: {
-        required: "seleccione una opcion",
+        required: "seleccione un motivo de contacto",
       },
 
       texto: {
-        minlength: "Debe tener un minimo de 20 caracteres",
+        minlength: "Debe tener un mínimo de 20 caracteres",
       },
 
       acept: {
-        required: "Acepte los terminos y condiciones para continuar",
+        required: "Acepte los términos y condiciones para continuar",
       },
     },
     errorElement: "spa",
@@ -115,15 +115,23 @@ $.validator.addMethod("noNumbers", function(value, element) {
     //hace foco en el campo invalido
     focusInvalid: true,
 
-    //funcion de jquery validation que se ejecuta cuando se envia el form
+    //función de jquery validation que se ejecuta cuando se envía el form
     submitHandler: function(form) {
-      alert("Formulario enviado con exito")
+
+      //se obtiene el valor del atributo 'action' del formulario
+      var actionUrl = $(form).attr('action');
+
+      // Realizar la acción de envío del formulario
+      window.location.href = actionUrl;
+
+      //Se muestra mensaje de envío con éxito
+      $('#mensaje').show();
     }
   });
 
-  /* funcion jquery que permite la seleccion solo de un check */
+  /* función jquery que permite la selección solo de un check */
   $(".form-check").click(function () {
-    //cuando se selecciona un check ,prop("checked,false") deselecciona los demas
+    //cuando se selecciona un check ,prop("checked,false") se deselecciona los demás
     $(".form-check").not(this).prop("checked", false);
   });
 });

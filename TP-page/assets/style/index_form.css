@@ -17,7 +17,7 @@ html{
 /* La convención recomendada en CSS es colocar las reglas del selector :root al comienzo del archivo CSS, antes de cualquier otro selector, incluido el selector body. Esto se debe a que las variables CSS definidas en :root estarán disponibles para su uso en todo el archivo CSS, incluyendo las reglas que se apliquen al selector body y otros elementos. */
 :root{
 
-  --color-primary: #270570;
+  --color-primary: #1d4d8b;
   --second-color:#FC2947;
   --color-white:#eeeeee;
   --other-color:#2b90e2;
@@ -37,7 +37,7 @@ body{
 
 }
 /* NO TOCAR */
-/* animacion background */
+/* animación background */
 /* @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -50,10 +50,29 @@ body{
 	}
 } */
 
-/*hasta aca estan definida los estilos  generales de la web*/
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+
+
+/*hasta aca están definida los estilos  generales de la web*/
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--other-color); /* Color del pulgar */
+  background-color: var(--color-primary); /* Color del pulgar */
 }
 
 /* *****header******* */
@@ -177,11 +196,6 @@ header a:hover:not(.logo-img){
   
 }
 
-
-
-
-
-
 /* formulario */
 
 .content-form{
@@ -209,8 +223,8 @@ header a:hover:not(.logo-img){
 
 #contact h6{
   position: relative;
-  top: 70px;
-  right: 22%;
+  top: 25vh;
+  right: 50%;
   font-family: var(--second-font);
   font-size: 14px;
   font-style: italic;
@@ -283,7 +297,7 @@ header a:hover:not(.logo-img){
   left: 5px;
 }
 
-/* boton envio */
+/* botón envío */
 
 .boton-env {
   width: 130px;
@@ -375,8 +389,21 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, var(--other-color) 100%)
   width: 100%;
 }
 
+/* mensaje de envío con éxito */
 
-/* mensajes de error de validacion jquery validation */
+#mensaje{
+  position: relative;
+  top: 35px;
+}
+
+#mensaje p{
+  font-size: 18px;
+    color: var(--color-primary);
+    font-style: var(--second-font);
+}
+
+
+/* mensajes de error de validación jquery validation */
 
 .error-list {
     color: #dc3545;

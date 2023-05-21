@@ -5,7 +5,10 @@
 /* fuente secundaria Poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
 
-@mixin flex-center {
+
+/* @mixin es una característica de SASS/SCSS , se reemplaza por css basico  -Griselda */
+
+/* @mixin flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +29,7 @@
     width: 100%;
     height: 100%;
   }
-  
+   */
 
 *{
     margin: 0; /*le saca el margen a todo*/
@@ -55,11 +58,11 @@ body {
     line-height: 1.6;
     /*@include flex-center;*/
     flex-wrap: wrap;
-    /* background-color: #161623; */
     min-height: 100vh;
     color: #fff;
-    background: linear-gradient(-45deg, #ec8666,#e25088, #65d2fa, #45d8b6); 
-    animation: gradient 15s ease infinite; 
+    background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+	background-size: 500%;
+	animation: gradient 10s infinite;
   } 
 
   @keyframes gradient {
@@ -72,6 +75,21 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+
+/*hasta aca están definida los estilos  generales de la web*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color del pulgar */
 }
   
 
@@ -147,21 +165,36 @@ header a:hover:not(.logo-img){
     color:var(--other-color);
     
 }
+/* tarjetas sobre nosotros */
 
-    main #nosotros {
-    text-align: center;
+/* se borro main  -Griselda- */
+
+   #nosotros {
     font-size: 1.3em;
     padding: 100px 90px 10px 90px;
     } 
+
+    /* se agrega estilo a titulo */
+    #nosotros h2{
+    font-size: 2em;
+    letter-spacing: 3px;
+    position: relative;
+    bottom: 65px;
+    color: var(--color-white);
+    text-align: center;
+    }
     
     .container {
     position: relative;
-    @include flex-center;
+    /* @include flex-center;  flex se debe aplicar aqui -Griselda*/
+    display: flex;
     z-index: 1;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;  no hace falta,ya que son solo 4 .card -Griselda*/
     margin: 40px 0;
     font-family: 'Poppins', sans-serif;
-    justify-content: space-evenly
+
+    /*  se alinea los .card al centro -Griselda*/
+    justify-content: center
     
     }
     
@@ -169,31 +202,52 @@ header a:hover:not(.logo-img){
     display: inline-block;
     width: 280px;
     height: 400px;
-    background: rgba(255,255,255,.05);
+    background: #1c1c1c;
     margin: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    @include flex-center;
+    /* @include flex-center;   se reemplaza por css basico -Griselda*/
     
     backdrop-filter: blur(10px);
     border-radius: 15px;
     text-align: center;
-    &:hover .content {
+
+    /*  sass/scss se reemplaza por css basico -Griselda */
+
+    /* &:hover .content {
         opacity: 1;
         transform: translateY(-20px);
     }
     &:hover .social-icons li {
         transform: translateY(0);
         opacity: 1;
-    }
+    } */
     }
     
+    /* se reemplaza sass/scss por css -Griselda */
+      .card:hover .content {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    .card:hover .social-icons li {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    
+
     .content {
-    @include flex-center-column;
+    /* @include flex-center-column; se reemplaza por css basico -Griselda*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     opacity: .5;
     transition: .5s;
     }
+
+    /* sass/scss se reemplaza por css basico  -Griselda*/
     
-    .content-box {
+    /* .content-box {
         & span {
         font-weight: 300;
         font-size: 15px;
@@ -204,24 +258,53 @@ header a:hover:not(.logo-img){
         text-transform: uppercase;
         font-weight: 500;
     }
+    } */
+
+
+    .content-box{
+      position: relative;
+      top: 12px;
     }
-    
+
+    .content-box span{
+      font-weight: 300;
+        font-size: 15px;
+    }
+
+    .content-box h3{
+      font-size: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
     .img-box {
         position: relative;
-        width: 150px;
+        width: 160px;
         height: 150px;
         border-radius: 50%;
         overflow: hidden;
-        border: 10px solid rgba(0,0,0,.25);
-    &__person-photo {
+        /* se cambia color de borde  -Griselda */
+        border: 10px solid var(--other-color);
+        /* se desplaza avatar 10px  */
+        top: 10px;
+
+        /* sass/scss  se reemplaza por css basico -Griselda*/
+    /* &__person-photo {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    }
-    
+        width: 100px;
+        height: 100px;
+    } */
+  }
+
+  .img-box__person-photo{
+    /* se agrega tamaño de la imagen igual que su contenedor  -Griselda */
+    width: 160px;
+    height: 150px;
+  }
+
     .social-icons {
         display: flex;
         margin-left: 100px;
@@ -229,16 +312,34 @@ header a:hover:not(.logo-img){
         list-style: none;
         bottom: 50px;
         
-    & li {
+        /* se reemplaza por css basico */
+    /* & li {
         margin-right: 15px;
         transform: translateY(40px);
         transition: .5s;
         opacity: 0;
         transition-delay: calc(0.1s * var(--i));
-        backface-visibility: hidden;
-        
-    }
-    }
+        backface-visibility: hidden; 
+    } */
+
+}
+
+.social-icons li {
+  margin-right: 15px;
+  transform: translateY(40px);
+  transition: .5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+  backface-visibility: hidden; 
+}
+
+
+
+
+
+
+
+
     
     .icon-white {
     color: #fff;
@@ -253,7 +354,8 @@ header a:hover:not(.logo-img){
 footer {
     margin-top: 150px;
      width: 100%;
-     height: 60vh;
+     /*  se reduce la altura del footer -Griselda */
+     height: 40vh;
     color: aliceblue;
     display: flex;
     background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);

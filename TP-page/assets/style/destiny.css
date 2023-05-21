@@ -29,16 +29,17 @@ html{
 body{
   font-family: 'Montserrat', sans-serif;
   /* NO TOCAR  */
-  /* background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+
+  background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
 	background-size: 500%;
-	animation: gradient 10s infinite; */
+	animation: gradient 10s infinite;
   
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
 
 }
 /* NO TOCAR */
-/* animacion background */
-/* @keyframes gradient {
+/* animación background */
+@keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -48,9 +49,36 @@ body{
 	100% {
 		background-position: 0% 50%;
 	}
-} */
+}
 
-/*hasta aca estan definida los estilos  generales de la web*/
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+
+
+/*hasta aca están definida los estilos  generales de la web*/
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color del pulgar */
+}
+
+
+
+/*hasta aca están definida los estilos  generales de la web*/
 
 /* *** header*** */
 
@@ -218,18 +246,13 @@ header a:hover:not(.logo-img){
   .pagos-container{
     width: 75%;
     display: flex;
-
-    box-shadow: 0 1px 2px 0 rgba(23,35,44,0.24), 0 -1px 5px 0 rgba(23,35,44,0.2);
     flex-direction: column;
     justify-content: center;
     margin: auto;
-
-    border-radius: 5px;
-
+    border-radius: 10px;
     cursor: pointer;
-
     height: 200px;
-
+    background: var(--color-white);
   }
 
   .medios-pagos{
@@ -238,8 +261,6 @@ header a:hover:not(.logo-img){
     align-items: center;
     margin-top: 10px;
   }
-
-
 
   .title-medios{
     padding: 15px 15px;
@@ -250,7 +271,10 @@ header a:hover:not(.logo-img){
     color: var(--second-color);
     display: inline-block;
     font-weight: 600;
-    margin: 0px;
+    position: relative;
+    left: 25px;
+    bottom: 15px;
+
   }
 
   .title-medios p{
@@ -413,20 +437,22 @@ display: inline-block;
 
 .titulo-destiny{
   position: relative;
-  top: 175px;
+  top: 115px;
+  text-align: center;
 }
 
 .titulo-destiny span{
+  letter-spacing: 7px;
   font-family: var(--second-font);
-  font-size: 2em;
-  color: #313131;
-  font-weight: 400;
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--color-white);
 }
 
 .slider{
 	position: relative;
 	width: 100%;
-	background: #000000; /* darckblue */
+	background: #000000; 
   top: 150px;
 }
 .myslide{
@@ -532,7 +558,7 @@ display: inline-block;
 	border-color: var(--second-color);
 }
 
-/* animacion */
+/* animación */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -700,7 +726,7 @@ cursor: pointer;
 
 /* ******** */
 
-/* responsividad comienza  aqui */
+/* responsividad comienza  aquí */
 
 /* --------- */
 
@@ -824,3 +850,4 @@ table tr td{
   top: 20px;
   left: 155vh;
 }
+
