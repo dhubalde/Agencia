@@ -1,10 +1,12 @@
-/* fuente principal */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Monserrat*/
+/*letras carteles Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
 
-/* letra titulo form destino */
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *{
+    padding: 0;
     box-sizing: border-box; /*no crece mas alla del tamaño*/
     /*margin: 0; le saca el margen a todo*/
 }
@@ -33,6 +35,24 @@ body{
 		background-position: 0% 50%;
 	}
 }
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+    width: 8px; /* Grosor horizontal del scroll */
+    height: 10px; /* Grosor vertical del scroll */
+  }
+  
+  /* Cambiar el color del scroll */
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color del scroll */
+  }
+  
+  /* Cambiar el color de fondo del scroll */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del scroll */
+  }
 
 :root{
 
@@ -70,72 +90,78 @@ button:hover{
 /*hasta aca estan definida los estilos  generales de la web*/
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 20px;
-    height: 150px;
-
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
-    background-position: center;
-    background-size: cover;
-    
+    height: 175px;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
+     
   }
 
-.logo{
-    display: flex;
-    flex-direction: column;
+  .logo{
+    display: column;
+    /* flex-direction: column;  */
     align-items: center;
+    filter: contrast(10.5);
   }
 
-.logo p{
+  .logo p{
     margin-top: -220px; /* Espacio entre el logo y el texto */
     /* font-size: 25px; */
     font-weight: bold;
     color: #d66bee;
     font-size: 1em;
     text-shadow: 2px 2px 2px #1d5fd0;
+
+    position: relative;
+    left: 15vh;
+    top: 7vh;
+    filter: contrast(10.5);
 }
 
-.logo img {
+
+  .logo img {
     width: 250px;
     height: auto;
     margin-top: -108px;
-
-}
-
-nav ul {
+  }
+  
+  .nav-header ul {
     display: flex;
+    flex-direction: row; 
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
 
-nav li {
-    margin: 0 10px;
-
-}
-
-nav a {
-    /* padding: 5px 12px; */
-    text-decoration: none;
-    /* font-weight: bold; */
-    color: var(--color-white);
-    /* font-size: 15px; */
-
-    font-weight: 300;
-    /* margin-bottom: 30px; */
-    letter-spacing: 1px;
-}
-
-header a{
+  .nav-header li {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    flex-direction: column; 
+  }
+  
+  .nav-header a {
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
     color: var(--color-white);
+  }
+
+  header a:not(.logo-img){
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-white);
+    position: relative;
+    top: 13px;
+    right: 7px;
 }
 
-header a:hover{
+/* menos a de logo */
+header a:hover:not(.logo-img){
     color:var(--other-color);
+    
 }
 
 .container {
@@ -143,14 +169,6 @@ header a:hover{
     margin: auto;  
 }
 
-header{
-    background-color: rgb(245,245,245);  
-}
-header .container{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;   
-}
 
 #hero{
     display: flex;
@@ -279,7 +297,7 @@ footer {
     display: flex;
     height: 300px;
 
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
     background-position: center;
     background-size: cover;
 }
@@ -289,16 +307,18 @@ footer div{
 }
 
 footer div h3{
-  font-weight: 300px;
+  font-weight: 200px;
   margin-bottom: 30px;
   letter-spacing: 1px;
+  font-size: 20px;
 }
 
 .col-1 a, .col-2 a, .col-3 a{
   display: block;
   text-decoration: none;
   color: aliceblue;
-  margin:10px 0 10px 0;
+  margin:5px 0px 5px 0px;
+  padding: 2px;
 }
 
 .col-2{
@@ -309,11 +329,10 @@ footer div h3{
   margin-top: 40px;
   display: flex;
   justify-content: center;
-
 }
 
 .social-icons a i{
-  font-size: 45px;
+  font-size: 30px;
   margin: 10px;
   cursor: pointer;
 }
@@ -340,8 +359,21 @@ footer div h3{
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 20px;
-
     }
+
+    .nav-header ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .nav-header li {
+        margin: 0 10px;
+        font-size: 15px;
+      }
+
+
      
 
     #hero h1 { 
