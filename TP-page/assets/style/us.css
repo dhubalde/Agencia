@@ -120,14 +120,14 @@ header {
     text-shadow: 2px 2px 2px #1d5fd0;
 
     position: relative;
-    left: 15vh;
+    left: 13vh;
     top: 7vh;
     filter: contrast(10.5);
   }
 
 
   .logo img {
-    width: 250px;
+    width: 230px;
     height: auto;
     margin-top: -108px;
   }
@@ -177,6 +177,7 @@ header a:hover:not(.logo-img){
     font-size: 1.3em;
     padding: 100px 90px 10px 90px;
     text-align: center;
+   
   } 
 
     /* se agrega estilo a titulo */
@@ -184,9 +185,10 @@ header a:hover:not(.logo-img){
       font-size: 2em;
       letter-spacing: 3px;
       position: relative;
-      bottom: 65px;
+      bottom: 25px;
       color: var(--color-white);
       text-align: center;
+      
     }
     
     .container {
@@ -403,9 +405,13 @@ footer {
 /*version para escritorio*/
 
 @media (min-width: 720px){
-
+  body{
+    position: relative;
+    width: 100%;
+  }
+  
   header{
-      position: fixed;
+      position: relative;
       width: 100%;
   }
 
@@ -419,7 +425,7 @@ footer {
       flex-direction: row;
       padding-bottom: 0px;
       padding-right: 20px;
-      z-index: 30;
+      z-index: 100;
   }
 
   .nav-header ul {
@@ -436,16 +442,8 @@ footer {
 
     main #nosotros {
       font-size: 1.3em;
-      text-align: center;
-     
-    } 
-
-    #nosotros h2{
-      margin: 100px;
-      padding: auto;
-    } 
-  
-      
+      text-align: center;  
+    }    
 
   footer {
       justify-content: flex;
