@@ -1,5 +1,5 @@
 /* fuente principal */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Monserrat*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Montserrat*/
 /*letras carteles Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
 /* fuente secundaria Poppins*/
@@ -15,7 +15,6 @@ html{
     scroll-behavior: smooth;
 }
 
-/* La convención recomendada en CSS es colocar las reglas del selector :root al comienzo del archivo CSS, antes de cualquier otro selector, incluido el selector body. Esto se debe a que las variables CSS definidas en :root estarán disponibles para su uso en todo el archivo CSS, incluyendo las reglas que se apliquen al selector body y otros elementos. */
 :root{
   --color-primary: #1d4d8b;
   --second-color:#DF2E38;
@@ -51,30 +50,7 @@ body{
 	}
 }
 
-/* estilo del scroll */
 
-/* Cambiar el grosor del scroll */
-::-webkit-scrollbar {
-  width: 8px; /* Grosor horizontal del scroll */
-  height: 10px; /* Grosor vertical del scroll */
-}
-
-/* Cambiar el color del scroll */
-::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Color del scroll */
-}
-
-/* Cambiar el color de fondo del scroll */
-::-webkit-scrollbar-track {
-  background-color: transparent; /* Color de fondo del scroll */
-}
-
-
-/*hasta aca están definida los estilos  generales de la web*/
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary); /* Color del pulgar */
-}
 
 
 
@@ -719,14 +695,14 @@ justify-content: center;
 
 .social-icons a i{
 
-font-size: 45px;
+font-size: 35px;
 margin: 10px;
 cursor: pointer;
 } 
 
 /* ******** */
 
-/* responsividad comienza  aquí */
+
 
 /* --------- */
 
@@ -851,3 +827,140 @@ table tr td{
   left: 155vh;
 }
 
+/* media-query comienza  aquí */
+
+/* dispositivo Movil */
+@media screen and (max-width: 767px) {
+
+  header {
+    padding: 10px;
+  }
+
+  .logo{
+    position: relative;
+    right: 70px;
+  }
+
+  .logo p{
+    left: 17vh;
+    top: 9vh;
+  }
+
+  nav {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  nav ul li i{
+    left: 10px !important;
+  }
+
+
+  header a:not(.logo-img){
+    left: 10px;
+  }
+
+  .container-form{
+    height: 90vh;
+
+  }
+
+  .form-destino{
+    flex-direction: column;
+    text-align: initial;
+    align-items: center;
+  }
+
+  .pagos-container{
+    width: 98%;
+  }
+
+
+  .title-medios h2{
+    font-size: 20px;
+    bottom: 35px;
+    left: 0px;
+}
+
+  .title-medios p{
+    position: relative;
+    bottom: 40px;
+    font-size: 10px;
+  }
+
+  .btn-pagos button{
+    font-size: 10px;
+    padding: 5px;
+    position: relative;
+    top: 45px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  .col-1, .col-2, .col-3 {
+    margin-left: 10vh;
+}
+
+footer div {
+    margin-top: 10vh;
+}
+
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  section {
+    padding: 50px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  nav ul li {
+    margin-right: 30px;
+  }
+
+  section {
+    padding: 70px;
+  }
+
+  footer {
+    padding: 30px;
+    text-align: center;
+  }
+}

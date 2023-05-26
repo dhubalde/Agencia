@@ -14,35 +14,50 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html">
-            <img src="./assets/img/logo.png"  alt="Grupo-17">
-            </a>
-            <p>Viva World Travel</p>
+          <a href="index.html" class="logo-img">
+            <img src="./assets/img/logo.png" alt="Grupo-17">
+          </a>
+          <p>Viva World Travel</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#quienes-somos"><i class="fa-solid fa-person fa-sm" style="color: white"></i> Quienes Somos</a></li>
-                <li><a href="destiny.html"><i class="fa-solid fa-plane fa-sm" style="color: #ffffff;"></i> Destinos</a></li>
-                <li><a href="packages.html"><i class="fa-solid fa-suitcase fa-sm" style="color: #ffffff;"></i> Paquetes</a></li>
-                <li><a href="contact.html"><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i> Contacto</a></li>
-                <li><a href="us.html"><i class="fa-solid fa-user-group fa-sm" style="color: #ffffff;"></i> Nosotros</a></li>
-            </ul>
+        <nav class="nav-header">
+          <ul>
+            <li><i class="fa-solid fa-house fa-2xl" style="color: #DF2E38;position:relative; left: 1px;"></i><a href="index.html"><br>
+              Home</a></li>
+            <li><i class="fa-solid fa-plane fa-2xl" style="color: #DF2E38;position:relative; left: 13px;"></i><a href="destiny.html"><br>
+              Destinos</a></li>
+            <li><i class="fa-solid fa-suitcase fa-2xl" style="color: #DF2E38; position:relative; left: 14px;"></i><a href="packages.html"><br>
+              Paquetes</a></li>
+            <li><i class="fa-solid fa-envelope fa-2xl" style="color: #DF2E38; position:relative; left:12px;"></i><a href="contact.html"><br>
+              Contacto</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <main>
-        <section id="hero">
-            <!--secciones de la web-->
-            <h1>Contrata los mejores <br> paquetes para tus viajes</h1>
-            <!-- <button><a href="contact.html">CONSULTA YA!</a></button> -->
-            <form action="contact.html">
-                <!--le da funcionabilidad al boton -->
+
+    <section id="hero">
+      
+      <div class="video-container">
+
+        <video autoplay loop muted>
+          <source src="../TP-page/assets/video/video.mp4" type="video/mp4">
+          Tu navegador no admite la etiqueta de video.
+        </video>
+
+        <div class="text-overlay">
+          <h1>Contrata los mejores <br> paquetes para tus viajes</h1>
+            <form action="/TP-page/contact.html">
                 <button>CONSULTA YA!</button>
             </form>
-        </section>
+        </div>
+
+      </div>
+
+    </section>
 
         <section id="quienes-somos">
-            <div class="container">
+
+            <div class="q-scontainer">
                 <div class="img-container"></div>
                     <div class="texto">
                         <h2>Somos <span class="color-acento">Viva Wold Travel</span></h2>
@@ -89,28 +104,27 @@
 
     <footer class="footer">
         <div class="col-1">
-            <h3>LINKS</h3>
-            <a href="index.html">Inicio</a>
-            <a href="destiny.html">Destinos</a>
-            <a href="packages.html">Paquetes</a>
-            <a href="contact.html">Contacto</a>
-            <a href="us.html">Nosotros</a>
+          <h3>LINKS</h3>
+          <a href="index.html">Inicio</a>
+          <a href="destiny.html">Destinos</a>
+          <a href="packages.html">Paquetes</a>
+          <a href="contact.html">Contacto</a>
+          <a href="us.html">Sobre nosotros</a>
         </div>
         <div class="col-2">
-            <h3>NUESTRAS REDES</h3>
-            <div class="social-icons">
+          <h3>NUESTRAS REDES</h3>
+          <div class="social-icons">
             <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #1877f2;"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #5b5a5a;"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #c7018c;"></i></a>
             <a href="#" target="_blank"><i class="fa-brands fa-whatsapp fa-xl" style="color: #1bd741;"></i></a>
             <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
-            </div>
+          </div>
         </div>
         <div class="col-3">
-            <h3>DIRECCION</h3>
-            <p>Calle falsa 123,<br>CABA, Argentina</p>
-            <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
+          <h3>DIRECCIÓN</h3>
+          <p>Calle falsa 123,<br>CABA, Argentina</p>
+          <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
         </div>
-
-    </footer>
+      </footer>
 </body>
 </html>

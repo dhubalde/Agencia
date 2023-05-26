@@ -159,7 +159,7 @@ header a:hover:not(.logo-img){
 
 /* formulario contacto */
 
-/* definicion un contenedor flex con dos items */
+/* definición un contenedor flex con dos items */
 
 .contenedor-flex {
   display: flex;
@@ -481,7 +481,7 @@ footer div h3{
 
 .social-icons a i{
  
-  font-size: 45px;
+  font-size: 35px;
   margin: 10px;
   cursor: pointer;
 } 

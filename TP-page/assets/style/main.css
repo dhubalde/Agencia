@@ -5,54 +5,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *{
-    box-sizing: border-box; /*no crece mas alla del tamaño*/
-    /*margin: 0; le saca el margen a todo*/
+    margin: 0; /*le saca el margen a todo*/
+    padding: 0;
+    box-sizing:border-box;
 }
 
 html{
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'roboto', sans-serif;
-    margin: 0; /*margen*/
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 :root{
-
-    --color-primary: #270570;
-    --second-color:#FC2947;
-    --color-white:#fff8dc;
+    --color-primary: #1d4d8b;
+    --second-color:#DF2E38;
+    --color-white:#FAF7F0;
     --other-color:#2b90e2;
     --principal-font:'Montserrat', sans-serif;
-    --second-font:'Anton', sans-serif;
+    --second-font:'Poppins', sans-serif;
+    --other-font: 'Raleway', sans-serif;
   }
 
-/*gerarquias de los titulos*/
-h1{font-size: 3.5em;}
-h2{font-size: 2.7em;}
-h3{font-size: 2em;}
-p{font-size: 1.25em;}
-ul{list-style: none;} /*le saca los puntos de la lista*/
-li{font-size: 1.25em;}
+body{
+    font-family: 'Montserrat', sans-serif;
+    /* NO TOCAR  */
+    background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+      /* background-size: 500%; */
+      animation: gradient 10s infinite;
+  }
 
-button{ /*estetica de los botones*/
+
+  /* NO TOCAR */
+  /* animación background */
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+
+button{ 
     font-size: 1.25em;
     font-weight: bold;
     padding: 10px 30px;
@@ -67,17 +64,33 @@ button:hover{
     background-color: rgb(9, 37, 59);
 }
 
-/*hasta aca estan definida los estilos  generales de la web*/
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+    width: 8px; /* Grosor horizontal del scroll */
+    height: 10px; /* Grosor vertical del scroll */
+  }
+  
+
+  /* Cambiar el color de fondo del scroll */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del scroll */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); /* Color del pulgar */
+  }
+
+/*hasta aca están definida los estilos  generales de la web*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    height: 150px;
+    height: 175px;
 
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
-    background-position: center;
-    background-size: cover;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
     
   }
 
@@ -85,15 +98,23 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    filter: contrast(10.5);
+
+
   }
 
 .logo p{
     margin-top: -220px; /* Espacio entre el logo y el texto */
-    /* font-size: 25px; */
     font-weight: bold;
     color: #d66bee;
     font-size: 1em;
     text-shadow: 2px 2px 2px #1d5fd0;
+
+    position: relative;
+    left: 13vh;
+    top: 7vh;
+    filter: contrast(10.5);
 }
 
 .logo img {
@@ -103,83 +124,88 @@ header {
 
 }
 
-nav ul {
+.nav-header ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-nav li {
+  }
+  
+  .nav-header li {
     margin: 0 10px;
-
-}
-
-nav a {
-    /* padding: 5px 12px; */
-    text-decoration: none;
-    /* font-weight: bold; */
-    color: var(--color-white);
-    /* font-size: 15px; */
-
-    font-weight: 300;
-    /* margin-bottom: 30px; */
-    letter-spacing: 1px;
-}
-
-header a{
+   
+  }
+  
+  .nav-header a {
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
     color: var(--color-white);
+  }
+
+  header a:not(.logo-img){
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-white);
+
+    position: relative;
+    top: 13px;
+    right: 7px;
 }
 
-header a:hover{
+/* menos a de logo */
+header a:hover:not(.logo-img){
     color:var(--other-color);
+    
 }
 
-.container {
-    max-width: 1400px; 
-    margin: auto;  
-}
+/*** Main  ***/
 
-header{
-    background-color: rgb(245,245,245);  
-}
-header .container{
+/* prueba video */
+
+.video-container {
+    position: relative;
+    height: 65vh;
+    top: 18.5vh;
+  }
+  
+  .video-container video {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    /* La propiedad CSS object-fit se utiliza para controlar cómo se ajusta una imagen o un video dentro de su contenedor */
+    object-fit: cover;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column; 
-    align-items: center;   
-}
-
-#hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
-    height: 90vh;
-    color: white;
-    
-    
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/assets/img/miami.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
 
-#hero h1{
+    background-color: rgba(0, 0, 0, 0.346);
+    
+  }
+
+  .text-overlay h1{
     color: white;
 }
 
-#hero button{
+.text-overlay button{
     font-size: 1.75em;
-}
+} */
+
+/* *** */
 
 #quienes-somos .container{
     text-align: center;
@@ -195,6 +221,7 @@ header .container{
     
 }
 
+/* *** */
 
 #nuestros-viajes{
     color: white;
@@ -271,53 +298,72 @@ header .container{
     ,url("/assets/img/viajes-negocios.jpg");
 }
 
+
+
+/*** footer***/
+
 footer {
-    margin-top: 0px;
-    width: 100%;
-    padding: 60px 15%;
+    margin-top: 150px;
+     width: 100%;
+     height: 40vh;
     color: aliceblue;
     display: flex;
-    height: 300px;
-
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(54,54,54,1) 100%);
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
     background-position: center;
     background-size: cover;
-}
-
-footer div{
+  
+  }
+  
+  footer div{
   text-align: center;
-}
-
-footer div h3{
-  font-weight: 300px;
-  margin-bottom: 30px;
+  margin-top: 15vh;
+  }
+  
+  footer div h3{
+  font-weight: 300;
   letter-spacing: 1px;
-}
-
-.col-1 a, .col-2 a, .col-3 a{
+  margin-bottom: 20px;
+  }
+  
+  .col-2{
+    flex-grow: 1;
+  }
+  
+  .col-1 a, .col-2 a, .col-3 a{
   display: block;
   text-decoration: none;
   color: aliceblue;
   margin:10px 0 10px 0;
-}
-
-.col-2{
-  flex-grow: 1;
-}
-
-.social-icons{
+  }
+  
+  .col-1{
+    margin-left: 30vh;
+  
+  }
+  
+  .col-1 a:hover{
+    color: var(--other-color);
+  }
+  
+  .col-3{
+    margin-right: 30vh;
+  }
+  
+  
+  .social-icons{
   margin-top: 40px;
   display: flex;
   justify-content: center;
-
-}
-
-.social-icons a i{
-  font-size: 45px;
+  
+  }
+  
+  
+  .social-icons a i{
+  
+  font-size: 35px;
   margin: 10px;
   cursor: pointer;
-}
-  
+  } 
 
 
 
@@ -327,7 +373,7 @@ footer div h3{
 @media (min-width: 720px){
 
     header{
-        position: fixed;
+        position: absolute;
         width: 100%;
     }
 
@@ -348,9 +394,12 @@ footer div h3{
         font-size: 3.5em;
     }
 
-    #quienes-somos .container{
+
+    #quienes-somos .q-scontainer{
         display: flex;
         justify-content: space-evenly;
+        position: relative;
+        top: 25vh;
     }
 
     #quienes-somos h2 {
@@ -369,7 +418,7 @@ footer div h3{
    
 
     #quienes-somos .img-container {
-        background-image: url("/assets/img/lisboa.jpeg");
+        background-image: url(../img/agencia-viajes.jpg);
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -433,12 +482,6 @@ footer div h3{
         )
         ,url("/assets/img/viajes-negocios.jpg");
     }
-
-    footer {
-        justify-content: flex;
-        height: 300px;
-    }
-    
 
 
 @media (min-width: 1200px) {
