@@ -40,6 +40,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 :root{
     --color-primary: #1d4d8b;
     --second-color:#DF2E38;
@@ -108,7 +109,6 @@ header {
     flex-direction: column;
     align-items: center;
     filter: contrast(10.5);
-
   }
 
   .logo p{
@@ -123,24 +123,28 @@ header {
     left: 13vh;
     top: 7vh;
     filter: contrast(10.5);
-}
+  }
 
 
   .logo img {
-    width: 250px;
+    width: 230px;
     height: auto;
     margin-top: -108px;
   }
   
   .nav-header ul {
     display: flex;
+    flex-direction: row;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   .nav-header li {
-    margin: 0 10px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    flex-direction: column; 
   }
   
   .nav-header a {
@@ -169,19 +173,22 @@ header a:hover:not(.logo-img){
 
 /* se borro main  -Griselda- */
 
-   #nosotros {
+   main #nosotros {
     font-size: 1.3em;
     padding: 100px 90px 10px 90px;
-    } 
+    text-align: center;
+   
+  } 
 
     /* se agrega estilo a titulo */
     #nosotros h2{
-    font-size: 2em;
-    letter-spacing: 3px;
-    position: relative;
-    bottom: 65px;
-    color: var(--color-white);
-    text-align: center;
+      font-size: 2em;
+      letter-spacing: 3px;
+      position: relative;
+      bottom: 25px;
+      color: var(--color-white);
+      text-align: center;
+      
     }
     
     .container {
@@ -189,7 +196,7 @@ header a:hover:not(.logo-img){
     /* @include flex-center;  flex se debe aplicar aqui -Griselda*/
     display: flex;
     z-index: 1;
-    /* flex-wrap: wrap;  no hace falta,ya que son solo 4 .card -Griselda*/
+    flex-wrap: wrap;  /*no hace falta,ya que son solo 4 .card -Griselda-- lo uso para el responsive*/
     margin: 40px 0;
     font-family: 'Poppins', sans-serif;
 
@@ -268,7 +275,7 @@ header a:hover:not(.logo-img){
 
     .content-box span{
       font-weight: 300;
-        font-size: 15px;
+      font-size: 15px;
     }
 
     .content-box h3{
@@ -332,86 +339,141 @@ header a:hover:not(.logo-img){
   transition-delay: calc(0.1s * var(--i));
   backface-visibility: hidden; 
 }
-
-
-
-
-
-
-
-
-    
+   
     .icon-white {
     color: #fff;
     font-size: 18px;
    
     }
-    
-      
 
+  
 /***** footer  ****/
 
 footer {
-    margin-top: 150px;
-     width: 100%;
-     /*  se reduce la altura del footer -Griselda */
-     height: 40vh;
-    color: aliceblue;
-    display: flex;
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
-    background-position: center;
-    background-size: cover;
-  
-  }
+  margin-top: 0px;
+  width: 100%;
+  padding: 60px 15%;
+  color: aliceblue;
+  display: flex;
+  height: 300px;
+
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
+  background-position: center;
+  background-size: cover;
+}
   
   footer div{
   text-align: center;
-  margin-top: 15vh;
   }
-  
+
   footer div h3{
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+    font-weight: 200px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-size: 20px;
   }
   
+  
+  
+  
+  .col-1 a, .col-2 a, .col-3 a{
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    margin:5px 0px 5px 0px;
+    padding: 2px;
+  }
+
   .col-2{
     flex-grow: 1;
   }
   
-  .col-1 a, .col-2 a, .col-3 a{
-  display: block;
-  text-decoration: none;
-  color: aliceblue;
-  margin:10px 0 10px 0;
-  }
-  
-  .col-1{
-    margin-left: 30vh;
-  
-  }
-  
-  .col-1 a:hover{
-    color: var(--other-color);
-  }
-  
-  .col-3{
-    margin-right: 30vh;
-  }
-  
-  
+   
   .social_icons{
   margin-top: 40px;
   display: flex;
   justify-content: center;
-  
-  }
-  
+ }
   
   .social_icons a i{
-  
-  font-size: 45px;
+  font-size: 30px;
   margin: 10px;
   cursor: pointer;
   } 
+
+  /* ******************************************************************** */
+/*version para escritorio*/
+
+@media (min-width: 720px){
+  body{
+    position: relative;
+    width: 100%;
+  }
   
+  header{
+      position: relative;
+      width: 100%;
+  }
+
+  header .container{
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 80px;
+  }
+
+  header nav{
+      flex-direction: row;
+      padding-bottom: 0px;
+      padding-right: 20px;
+      z-index: 100;
+  }
+
+  .nav-header ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .nav-header li {
+      margin: 0 10px;
+      font-size: 15px;
+    }
+
+    main #nosotros {
+      font-size: 1.3em;
+      text-align: center;  
+    }    
+
+  footer {
+      justify-content: flex;
+      height: 300px;
+  }
+} 
+
+
+@media (min-width: 1200px) {
+  #contacto{
+      background-position-x: calc(100wv - 800px);
+  }
+}
+
+
+  /* .container {
+  position: relative;
+  @include flex-center;  flex se debe aplicar aqui -Griselda*/
+  /*display: flex;
+  z-index: 1;
+  flex-wrap: wrap;  no hace falta,ya que son solo 4 .card -Griselda-- lo uso para el responsive
+  margin: 40px 0;
+  font-family: 'Poppins', sans-serif;
+
+  /*  se alinea los .card al centro -Griselda*/
+  /*justify-content: center
+  
+  } */
+
+
+  
+ 
+    

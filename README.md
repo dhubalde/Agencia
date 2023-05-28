@@ -78,4 +78,9 @@
 * us.html se usan tarjetas con datos de los integrantes menu y footer nueva version
 * us.css menu y footer nueva version
 
+### 25/05 - Dalila -
+* us.html/.css pagina finalizada (version reponsive)
+* index.html/.css pagina finalizada (version reponsive)
+* packages.html/.css pagina finalizada (version reponsive)
+
 
