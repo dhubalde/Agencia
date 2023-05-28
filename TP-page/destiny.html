@@ -10,27 +10,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
-  
+  <!-- ion icon -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <title>Viva World Travel ✈</title>
 </head>
 <body>
   <header>
     <div class="logo">
       <a href="index.html" class="logo-img">
-        <img src="./assets/img/logo.png" alt="Grupo-17">
+        <img src="./assets/img/logo1.png" alt="Grupo-17">
       </a>
       <p>Viva World Travel</p>
     </div>
     <nav class="nav-header">
       <ul>
-        <li><i class="fa-solid fa-house fa-2xl" style="color: #DF2E38;position:relative; left: 1px;"></i><a href="index.html"><br>
-          Home</a></li>
-        <li><i class="fa-solid fa-plane fa-2xl" style="color: #DF2E38;position:relative; left: 13px;"></i><a href="destiny.html"><br>
-          Destinos</a></li>
-        <li><i class="fa-solid fa-suitcase fa-2xl" style="color: #DF2E38; position:relative; left: 14px;"></i><a href="packages.html"><br>
-          Paquetes</a></li>
-        <li><i class="fa-solid fa-envelope fa-2xl" style="color: #DF2E38; position:relative; left:12px;"></i><a href="contact.html"><br>
-          Contacto</a></li>
+        <li>
+          <a href="index.html">
+            <ion-icon name="home-outline" size="large" style="color:aliceblue; position: relative;
+            left: -7px;" >
+            </ion-icon><br>HOME</a>
+        </li>
+        <li><a
+            href="destiny.html"><ion-icon name="airplane-outline" size="large" style="color:aliceblue"></ion-icon><br>DESTINOS</a>
+          </li>
+          
+        <li><a href="packages.html"><ion-icon name="bag-handle-outline" size="large" style="color:aliceblue"></ion-icon><br>PAQUETES</a>
+        </li>
+
+        <li><a
+            href="contact.html"><ion-icon name="mail-open-outline" size="large" style="color:aliceblue"></ion-icon><br>
+            CONTACTO</a>
+          </li>
+        <li><a
+            href="us.html"><ion-icon name="person-outline" size="large" style="color:aliceblue"></ion-icon><br>
+            NOSOTROS</a>
+          </li>
       </ul>
     </nav>
   </header>
@@ -42,28 +57,30 @@
         <span>Elije tu destino:</span>
       </div>
       <form class="form-destino">
-        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i>
+        <div class="form-group"><label for="origen"><i class="fa-solid fa-location-dot fa-lg" style="color:#2b90e2"></i>
           Origen:</label>
         <select id="origen" name="origen">
           <option value="none" selected disabled hidden>Seleccione Origen</option>
         </select>
       </div>
+
       <div class="form-group">
-        <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#270570"></i> Destino:</label>
+        <label for="destino"><i class="fa-solid fa-location-dot fa-lg" style="color:#2b90e2"></i> Destino:</label>
         <select id="destino" name="destino">
           <option value="none" selected disabled hidden>Seleccione Destino</option>
         </select>
       </div>
+
       <div class="form-group">
-        <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha: Ida</label>
-        <input type="date" id="fecha" name="fecha">
+        <label for="fecha-ida"><i class="fa-solid fa-calendar-days fa-lg" style="color:#2b90e2"></i> Fecha: Ida</label>
+        <input type="date" id="fecha-ida" name="fecha-ida">
       </div>
       <div class="form-group">
-        <label for="fecha"><i class="fa-solid fa-calendar-days fa-lg" style="color:#270570"></i> Fecha: Vuelta</label>
-        <input type="date" id="fecha" name="fecha">
+        <label for="fecha-vuelta"><i class="fa-solid fa-calendar-days fa-lg" style="color:#2b90e2"></i> Fecha: Vuelta</label>
+        <input type="date" id="fecha-vuelta" name="fecha-vuelta">
       </div>
       <div class="form-group">
-        <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #270570"></i> Pasajeros:</label>
+        <label for="pasajeros"><i class="fa-solid fa-person fa-lg" style="color: #2b90e2"></i> Pasajeros:</label>
         <input type="number" id="pasajeros" name="pasajeros" value="1">
       </div>
       <div class="form-group">
@@ -153,7 +170,7 @@
       <div class="myslide fade">
         <div class="txt">
           <h1 class="t-stroke t-shadow">BRASIL</h1>
-          <ul id="list-card" style="list-style: none;">
+          <ul class="list-card" style="list-style: none;">
             <li>São Paulo</li>
             <li>Rio de Janeiro</li>
             <li>Brasilia</li>
@@ -166,7 +183,7 @@
       <div class="myslide fade">
         <div class="txt">
           <h1 class="t-stroke t-shadow">CHILE</h1>
-          <ul id="list-card" style="list-style: none;">
+          <ul class="list-card" style="list-style: none;">
             <li>Santiago de Chile</li>
             <li>Valparaiso</li>
             <li>Antofagasta</li>
@@ -275,10 +292,10 @@
                 <img src="/TP-page/assets/img/visa.png" alt="visa">
               </span>
 
-              <span class="textomedios">
+              <div class="textomedios">
                 <h5><b>Tarjetas Visa </b></h5>
                 <p>Hasta 24 cuotas fijas</p>
-              </span>
+              </div>
 
               <span class="vercondicion">
                 <a href="https://www.visa.com.ar/support/consumer/visa-rules.html" target="_blank">Ver condiciones</a>
@@ -297,10 +314,10 @@
                 <img src="/TP-page/assets/img/mastercard.png" alt="Mastercard">
               </span>
 
-              <span class="textomedios">
+              <div class="textomedios">
                 <h5><b>Tarjeta MasterCard</b></h5>
                 <p>Hasta 24 cuotas fijas</p>
-              </span>
+              </div>
 
               <span class="vercondicion">
                 <a href="https://www.masterconsultas.com.ar/tarjetas.html" target="_blank">Ver condiciones</a>
@@ -318,10 +335,10 @@
                 <img src="/TP-page/assets/img/amex.png" alt="American">
               </span>
 
-               <span class="textomedios">
+               <div class="textomedios">
                 <h5><b>Tarjeta American Express</b></h5>
                 <p>Hasta 24 cuotas fijas</p>
-              </span>
+              </div>
 
                <span class="vercondicion">
                 <a href="https://www.americanexpress.com/ar/ayuda/index.html?inav=ar_utility_contact" target="_blank">Ver condiciones</a>
@@ -339,10 +356,10 @@
                 <img src="/TP-page/assets/img/cabal.png" alt="Cabal">
               </span>
 
-              <span class="textomedios">
+              <div class="textomedios">
                 <h5><b>Tarjeta Cabal</b></h5>
                 <p>Hasta 24 cuotas Fijas</p>
-              </span>
+              </div>
 
                <span class="vercondicion">
                 <a href="https://www.cabal.coop/personas/tarjeta-de-credito" target="_blank">Ver condiciones</a>
@@ -356,14 +373,14 @@
 
             <div class="fila-pago">
 
-              <span class="logos-bancos">
+              <div class="logos-bancos">
                 <img src="/TP-page/assets/img/nativa.jpg" alt="Nativa">
-              </span>
+              </div>
               
-              <span class="textomedios">
+              <div class="textomedios">
                 <h5><b>Tarjeta Nativa</b></h5>
                 <p>Hasta 24 cuotas fijas </p>
-              </span>
+              </div>
 
                <span class="vercondicion">
                 <a href="https://www.nativanacion.com.ar/" target="_blank">Ver condiciones</a>
@@ -382,10 +399,10 @@
                 <img src="/TP-page/assets/img/pagofacil.png" alt="Pago-fácil">
               </span>
 
-              <span class="textomedios">
+              <div class="textomedios">
                 <h5><b>Pago Fácil</b></h5>
                 <p>Red Pago Fácil de todo el país!</p>
-              </span>
+              </div>
 
                <span class="vercondicion">
                 <a href="https://www.pagofacil.net/terminos-y-condiciones" target="_blank">Ver condiciones</a>
@@ -400,10 +417,11 @@
               <span class="logos-bancos">
                 <img src="/TP-page/assets/img/mercadopago.png" alt="Mercado-pago">
               </span>
-              <span class="textomedios">
+
+              <div class="textomedios">
                 <h5><b>MercadoPago</b></h5>
                 <p>MercadoPago</p>
-              </span>
+              </div>
               <span class="vercondicion">
                 <a href="https://www.mercadopago.com.ar/ayuda/terminos-y-condiciones-de-rendimientos_4070" target="_blank">Ver condiciones</a>
               </span>
@@ -418,10 +436,11 @@
               <span class="logos-bancos">
                 <img src="/TP-page/assets/img/transferencias-ban.png" alt="tranfer">
               </span>
-              <span class="textomedios">
+
+              <div class="textomedios">
                 <h5><b>Transferencias bancarias</b></h5>
                 <p>Pago al instante</p>
-              </span>
+              </div>
               <span class="vercondicion">
                 <a href="https://www.bcra.gob.ar/Saber_es_central/transferencias-bancarias-inmediatas-y-gratuitas.html" target="_blank">Ver condiciones</a>
               </span>

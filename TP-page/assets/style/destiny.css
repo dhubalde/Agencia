@@ -29,16 +29,16 @@ body{
   font-family: 'Montserrat', sans-serif;
   /* NO TOCAR  */
 
-  background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+  /* background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
 	background-size: 500%;
-	animation: gradient 10s infinite;
+	animation: gradient 10s infinite; */
   
-  /* background-color: var(--color-white); */
+  background-color: var(--color-white);
 
 }
 /* NO TOCAR */
 /* animación background */
-@keyframes gradient {
+/* @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -48,6 +48,31 @@ body{
 	100% {
 		background-position: 0% 50%;
 	}
+} */
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+
+
+/*hasta aca están definida los estilos  generales de la web*/
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color del pulgar */
 }
 
 
@@ -65,28 +90,20 @@ header {
     justify-content:space-between;
     align-items: center;
     padding: 20px;
-    height: 175px;
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
-    
+    height: 150px;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+    background-position: center;
+
   }
 
   .logo{
     display: flex;
     flex-direction: column;
-   align-items: center;
-   filter: contrast(10.5);
-
   }
 
   .logo p{
-    margin-top: -220px; /* Espacio entre el logo y el texto */
-    /* font-size: 25px; */
-    font-weight: bold;
-    color: #d66bee;
+    color: var(--other-color);
     font-size: 1em;
-    text-shadow: 2px 2px 2px #1d5fd0;
-
-    position: relative;
     left: 13vh;
     top: 7vh;
     filter: contrast(10.5);
@@ -94,10 +111,10 @@ header {
 
 
   .logo img {
-    width: 250px;
-    height: auto;
-    margin-top: -108px;
-
+    right: 30px;
+    width: 200px;
+    position: relative;
+    top: 3px;
   }
   
   .nav-header ul {
@@ -112,13 +129,6 @@ header {
    
   }
   
-  .nav-header a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--color-white);
-  }
-
   header a:not(.logo-img){
     padding: 5px 12px;
     text-decoration: none;
@@ -126,30 +136,39 @@ header {
     color: var(--color-white);
 
     position: relative;
-    top: 13px;
-    right: 7px;
+    top: 5px;
+    right: 9px;
+
+    font-size: small;
 }
 
 /* menos a de logo */
 header a:hover:not(.logo-img){
-    color:var(--other-color);
-    
+    color:var(--other-color)
+  
 }
+
+ion-icon{
+  position: relative;
+  left: 7px;
+}
+
+
 
 /* ***main*** */
 
 /* estilo de formulario destino */
 
 .titulo-form span{
-  color: white;
-    font-size: 39px;
-    background-color: #00000040;
+
+    color: var(--color-white);
+    font-size: 25px;
     position: relative;
-    right: 28%;
+    right: 30.5%;
 }
 
 .container-form {
-    background-image: url(https://www.ola.com.ar/assets/gfx/back/panel-buscador.png);
+    background-image: url(https://assets.turismocity.com/cdn-cgi/image/format=auto/img/home-package.png);
     background-position: center;
     background-size:cover;
     padding: 40px 16px;
@@ -226,15 +245,15 @@ header a:hover:not(.logo-img){
     margin: auto;
     border-radius: 10px;
     cursor: pointer;
-    height: 200px;
-    background: var(--color-white);
+    height: 185px;
+    background: #dcdde1;
   }
 
   .medios-pagos{
     display: flex;
-    justify-content:space-around;
-    align-items: center;
-    margin-top: 10px;
+    justify-content: space-around;
+    align-items: end;
+    margin-top: 30px;
   }
 
   .title-medios{
@@ -242,13 +261,14 @@ header a:hover:not(.logo-img){
   }
 
   .title-medios h2{
-    font-size: 27px;
+
+    font-size: 25px;
     color: var(--second-color);
     display: inline-block;
     font-weight: 600;
     position: relative;
-    left: 25px;
-    bottom: 15px;
+    left: 14px;
+    bottom: 7px;
 
   }
 
@@ -421,7 +441,7 @@ display: inline-block;
   font-family: var(--second-font);
   font-size: 3em;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .slider{
@@ -472,7 +492,7 @@ display: inline-block;
     text-shadow: 7px 7px var(--color-primary);
   }
 
-  #list-card ul{
+  .list-card ul{
     list-style: none;
   }
 
@@ -563,15 +583,10 @@ display: inline-block;
   to {left: 15%;}
 }
 
-
-
-
-
 @-webkit-keyframes zoomin {
   from {transform: scale(1, 1);}
   to {transform: scale(1.5, 1.5);}
 }
-
 
 @keyframes zoomin {
   from {transform: scale(1, 1);}
@@ -639,10 +654,10 @@ display: inline-block;
 footer {
   margin-top: 150px;
    width: 100%;
-   height: 40vh;
+   height: 35vh;
   color: aliceblue;
   display: flex;
-  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
   background-position: center;
   background-size: cover;
 
@@ -705,7 +720,7 @@ cursor: pointer;
 
 /* --------- */
 
-/* listado de ofertas ARREGLAR ESTILOS TEXTOS Y TABLA */
+
 /* -Gonzalo- */
 
 /* aplique flex para distribuir las tarjetas -Griselda- */
@@ -829,7 +844,7 @@ table tr td{
 /* media-query comienza  aquí */
 
 /* dispositivo Movil */
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
 
   header {
     padding: 10px;
@@ -906,10 +921,10 @@ footer div {
     margin-top: 10vh;
 }
 
-}
+} */
 
 /* Estilos para pantallas medianas */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -934,10 +949,10 @@ footer div {
     padding: 20px;
     text-align: center;
   }
-}
+} */
 
 /* Estilos para pantallas grandes */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -962,4 +977,4 @@ footer div {
     padding: 30px;
     text-align: center;
   }
-}
+} */

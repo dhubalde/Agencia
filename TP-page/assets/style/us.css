@@ -6,30 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
 
 
-/* @mixin es una característica de SASS/SCSS , se reemplaza por css basico  -Griselda */
-
-/* @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-@mixin flex-center-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-@mixin circles-setting {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-   */
+/* @mixin es una característica de SASS/SCSS , se reemplaza por css básico  -Griselda */
 
 *{
     margin: 0; /*le saca el margen a todo*/
@@ -78,6 +55,14 @@ body {
 	}
 }
 
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
 /* Cambiar el color del scroll */
 ::-webkit-scrollbar-thumb {
   background-color: transparent; /* Color del scroll */
@@ -87,92 +72,84 @@ body {
 ::-webkit-scrollbar-track {
   background-color: transparent; /* Color de fondo del scroll */
 }
-
-/*hasta aca están definida los estilos  generales de la web*/
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-primary); /* Color del pulgar */
 }
-  
+
+/* header */
 
 header {
     display: flex;
     justify-content:space-between;
     align-items: center;
     padding: 20px;
-    height: 175px;
-    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
+    height: 150px;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+
+    background-position: center;
      
   }
 
   .logo{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    filter: contrast(10.5);
   }
 
   .logo p{
-    margin-top: -220px; /* Espacio entre el logo y el texto */
-    /* font-size: 25px; */
-    font-weight: bold;
-    color: #d66bee;
+    color: var(--other-color);
     font-size: 1em;
-    text-shadow: 2px 2px 2px #1d5fd0;
-
-    position: relative;
     left: 13vh;
     top: 7vh;
     filter: contrast(10.5);
-  }
+}
 
 
   .logo img {
-    width: 230px;
-    height: auto;
-    margin-top: -108px;
+    right: 30px;
+    width: 200px;
+    position: relative;
+    top: 3px;
   }
   
   .nav-header ul {
     display: flex;
-    flex-direction: row;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-
+  
   .nav-header li {
-    margin: 0px;
-    padding: 0px;
-    font-size: 10px;
-    flex-direction: column; 
+    margin: 0 10px;
+   
   }
   
-  .nav-header a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--color-white);
-  }
-
   header a:not(.logo-img){
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
     color: var(--color-white);
+
     position: relative;
-    top: 13px;
-    right: 7px;
+    top: 5px;
+    right: 9px;
+
+    font-size: small;
 }
 
 /* menos a de logo */
 header a:hover:not(.logo-img){
-    color:var(--other-color);
-    
+    color:var(--other-color)
+  
 }
+
+ion-icon{
+  position: relative;
+  left: 7px;
+}
+
+
 /* tarjetas sobre nosotros */
-
 /* se borro main  -Griselda- */
-
    main #nosotros {
     font-size: 1.3em;
     padding: 100px 90px 10px 90px;

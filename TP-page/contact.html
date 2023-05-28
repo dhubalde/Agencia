@@ -10,6 +10,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
+  <!-- ion icon -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="assets/style/index_form.css">
   <title>Viva World Travel ✈</title>
 </head>
@@ -18,24 +21,33 @@
   <header>
     <div class="logo">
       <a href="index.html" class="logo-img">
-        <img src="./assets/img/logo.png" alt="Grupo-17">
+        <img src="./assets/img/logo1.png" alt="Grupo-17">
       </a>
       <p>Viva World Travel</p>
     </div>
     <nav class="nav-header">
       <ul>
-        <li><i class="fa-solid fa-house fa-2xl" style="color: #DF2E38;position:relative; left: 1px;"></i><a
-            href="index.html"><br>
-            Home</a></li>
-        <li><i class="fa-solid fa-plane fa-2xl" style="color: #DF2E38;position:relative; left: 13px;"></i><a
-            href="destiny.html"><br>
-            Destinos</a></li>
-        <li><i class="fa-solid fa-suitcase fa-2xl" style="color: #DF2E38; position:relative; left: 14px;"></i><a
-            href="packages.html"><br>
-            Paquetes</a></li>
-        <li><i class="fa-solid fa-envelope fa-2xl" style="color: #DF2E38; position:relative; left:12px;"></i><a
-            href="contact.html"><br>
-            Contacto</a></li>
+        <li>
+          <a href="index.html">
+            <ion-icon name="home-outline" size="large" style="color:aliceblue; position: relative;
+            left: -7px;" >
+            </ion-icon><br>HOME</a>
+        </li>
+        <li><a
+            href="destiny.html"><ion-icon name="airplane-outline" size="large" style="color:aliceblue"></ion-icon><br>DESTINOS</a>
+          </li>
+          
+        <li><a href="packages.html"><ion-icon name="bag-handle-outline" size="large" style="color:aliceblue"></ion-icon><br>PAQUETES</a>
+        </li>
+
+        <li><a
+            href="contact.html"><ion-icon name="mail-open-outline" size="large" style="color:aliceblue"></ion-icon><br>
+            CONTACTO</a>
+          </li>
+        <li><a
+            href="us.html"><ion-icon name="person-outline" size="large" style="color:aliceblue"></ion-icon><br>
+            NOSOTROS</a>
+          </li>
       </ul>
     </nav>
   </header>
@@ -53,10 +65,11 @@
         <ul id="errorList" class="error-list"></ul>
         <input type="text" class="form_input" name="nombre" placeholder="Ingrese Nombre*" id="nombre">
         <input type="text" class="form_input" name="apellido" placeholder="Ingrese apellido*" id="apellido">
-        <input type="email" id="correoelectronico" class="form_input" name="email"
+
+        <input type="email" class="form_input" name="email"
           placeholder="Dirección de correo electrónico*" id="email">
-        <input type="tel" class="form_input" name="tel" placeholder="Número de teléfono* (Cod. Area sin 0)
-            " id="tel">
+
+        <input type="tel" class="form_input" name="tel" placeholder="(Cod. Area sin 0)*" id="tel">
         <label for="select" class="form_label">Motivo de tu contacto</label>
         <select id="select" name="select">
           <option value="">--seleccione--</option>
@@ -66,27 +79,27 @@
           <option value="4">Otro</option>
         </select>
         <div class="form_legend">
-          <legend>¿Cómo le gustaría que lo contactemos?*</legend>
-          <label for="contacto">
+          <p>¿Cómo le gustaría que lo contactemos?*</p>
+          <label for="check-email">
             <input type="checkbox" name="contacto" value="email" id="check-email" class="form-check">
             <i class="fa-solid fa-envelope fa-lg" style="color:#2b90e2"></i>
             Email</label>
-          <label for="contacto"> <input type="checkbox" name="contacto" value="teléfono" id="check-telefono"
+          <label for="check-telefono"> <input type="checkbox" name="contacto" value="teléfono" id="check-telefono"
               class="form-check">
             <i class="fa-solid fa-phone fa-lg" style="color:#2b90e2"></i>
             Teléfono
           </label>
-          <label for="contacto"><input type="checkbox" name="contacto" value="WhatsApp" id="check-whatsapp"
+          <label for="check-whatsapp"><input type="checkbox" name="contacto" value="WhatsApp" id="check-whatsapp"
               class="form-check">
             <i class="fa-brands fa-whatsapp fa-lg" style="color:#00bb2d"></i>
             WhatsApp
           </label>
         </div>
         <input type="text" class="form_input" name="texto" placeholder="Déjanos tus Comentarios" style="height:85px;">
-        <label class="checkbox">
-          <input type="checkbox"> ¿Le gustaría recibir novedades de nuestros
+        <label class="checkbox" for="check">
+          <input type="checkbox" id="check"> ¿Le gustaría recibir novedades de nuestros
           Viajes?</label>
-        <label class="checkbox">
+        <label class="checkbox" for="acept">
           <input type="checkbox" name="acept" id="acept"> *Acepto los términos y <a href="#">condiciones</a>
         </label>
         <h6>*Campo obligatorio</h6>
