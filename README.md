@@ -1,9 +1,17 @@
-                                                         Grupo 17
+## :floppy_disk: *Viva Word Travel* Web
 
+:ok_hand: Somos el grupo N° 17 comision #23031 del curso fullstack Python Codo a Codo, y realizamos una web sobre una agencia de viajes llamada *"Viva Word Travel"*, es una web básica, compuesta por 4 paginas, entre ellas se encuentra una pagina con formulario de contacto validado con *[Jquery Validation](https://jqueryvalidation.org/)* y enviado por *[Formsubmit](https://formsubmit.co/)*, una pagina con un formulario *"buscador de destinos"* que utiliza una APIrest y otras paginas con algunas animaciones como slideshow o video-background.
+
+Continuamos el desarrollo corrigiendo errores.
+
+
+#### :point_right: [Deployment](https://grupo17-tp-viva-word-travel.netlify.app/us.html).
 ---
 
-#### 27/04  -Griselda.-
 
+#### :point_down: Registro:
+
+#### 27/04  -Griselda.-
 * Se agrega formulario de elegir destino en destiny.html
 * Se agrega tarjetas de destinos en destiny.html
 * Se agrega :root colores y fuente de google
@@ -11,13 +19,11 @@
 * Trabajando en:  *validación de formularios, paquetes de viajes, otras correcciones.*
 
 ### 30/04 -Griselda.-
-
 * Cambios de estilos y correcciones en pagina destiny.html.
 * Se valida formulario de contacto con jquery.validations.
 * Se realiza cambio de estilo en formulario.
 
 ### 14/05 -Griselda.-
-
 * Se agrega banner de medios de pagos version 0.1
 * Se cambia tarjetas de destinos por un slideshow 
 * se repara footer en destiny.html
@@ -33,7 +39,6 @@
 * Se cambia background de header y footer.
 * Se cambia las tarjetas de destino por slideshow animado.
 * trabajando en *pagina contact.html, responsivas, igualar estilos a todas las paginas, otros arreglos*
-
 * Se elimina fuente Anton de destiny
 * Se realiza cambios en pagina contact.html y se unifica estilos
 * Se realiza cambios de estilos en formulario
@@ -46,7 +51,6 @@
 
 
 ### 18/05 -Griselda.-
-
 * fix formulario contacto. (validado con jquery.validation)
 
 ### 11/05 - Dalila -
@@ -77,9 +81,9 @@
 
 
 ### 28/05   -Griselda-
-
 * Se realiza varios cambios de estilos en todas las paginas.
 * Se comprueba errores en [w3.va](https://validator.w3.org/) y se los corrige.
 * Otras comprobaciones.
 * Pruebas de Deployment
 * version final 1.0  
+
