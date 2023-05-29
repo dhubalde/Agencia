@@ -5,7 +5,7 @@
 Continuamos el desarrollo corrigiendo errores.
 
 
-#### :point_right: [Deployment](https://grupo17-tp-viva-word-travel.netlify.app/us.html).
+#### :point_right: [Deployment](https://viva-word-traveltp-cac.netlify.app/).
 ---
 
 
