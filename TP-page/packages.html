@@ -8,110 +8,181 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
-    <title>Grupo 17!</title>
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
+<!-- ion icon -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<title>Viva World Travel ✈</title>
 </head>
 
 
 <body>
     <header>
-    <div class="logo">
-        <a href="index.html">
-        <img src="./assets/img/logo.png"  alt="Grupo-17">
-        </a>
-        <p>Viva World Travel</p>
-    </div>
-    <nav class="nav-header">
-        <ul>
-            <li><i class="fa-solid fa-home fa-2xl" style="color: #DF2E38;position:relative; left: 1px;"></i><a
-                href="index.html"><br>
-                Home</a></li>
-            <li><i class="fa-solid fa-plane fa-2xl" style="color: #DF2E38;position:relative; left: 13px;"></i><a
-                    href="destiny.html"><br>
-                    Destinos</a></li>
-            <li><i class="fa-solid fa-suitcase fa-2xl" style="color: #DF2E38; position:relative; left: 14px;"></i><a
-                    href="packages.html"><br>
-                    Paquetes</a></li>
-            <li><i class="fa-solid fa-envelope fa-2xl" style="color: #DF2E38; position:relative; left:12px;"></i><a
-                    href="contact.html"><br>
-                    Contacto</a></li>
-            <li><i class="fa-solid fa-user fa-2xl" style="color: #DF2E38; position:relative; left:12px;"></i><a
-                    href="us.html"><br>
-                    Nosotros</a></li>
-        </ul>
-    </nav>
-    </header>
+        <div class="logo">
+          <a href="index.html" class="logo-img">
+            <img src="./assets/img/logo1.png" alt="Grupo-17">
+          </a>
+          <p>Viva World Travel</p>
+        </div>
+        <nav class="nav-header">
+          <ul>
+            <li>
+              <a href="index.html">
+                <ion-icon name="home-outline" size="large" style="color:aliceblue; position: relative;
+                left: -7px;" >
+                </ion-icon><br>HOME</a>
+            </li>
+            <li><a
+                href="destiny.html"><ion-icon name="airplane-outline" size="large" style="color:aliceblue"></ion-icon><br>DESTINOS</a>
+              </li>
+              
+            <li><a href="packages.html"><ion-icon name="bag-handle-outline" size="large" style="color:aliceblue"></ion-icon><br>PAQUETES</a>
+            </li>
+    
+            <li><a
+                href="contact.html"><ion-icon name="mail-open-outline" size="large" style="color:aliceblue"></ion-icon><br>
+                CONTACTO</a>
+              </li>
+            <li><a
+                href="us.html"><ion-icon name="person-outline" size="large" style="color:aliceblue"></ion-icon><br>
+                NOSOTROS</a>
+              </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Griselda -->
 
     <main>
-        <!-- aqui se muestra los distintos paquetes de viajes -->
+        <!-- aquí se muestra los distintos paquetes de viajes -->
         <div class="titulo">
-            <h2>Paquetes Turisticos</h2> 
+            <h2>Paquetes Turísticos</h2> 
         </div>
+
         <section class="sectionPackage">
-            <h3>Grupales</h3>  
+            <h3>Grupales</h3>
+
             <div class="packages">
-                <div class="promocion europa">
-                    <p>PAQUETE GRUPAL</p><br>
-                    <p>EUROPA</p>
-                    <p>21 días visistando 5 paises</p><br><br><br><br>
-                    <p>u$s 4.200  All Inclusive</p>          
+
+                <div class="promocion">
+                    <img src="./assets/img/paris.jpg" alt="">
+
+                    <div class="over-promo"> 
+                        <h2 class="t-stroke t-shadow">PARIS,Francia</h2>
+                        <p>15 días visitando la ciudad del amor</p>
+                        <span>u$s 4.200  All Inclusive</span>          
+                    </div>
                 </div>
-                <div class="promocion mediooriente">
-                    <p>PAQUETE GRUPAL</p><br>
-                    <p>M. ORIENTE</p>
-                    <p>27 días visitando 4 paises</p><br><br><br><br>
-                    <p>u$s 5.350  All Inclusive</p>
+
+                <div class="promocion">
+                    <img src="./assets/img/lisboa800x500.jpg" alt="">
+                <div class="over-promo"> 
+                    <h2 class="t-stroke t-shadow">Tour EUROPA</h2>
+                    <p>27 días visitando las ciudades de Lisboa y Barcelona</p>
+                    <span>u$s 5.350  All Inclusive</span>
                 </div>
+                </div>
+
             </div>
+
             <div class="vermas">
-                <button type="button">Ver mas</button>
+
+                <a href="contact.html"><button type="button">Ver mas</button></a>
+
+
+                
             </div>              
         </section>
+
         <section class="sectionPackage">
-            <h3>Deportivos</h3>
+
+            <h3>Individuales</h3>
             <div class="packages">
-                <div class="promocion fortaleza">
-                    <p>PAQUETE DEPORTIVO</p><br>
-                    <p>FORTALEZA</p>
-                    <p>10 días a puro Kite-Surf</p><br><br><br><br>
-                    <p>u$s 2.500  All Inclusive</p> 
+
+                <div class="promocion brasil">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/84/cc/ae/if-it-s-your-first-time.jpg?w=1200&h=-1&s=1" alt="brasil">
+                    <div class="over-promo">
+                        <h2 class="t-stroke t-shadow">BRASIL</h2>
+                        <p>10 días en nuestros destinos como Brasilia, Rio de Janeiro O San Pablo. </p>
+                        <span>u$s 2.500  All Inclusive</span> 
+                    </div>
                 </div>
-                <div class="promocion nepal">
-                    <p>PAQUETE DEPORTIVO</p><br>
-                    <p>NEPAL</p>
-                    <p>10 días de Ciclismo en la montaña</p><br><br><br><br>
-                    <p>u$s 2.500 Media Pension</p>
+
+                <div class="promocion">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/7b/86/eb/dreams-acapulco-resort.jpg?w=1100&h=-1&s=1" alt="acapulco">
+                    <div class="over-promo">
+                        <h2 class="t-stroke t-shadow">MEXICO</h2>
+                        <p>10 días para visitar las playas de Acapulco.</p>
+                        <span>u$s 2.500 Media Pension</span>
+                    </div>
                 </div>
+
             </div>
+
             <div class="vermas">
-                <button class="boton" type="button">Ver mas</button>
+                <a href="contact.html"><button type="button">Ver mas</button></a>
             </div>
         </section>
+
         <section class="sectionPackage">
             <h3>Ejecutivos</h3>
+
             <div class="packages">
-                <div class="promocion lasvegas">
-                    <p>PAQUETE EJECUTIVO</p><br>
-                    <p>LAS VEGAS</p>
-                    <p>7 dias en la Exposición #CES2024</p><br><br><br><br>
-                    <p>u$s 3800 C/Desayuno</p>
+
+                <div class="promocion">
+                    <img src="https://www.gochile.cl/fotos/full/107603-valparaiso-cerroalegre-sernatur-atr174.jpg" alt="Chile">
+                    <div class="over-promo">
+                        <h2 class="t-stroke t-shadow">CHILE</h2>
+                        <p>7 Dias en las ciudades de Santiago de Chile, Valparaiso o Punta arena</p>
+                        <span>u$s 3800 C/Desayuno</span>
+                    </div>
                 </div>
-                <div class="promocion tokio">
-                    <p>PAQUETE EJECUTIVO</p><br>
-                    <p>TOKIO</p>
-                    <p>14 dias en Convensión de Finanzas</p><br><br><br><br>
-                    <p>u$s 3800 C/Desayuno</p>
+
+                <div class="promocion">
+                    <img src="./assets/img/miami.jpg" alt="Miami">
+                    <div class="over-promo">
+                        <h2 class="t-stroke t-shadow">MIAMI, florida</h2>
+                        <p>14 Dias en Miami, destino turístico de sol y playa por excelencia, un paraíso tropical</p>
+                        <span>u$s 3800 C/Desayuno</span>
+                    </div>
                 </div>   
             </div>  
             <div class="vermas">
-                <button type="button">Ver mas</button>
+                <a href="contact.html"><button type="button">Ver mas</button></a>
             </div> 
         </section>
+
+        <section class="sectionPackage">
+            <h3>Especiales</h3>
+            <div class="packages">
+                <div class="promocion">
+                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1640835927/o3pfl41q7m5bj8jardk0.jpg" alt="roma">
+                    <div class="over-promo">
+
+                        <h2 class="t-stroke t-shadow">ROMA, Italia</h2>
+                        <p>20 Dias en la ciudad de Roma, conoce el coliseo romano, la Basilica de san Pedro o la ciudad del vaticano. </p>
+                        <span>u$s 3800 C/Desayuno, Hotel 4 estrellas.</span>
+                    </div>
+                </div>
+
+                <div class="promocion">
+                    <img src="https://images.pexels.com/photos/2450296/pexels-photo-2450296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="personal">
+                    <div class="over-promo">
+                        <h2 class="t-stroke t-shadow">P. Personal</h2>
+                        <p>14 Dias a los destinos que tenemos disponibles, personaliza tu viaje </p>
+                        <span>u$s 3800 C/Desayuno, Hotel 4 estrellas</span>
+                    </div>
+                </div>   
+            </div>  
+            <div class="vermas">
+                <a href="contact.html"><button type="button">Ver mas</button></a>
+            </div> 
+        </section>
+
+
     </main>
 
-
+<!-- footer -->
     <footer class="footer">
         <div class="col-1">
             <h3>LINKS</h3>
@@ -124,16 +195,16 @@
         <div class="col-2">
             <h3>NUESTRAS REDES</h3>
             <div class="social_icons">
-                <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #1877f2;"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #c7018c;"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-whatsapp fa-xl" style="color: #1bd741;"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
+                <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #1877f2;"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #c7018c;"></i></a>
+                <a href="https://www.whatsapp.com/coronavirus/get-started?lang=es_LA" target="_blank"><i class="fa-brands fa-whatsapp fa-xl" style="color: #1bd741;"></i></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
             </div>
         </div>
         <div class="col-3">
-            <h3>DIRECCION</h3>
+            <h3>DIRECCIÓN</h3>
             <p>Calle falsa 123,<br>CABA, Argentina</p>
-            <a href="#" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
+            <a href="https://goo.gl/maps/6WJtsaMJXC1aFkwt6" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
         </div>
 
     </footer>

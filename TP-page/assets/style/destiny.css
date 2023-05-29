@@ -27,28 +27,9 @@ html{
 
 body{
   font-family: 'Montserrat', sans-serif;
-  /* NO TOCAR  */
-
-  /* background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
-	background-size: 500%;
-	animation: gradient 10s infinite; */
-  
   background-color: var(--color-white);
 
 }
-/* NO TOCAR */
-/* animación background */
-/* @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
 
 /* estilo del scroll */
 
@@ -68,21 +49,13 @@ body{
   background-color: transparent; /* Color de fondo del scroll */
 }
 
-
-/*hasta aca están definida los estilos  generales de la web*/
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-primary); /* Color del pulgar */
 }
 
-
-
-
-
 /*hasta aca están definida los estilos  generales de la web*/
 
 /* *** header*** */
-
 
 header {
 
@@ -93,6 +66,8 @@ header {
     height: 150px;
     background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
     background-position: center;
+
+    border-bottom: 1px solid var(--color-white);
 
   }
 
@@ -152,8 +127,6 @@ ion-icon{
   position: relative;
   left: 7px;
 }
-
-
 
 /* ***main*** */
 
@@ -655,27 +628,30 @@ footer {
   margin-top: 150px;
    width: 100%;
    height: 35vh;
-  color: aliceblue;
+  color: var(--color-white);
   display: flex;
   background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
-  background-position: center;
+  background-position: revert;
   background-size: cover;
+  border-top: 1px solid var(--color-white);
 
 }
 
 footer div{
 text-align: center;
-margin-top: 15vh;
+margin-top: 13vh;
 }
 
 footer div h3{
 font-weight: 300;
 letter-spacing: 1px;
 margin-bottom: 20px;
+font-size: 15px;
 }
 
 .col-2{
   flex-grow: 1;
+  margin-left: 150px;
 }
 
 .col-1 a, .col-2 a, .col-3 a{
@@ -687,20 +663,22 @@ margin:10px 0 10px 0;
 
 .col-1{
   margin-left: 30vh;
+  font-size: 12px;
 
 }
 
 .col-1 a:hover{
-  color: var(--other-color);
+  color: var(--second-color);
 }
 
 .col-3{
   margin-right: 30vh;
+  font-size: 12px;
 }
 
 
 .social-icons{
-margin-top: 40px;
+margin-top: 15px;
 display: flex;
 justify-content: center;
 
@@ -709,7 +687,7 @@ justify-content: center;
 
 .social-icons a i{
 
-font-size: 35px;
+font-size: 30px;
 margin: 10px;
 cursor: pointer;
 } 

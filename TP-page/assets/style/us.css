@@ -9,7 +9,7 @@
 /* @mixin es una característica de SASS/SCSS , se reemplaza por css básico  -Griselda */
 
 *{
-    margin: 0; /*le saca el margen a todo*/
+    margin: 0; 
     padding: 0;
     box-sizing:border-box;
 }
@@ -34,26 +34,9 @@ body {
     background-color: var(--color-white);
     position: relative;
     line-height: 1.6;
-    /*@include flex-center;*/
     flex-wrap: wrap;
     min-height: 100vh;
-    color: #fff;
-    background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
-	background-size: 500%;
-	animation: gradient 10s infinite;
   } 
-
-  @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 /* estilo del scroll */
 
@@ -87,6 +70,7 @@ header {
     background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
 
     background-position: center;
+    border-bottom: 1px solid var(--color-white);
      
   }
 
@@ -149,8 +133,8 @@ ion-icon{
 
 
 /* tarjetas sobre nosotros */
-/* se borro main  -Griselda- */
-   main #nosotros {
+
+   #nosotros {
     font-size: 1.3em;
     padding: 100px 90px 10px 90px;
     text-align: center;
@@ -160,51 +144,66 @@ ion-icon{
     /* se agrega estilo a titulo */
     #nosotros h2{
       font-size: 2em;
-      letter-spacing: 3px;
-      position: relative;
-      bottom: 25px;
-      color: var(--color-white);
-      text-align: center;
+    letter-spacing: 3px;
+    position: relative;
+    bottom: 40px;
+    color: var(--color-primary);
       
     }
+
+    .container{
+      border-right: 1px solid var(--color-primary);
+      border-left: 1px solid var(--color-primary);
+    }
+
+    .container p{
+      font-size: large;
+    text-align: start;
+    padding: 10px 10px ;
+    }
+
+
     
-    .container {
+    .container-us {
     position: relative;
-    /* @include flex-center;  flex se debe aplicar aqui -Griselda*/
+    /* @include flex-center;  flex se debe aplicar aquí -Griselda*/
     display: flex;
     z-index: 1;
-    flex-wrap: wrap;  /*no hace falta,ya que son solo 4 .card -Griselda-- lo uso para el responsive*/
-    margin: 40px 0;
+    flex-wrap: wrap;  
+    margin: 70px 0;
     font-family: 'Poppins', sans-serif;
-
     /*  se alinea los .card al centro -Griselda*/
-    justify-content: center
-    
-    }
+    justify-content: center;
+
+    background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+	background-size: 500%;
+	animation: gradient 10s infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
     
     .card {
-    display: inline-block;
-    width: 280px;
-    height: 400px;
-    background: #1c1c1c;
-    margin: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    /* @include flex-center;   se reemplaza por css basico -Griselda*/
-    
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    text-align: center;
+      display: inline-block;
+      width: 290px;
+      height: 410px;
+      background: var(--color-white);
+      margin: 20px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      border-radius: 15px;
+      text-align: center;
 
-    /*  sass/scss se reemplaza por css basico -Griselda */
-
-    /* &:hover .content {
-        opacity: 1;
-        transform: translateY(-20px);
-    }
-    &:hover .social-icons li {
-        transform: translateY(0);
-        opacity: 1;
-    } */
     }
     
     /* se reemplaza sass/scss por css -Griselda */
@@ -217,37 +216,18 @@ ion-icon{
         opacity: 1;
     }
 
-    
-
     .content {
-    /* @include flex-center-column; se reemplaza por css basico -Griselda*/
+    /* @include flex-center-column; se reemplaza por css básico -Griselda*/
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    opacity: .5;
     transition: .5s;
     }
 
-    /* sass/scss se reemplaza por css basico  -Griselda*/
-    
-    /* .content-box {
-        & span {
-        font-weight: 300;
-        font-size: 15px;
-    }
-        & h3 {
-        font-size: 17px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: 500;
-    }
-    } */
-
-
     .content-box{
       position: relative;
-      top: 12px;
+      top: 5px;
+      padding: 15px 15px;
     }
 
     .content-box span{
@@ -256,7 +236,6 @@ ion-icon{
     }
 
     .content-box h3{
-      font-size: 17px;
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 500;
@@ -273,14 +252,6 @@ ion-icon{
         /* se desplaza avatar 10px  */
         top: 10px;
 
-        /* sass/scss  se reemplaza por css basico -Griselda*/
-    /* &__person-photo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-    } */
   }
 
   .img-box__person-photo{
@@ -294,18 +265,7 @@ ion-icon{
         margin-left: 100px;
         position: absolute;
         list-style: none;
-        bottom: 50px;
-        
-        /* se reemplaza por css basico */
-    /* & li {
-        margin-right: 15px;
-        transform: translateY(40px);
-        transition: .5s;
-        opacity: 0;
-        transition-delay: calc(0.1s * var(--i));
-        backface-visibility: hidden; 
-    } */
-
+        bottom: 40px;
 }
 
 .social-icons li {
@@ -327,31 +287,30 @@ ion-icon{
 /***** footer  ****/
 
 footer {
-  margin-top: 0px;
+ 
   width: 100%;
   padding: 60px 15%;
   color: aliceblue;
   display: flex;
-  height: 300px;
+  height: 35vh;
 
-  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, #1d5fd0 100%);
-  background-position: center;
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+  background-position: revert;
   background-size: cover;
 }
   
   footer div{
   text-align: center;
+  font-size: 12px;
   }
 
   footer div h3{
-    font-weight: 200px;
+    
     margin-bottom: 30px;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 300;
   }
-  
-  
-  
   
   .col-1 a, .col-2 a, .col-3 a{
     display: block;
@@ -363,11 +322,16 @@ footer {
 
   .col-2{
     flex-grow: 1;
+    margin-left: 150px;
+  }
+
+  .col-1 a:hover{
+    color: var(--second-color);
   }
   
    
   .social_icons{
-  margin-top: 40px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
  }
@@ -434,21 +398,6 @@ footer {
       background-position-x: calc(100wv - 800px);
   }
 }
-
-
-  /* .container {
-  position: relative;
-  @include flex-center;  flex se debe aplicar aqui -Griselda*/
-  /*display: flex;
-  z-index: 1;
-  flex-wrap: wrap;  no hace falta,ya que son solo 4 .card -Griselda-- lo uso para el responsive
-  margin: 40px 0;
-  font-family: 'Poppins', sans-serif;
-
-  /*  se alinea los .card al centro -Griselda*/
-  /*justify-content: center
-  
-  } */
 
 
   

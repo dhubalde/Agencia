@@ -28,27 +28,10 @@ html{
 
 body{
   font-family: 'Montserrat', sans-serif;
-  /* NO TOCAR  */
-  /* background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
-	background-size: 500%;
-	animation: gradient 10s infinite; */
-  
+ 
   background-color: var(--color-white);
 
 }
-/* NO TOCAR */
-/* animación background */
-/* @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
 
 /* estilo del scroll */
 
@@ -86,6 +69,7 @@ header {
   background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
 
   background-position: center;
+  border-bottom: 1px solid var(--color-white);
   
 }
 
@@ -152,7 +136,7 @@ ion-icon{
 
 /* formulario contacto */
 
-/* definición un contenedor flex con dos items */
+/* un contenedor flex con dos items */
 
 .contenedor-flex {
   display: flex;
@@ -176,15 +160,16 @@ ion-icon{
 }
 
 .img-text-form {
+
   position: absolute;
   top: 80%;
   left: 25%;
   transform: translate(-50%, -50%);
   z-index: 1;
   color: var(--color-white);
-  font-size: 35px;
+  font-size: 5em;
   letter-spacing: .5em;
-  /* font-weight: 600; */
+  font-weight: 600;
   text-transform: uppercase;
   
 }
@@ -196,13 +181,15 @@ ion-icon{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--color-primary);
+  height: 116vh;
 }
 
 #contact{
 
   width: 80%;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -211,13 +198,13 @@ ion-icon{
     position: relative;
     top: 5px;
     font-family: var(--second-font);
+    border-radius: 10px;
+
     
 }
 
 #contact h6{
-  position: relative;
-  top: 25vh;
-  right: 50%;
+
   font-family: var(--second-font);
   font-size: 14px;
   font-style: italic;
@@ -386,7 +373,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, var(--other-color) 100%)
 
 #mensaje{
   position: relative;
-  top: 35px;
+  top: 5px;
 }
 
 #mensaje p{
@@ -399,13 +386,13 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, var(--other-color) 100%)
 /* mensajes de error de validación jquery validation */
 
 .error-list {
-    color: #dc3545;
-    font-size: 15px;
-    margin-top: 5px;
-    position: relative;
-    bottom: 50px;
-    font-style: italic;
-    list-style: circle;
+  color: var(--second-color);
+  font-size: 14px;
+  margin-top: 5px;
+  position: relative;
+  bottom: 15px;
+  font-style: italic;
+  list-style: disc;
 }
 
 .error-list-item {
@@ -422,15 +409,16 @@ footer {
   color: aliceblue;
   display: flex;
   background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
-  background-position: center;
+  background-position: revert;
   background-size: cover;
+  border-top: 1px solid var(--color-white);
 
 }
 
 
 footer div{
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 13vh;
 }
 
 
@@ -438,10 +426,12 @@ footer div h3{
   font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 
 .col-2{
     flex-grow: 1;
+    margin-left: 150px;
   }
 
 .col-1 a, .col-2 a, .col-3 a{
@@ -453,6 +443,7 @@ footer div h3{
 
 .col-1{
     margin-left: 30vh;
+    font-size: 12px;
 
 }
 
@@ -462,10 +453,11 @@ footer div h3{
 
 .col-3{
     margin-right: 30vh;
+    font-size: 12px;
 }
 
 .social-icons{
-  margin-top: 40px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
 
@@ -473,7 +465,7 @@ footer div h3{
 
 .social-icons a i{
  
-  font-size: 35px;
+  font-size: 30px;
   margin: 10px;
   cursor: pointer;
 } 
@@ -499,16 +491,3 @@ footer div h3{
 
 } */
 
-
-
-
-
-
-/*
-se renombro ha app.js
-se movio README.md a raiz
-se corrigio formulario de contacto
-se realizo la validacion del formulario con jquery.validation
-se creo estilo para formulario.
-
-*/
