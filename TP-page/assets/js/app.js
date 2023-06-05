@@ -6,8 +6,6 @@
 //   success: "valid",
 // });
 
-
-
 $(document).ready(function () {
 // se agrega nueva propiedad llamada noNumbes para las reglas
 $.validator.addMethod("noNumbers", function(value, element) {
@@ -135,3 +133,7 @@ $.validator.addMethod("noNumbers", function(value, element) {
     $(".form-check").not(this).prop("checked", false);
   });
 });
+
+
+
+

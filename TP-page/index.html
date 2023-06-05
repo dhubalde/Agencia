@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style/reset.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
@@ -12,6 +13,7 @@
   <!-- ion icon -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   <title>Viva World Travel ✈</title>
 </head>
 
@@ -26,9 +28,7 @@
     <nav class="nav-header">
       <ul>
         <li>
-          <a href="index.html">
-            <ion-icon name="home-outline" size="large" style="color:aliceblue; position: relative;
-            left: -7px;" >
+          <a href="index.html"><ion-icon name="home-outline" size="large" style="color:aliceblue;" >
             </ion-icon><br>HOME</a>
         </li>
         <li><a
@@ -62,10 +62,9 @@
         </video>
 
         <div class="text-overlay">
-          <h1>Contrata los mejores <br> paquetes para tus viajes</h1>
-          <form>
-            <a href="./contact.html"><button>CONSULTA YA!</button></a>
-          </form>
+          <h1>Contrata los mejores paquetes para tus viajes</h1>
+          
+            <a href="contact.html"><button>Entrar</button></a>
         </div>
 
       </div>
@@ -75,7 +74,7 @@
     <section id="quienes-somos">
 
       <div class="q-scontainer">
-        <div class="img-container"></div>
+        <div id="img-container"></div>
         <div class="texto">
           <h2>Somos <span class="color-acento">Viva Wold Travel</span></h2>
           <h3>¿Por qué elegirnos como tu agencia de viajes de confianza?</h3>
@@ -190,6 +189,20 @@
       <a href="https://goo.gl/maps/6WJtsaMJXC1aFkwt6" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
     </div>
   </footer>
+  
+<script>
+  var container = document.getElementById("img-container");
+    //array de imagenes
+var images = ["https://images.unsplash.com/photo-1575986767340-5d17ae767ab0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1333&q=80", "https://images.unsplash.com/photo-1546961230-78285e50ca1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80", "https://images.unsplash.com/photo-1567564967039-a5839aa2d89c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80","/TP-page/assets/img/miami800x500.jpg","https://images.unsplash.com/photo-1593238738950-01f243cac6fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"]; // Agrega aquí las rutas de tus imágenes
+
+var currentIndex = 0;
+setInterval(changeBackground, 10000); // Cambia la imagen cada 10 segundos (ajusta según tus necesidades)
+
+function changeBackground() {
+  container.style.backgroundImage = "url(" + images[currentIndex] + ")";
+  currentIndex = (currentIndex + 1) % images.length;
+}
+</script>
 </body>
 
 </html>

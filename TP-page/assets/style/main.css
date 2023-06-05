@@ -1,3 +1,5 @@
+@import url("assets/style/reset.css");
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Monserrat*/
 /*letras carteles Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
@@ -145,9 +147,10 @@ ion-icon{
 /* --video background de index -Griselda*/
 
 .video-container {
-    position: relative;
-    height: 75vh;
-    top: 22.5vh;
+  position: relative;
+  height: 75vh;
+  top: 20vh;
+
   }
   
   .video-container video {
@@ -215,6 +218,16 @@ button:hover{
 #quienes-somos .texto{
     margin-top: 50px;
     
+}
+
+#img-container{
+
+  width: 80vh;
+  height: 50vh;
+  background-size: cover;
+  margin-top: 11vh;
+  background-position: center;
+
 }
 
 /* *** */
@@ -425,17 +438,16 @@ footer {
     }
 
     #quienes-somos .texto{
-        width: 50%;
-        max-width: 600px;
+       
+        max-width: 100vh;
         text-align: initial;
-        padding-left: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;  
     }
    
 
-    #quienes-somos .img-container {
+    /* #quienes-somos .img-container {
         background-image: url(../img/agencia-viajes.jpg);
         background-size: cover;
         background-position: center center;
@@ -446,7 +458,7 @@ footer {
         border-radius: 15px;
         filter: contrast(0.5);
 
-    }
+    } */
 
     #nuestros-viajes{
         height: 90vh;
