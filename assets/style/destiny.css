@@ -1,0 +1,958 @@
+/* fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Montserrat*/
+/*letras carteles Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
+
+*{
+    margin: 0; /*le saca el margen a todo*/
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+  --color-primary: #1d4d8b;
+  --second-color:#DF2E38;
+  --color-white:#FAF7F0;
+  --other-color:#2b90e2;
+  --principal-font:'Montserrat', sans-serif;
+  --second-font:'Poppins', sans-serif;
+  --other-font: 'Raleway', sans-serif;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-white);
+
+}
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color del pulgar */
+}
+
+/*hasta aca están definida los estilos  generales de la web*/
+
+/* *** header*** */
+
+header {
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    height: 150px;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+    background-position: center;
+
+    border-bottom: 1px solid var(--color-white);
+
+  }
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo p{
+    color: var(--other-color);
+    font-size: 1em;
+    left: 13vh;
+    top: 7vh;
+    filter: contrast(10.5);
+}
+
+
+  .logo img {
+    right: 30px;
+    width: 200px;
+    position: relative;
+    top: 3px;
+  }
+  
+  .nav-header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-header li {
+    margin: 0 10px;
+   
+  }
+  
+  header a:not(.logo-img){
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-white);
+
+    position: relative;
+    top: 5px;
+    right: 9px;
+
+    font-size: small;
+}
+
+/* menos a de logo */
+header a:hover:not(.logo-img){
+    color:var(--other-color)
+  
+}
+
+ion-icon{
+  position: relative;
+  left: 7px;
+}
+
+/* ***main*** */
+
+/* estilo de formulario destino */
+
+.titulo-form span{
+
+    color: var(--color-white);
+    font-size: 25px;
+    position: relative;
+    right: 30.5%;
+}
+
+.container-form {
+    background-image: url(https://assets.turismocity.com/cdn-cgi/image/format=auto/img/home-package.png);
+    background-position: center;
+    background-size:cover;
+    padding: 40px 16px;
+    text-align: center;
+    height: 340px;
+  }
+
+  
+  .form-destino {
+
+    max-width: 1350px;
+    margin: 0px auto;
+  
+    background: var(--second-color);
+    border-radius: 10px;
+    padding: 38px 16px 38px 32px;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-around;
+  
+
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  
+.form-group label {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  .form-group select, input {
+    font-size: 15px;
+    width: 210px;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  
+  .btn-search {
+    background-color:var(--color-primary);
+    color:var(--color-white);
+    padding: 20px 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+
+  .btn-search:hover{
+
+    background-color:var(--second-color);
+    color:var(--color-white);
+    
+  }
+
+  /*----medios de pago*/
+
+  .pagos-container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 185px;
+    background: #dcdde1;
+  }
+
+  .medios-pagos{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    margin-top: 30px;
+  }
+
+  .title-medios{
+    padding: 15px 15px;
+  }
+
+  .title-medios h2{
+
+    font-size: 25px;
+    color: var(--second-color);
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+    left: 14px;
+    bottom: 7px;
+
+  }
+
+  .title-medios p{
+    font-size: 15px;
+    color: #484848;
+    float: right;
+    margin: 0px;
+    padding-top: 10px;
+    font-style: italic;
+  }
+
+
+  .altura-logo{
+    display: block;
+    height: 30px;
+}
+
+.pago-logo img{
+  width: 60px;
+  margin: auto;
+  display: block;
+}
+
+.pago-logo p{
+  text-align: center;
+  display: block;
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+.btn-pagos{
+  margin: 10px 0px 25px 0px;
+}
+  
+.btn-pagos button{
+  color: var(--second-color);
+  background: #fff;
+  padding: 12px 20px;
+  border: 1px solid var(--second-color);
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+/* pagina oculta de medios de pagos */
+
+#modal {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  z-index: 9999;
+  text-align: center;
+  color: #484848;
+
+}
+
+#modal.oculto {
+  display: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.titulos-pago h3{
+color: #05a08d;
+  font-size: 30px;
+  display: inline-block;
+  font-weight: 600;
+  margin: 30px 0 30px 0;
+}
+
+.titulos-pago hr{
+  width: 55%;
+  margin: 0 auto;
+
+}
+
+
+.medio-pago{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.fila-pago{
+width: 100%;
+/* margin-left:15%; */
+text-align: center;
+}
+
+.logos-bancos{
+  display: inline-block;
+  margin-right: 50%;
+  width: 30%;
+}
+
+.logos-bancos img{
+  width: 75px;
+  position: relative;
+  top: 40px;
+}
+
+.textomedios{
+  display: inline-block;
+  width: 30%;
+  margin-left: 34%;
+}
+
+.textomedios h5 {
+font-size: 15px;
+display: inline-block;
+}
+
+.vercondicion {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 14%;
+  width: 21%;
+}
+
+.vercondicion a{
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+}
+
+
+/* ****************** */
+
+
+  /*tarjetas de destinos*/
+
+.titulo-destiny{
+  position: relative;
+  top: 115px;
+  text-align: center;
+}
+
+.titulo-destiny span{
+  letter-spacing: 7px;
+  font-family: var(--second-font);
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.slider{
+	position: relative;
+	width: 100%;
+	background: #000000; 
+  top: 150px;
+}
+.myslide{
+	margin-top: 60px;
+	height: 800px;
+	display: none;
+	overflow: hidden;
+}
+
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+
+  font-size: 22px;
+  font-family: var(--other-font);
+}
+
+/* titulo con bordes y sombras: efecto doble */
+.t-stroke {
+  color: transparent;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-color: #000000;
+    -webkit-text-stroke-color: var(--second-color);
+    font-size: 120px;
+	  margin-bottom: 20px;
+
+    position: relative;
+    bottom: 7vh;
+  }
+
+  .t-shadow {
+    text-shadow: 7px 7px var(--color-primary);
+  }
+
+  .list-card ul{
+    list-style: none;
+  }
+
+.txt p{
+  /* ? */
+	font-size: 20px;
+  position: relative;
+  top: 20px;
+}
+
+.myslide img{
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+    opacity: 0.7;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+
+.next{
+	right: 0;
+}
+
+.prev:hover, .next:hover{
+	color: var(--color-primary); 
+}
+
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.active, .dot:hover{
+	border-color: var(--second-color);
+}
+
+/* animación */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+/* responsividad de slideshow hasta 800px */
+@media screen and (max-width: 800px){
+
+	.myslide{
+		height: 500px;
+	}
+
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+
+}
+/* Responsividad hasta 520px de slideshow */
+@media screen and (max-width: 520px){
+	.txt h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.sign{
+		margin-right: 20px;
+	}
+	.sign a{
+		font-size: 12px;
+	}
+}
+
+/* ***main*** */
+
+
+/* ***footer*** */
+
+footer {
+  margin-top: 150px;
+   width: 100%;
+   height: 35vh;
+  color: var(--color-white);
+  display: flex;
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+  background-position: revert;
+  background-size: cover;
+  border-top: 1px solid var(--color-white);
+
+}
+
+footer div{
+text-align: center;
+margin-top: 13vh;
+}
+
+footer div h3{
+font-weight: 300;
+letter-spacing: 1px;
+margin-bottom: 20px;
+font-size: 15px;
+}
+
+.col-2{
+  flex-grow: 1;
+  margin-left: 150px;
+}
+
+.col-1 a, .col-2 a, .col-3 a{
+display: block;
+text-decoration: none;
+color: aliceblue;
+margin:10px 0 10px 0;
+}
+
+.col-1{
+  margin-left: 30vh;
+  font-size: 12px;
+
+}
+
+.col-1 a:hover{
+  color: var(--second-color);
+}
+
+.col-3{
+  margin-right: 30vh;
+  font-size: 12px;
+}
+
+
+.social-icons{
+margin-top: 15px;
+display: flex;
+justify-content: center;
+
+}
+
+
+.social-icons a i{
+
+font-size: 30px;
+margin: 10px;
+cursor: pointer;
+} 
+
+/* ******** */
+
+
+
+/* --------- */
+
+
+/* -Gonzalo- */
+
+/* aplique flex para distribuir las tarjetas -Griselda- */
+#ofertas{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #00000000; */
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  bottom: 19px;
+
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 15px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+table:hover {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+td {
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+    
+}
+
+.ciudad {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.tiempo {
+  font-size: 0.8em;
+}
+
+.icon {
+  font-size: 1em;
+}
+
+.escalas {
+  font-size: 0.7em;
+}
+
+table tr td{
+  width: 100px;
+}
+@media screen and (max-width: 767px) {
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    display: block;
+    border: none;
+    margin: 0;
+    position: relative;
+  }
+
+  td:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+  }
+
+  td:last-child:after {
+    display: none;
+  }
+
+  td:before {
+    content: attr(data-label);
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
+.offer-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 100px;
+  
+}
+
+.offer-btn:hover {
+  background-color: #0062cc;
+}
+
+/* cruz de cierre */
+
+.close{
+  position: relative;
+  top: 20px;
+  left: 155vh;
+}
+
+/* media-query comienza  aquí */
+
+/* dispositivo Movil */
+/* @media screen and (max-width: 767px) {
+
+  header {
+    padding: 10px;
+  }
+
+  .logo{
+    position: relative;
+    right: 70px;
+  }
+
+  .logo p{
+    left: 17vh;
+    top: 9vh;
+  }
+
+  nav {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  nav ul li i{
+    left: 10px !important;
+  }
+
+
+  header a:not(.logo-img){
+    left: 10px;
+  }
+
+  .container-form{
+    height: 90vh;
+
+  }
+
+  .form-destino{
+    flex-direction: column;
+    text-align: initial;
+    align-items: center;
+  }
+
+  .pagos-container{
+    width: 98%;
+  }
+
+
+  .title-medios h2{
+    font-size: 20px;
+    bottom: 35px;
+    left: 0px;
+}
+
+  .title-medios p{
+    position: relative;
+    bottom: 40px;
+    font-size: 10px;
+  }
+
+  .btn-pagos button{
+    font-size: 10px;
+    padding: 5px;
+    position: relative;
+    top: 45px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  .col-1, .col-2, .col-3 {
+    margin-left: 10vh;
+}
+
+footer div {
+    margin-top: 10vh;
+}
+
+} */
+
+/* Estilos para pantallas medianas */
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  section {
+    padding: 50px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+} */
+
+/* Estilos para pantallas grandes */
+/* @media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  nav ul li {
+    margin-right: 30px;
+  }
+
+  section {
+    padding: 70px;
+  }
+
+  footer {
+    padding: 30px;
+    text-align: center;
+  }
+} */

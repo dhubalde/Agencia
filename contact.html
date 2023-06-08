@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jquery validation-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/9893ac1a05.js" crossorigin="anonymous"></script>
+  <!-- ion icon -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="assets/style/index_form.css">
+  <title>Viva World Travel ✈</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html" class="logo-img">
+        <img src="./assets/img/logo1.png" alt="Grupo-17">
+      </a>
+      <p>Viva World Travel</p>
+    </div>
+    <nav class="nav-header">
+      <ul>
+        <li>
+          <a href="index.html">
+            <ion-icon name="home-outline" size="large" style="color:aliceblue; position: relative;
+            left: -7px;" >
+            </ion-icon><br>HOME</a>
+        </li>
+        <li><a
+            href="destiny.html"><ion-icon name="airplane-outline" size="large" style="color:aliceblue"></ion-icon><br>DESTINOS</a>
+          </li>
+          
+        <li><a href="packages.html"><ion-icon name="bag-handle-outline" size="large" style="color:aliceblue"></ion-icon><br>PAQUETES</a>
+        </li>
+
+        <li><a
+            href="contact.html"><ion-icon name="mail-open-outline" size="large" style="color:aliceblue"></ion-icon><br>
+            CONTACTO</a>
+          </li>
+        <li><a
+            href="us.html"><ion-icon name="person-outline" size="large" style="color:aliceblue"></ion-icon><br>
+            NOSOTROS</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ************************ -->
+  <main class="contenedor-flex">
+
+    <!-- imagen contenedor 1-->
+    <div class="img-form">
+      <span class="img-text-form">Contacto</span>
+    </div>
+
+    <!-- contenedor 2 -->
+    <div class="content-form">
+      <form id="contact" action="https://formsubmit.co/googlerax@gmail.com" method="POST">
+        <ul id="errorList" class="error-list"></ul>
+        <input type="text" class="form_input" name="nombre" placeholder="Ingrese Nombre*" id="nombre">
+        <input type="text" class="form_input" name="apellido" placeholder="Ingrese apellido*" id="apellido">
+
+        <input type="email" class="form_input" name="email"
+          placeholder="Dirección de correo electrónico*" id="email">
+
+        <input type="tel" class="form_input" name="tel" placeholder="(Cod. Area sin 0)*" id="tel">
+        <label for="select" class="form_label">Motivo de tu contacto</label>
+        <select id="select" name="select">
+          <option value="">--seleccione--</option>
+          <option value="1">Quiero contratar un paquete</option>
+          <option value="2">Realizar consulta sobre un destino</option>
+          <option value="3">Consulta sobre pasaporte y/o documentación</option>
+          <option value="4">Otro</option>
+        </select>
+        <div class="form_legend">
+          <p>¿Cómo le gustaría que lo contactemos?*</p>
+          <label for="check-email">
+            <input type="checkbox" name="contacto" value="email" id="check-email" class="form-check">
+            <i class="fa-solid fa-envelope fa-lg" style="color:#2b90e2"></i>
+            Email</label>
+          <label for="check-telefono"> <input type="checkbox" name="contacto" value="teléfono" id="check-telefono"
+              class="form-check">
+            <i class="fa-solid fa-phone fa-lg" style="color:#2b90e2"></i>
+            Teléfono
+          </label>
+          <label for="check-whatsapp"><input type="checkbox" name="contacto" value="WhatsApp" id="check-whatsapp"
+              class="form-check">
+            <i class="fa-brands fa-whatsapp fa-lg" style="color:#00bb2d"></i>
+            WhatsApp
+          </label>
+        </div>
+        <input type="text" class="form_input" name="texto" placeholder="Déjanos tus Comentarios" style="height:85px;">
+        <label class="checkbox" for="check">
+          <input type="checkbox" id="check"> ¿Le gustaría recibir novedades de nuestros
+          Viajes?</label>
+        <label class="checkbox" for="acept">
+          <input type="checkbox" name="acept" id="acept"> *Acepto los términos y <a href="#">condiciones</a>
+        </label>
+        <h6>*Campo obligatorio</h6>
+        <!-- boton  enviar -->
+        <button class="boton-env btn-3" type="submit">
+          <span>ENVIAR</span>
+        </button>
+        <!--Esto es para que no se vea la confirmación del envió del formulario-->
+        <input type="hidden" name="_next" value="http://index.html/">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div id="mensaje" style="display: none;">
+          <p>¡Formulario enviado con éxito!</p>
+        </div>
+        
+      </form>
+      
+    </div>
+  </main>
+  <!-- ***footer***** -->
+
+  <footer class="footer">
+    <div class="col-1">
+      <h3>LINKS</h3>
+      <a href="index.html">Inicio</a>
+      <a href="destiny.html">Destinos</a>
+      <a href="packages.html">Paquetes</a>
+      <a href="contact.html">Contacto</a>
+      <a href="us.html">Sobre nosotros</a>
+    </div>
+    <div class="col-2">
+      <h3>NUESTRAS REDES</h3>
+      <div class="social-icons">
+        <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #1877f2;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #c7018c;"></i></a>
+        <a href="https://www.whatsapp.com/coronavirus/get-started?lang=es_LA" target="_blank"><i class="fa-brands fa-whatsapp fa-xl" style="color: #1bd741;"></i></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #0973f0;"></i></a>
+      </div>
+    </div>
+    <div class="col-3">
+      <h3>DIRECCIÓN</h3>
+      <p>Calle falsa 123,<br>CABA, Argentina</p>
+      <a href="https://goo.gl/maps/6WJtsaMJXC1aFkwt6" target="_blank"><i class="fa-solid fa-map-location-dot fa-xl" style="color: #919191;"></i></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

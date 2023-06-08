@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap');
+/*letras carteles Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* La convención recomendada en CSS es colocar las reglas del selector :root al comienzo del archivo CSS, antes de cualquier otro selector, incluido el selector body. Esto se debe a que las variables CSS definidas en :root estarán disponibles para su uso en todo el archivo CSS, incluyendo las reglas que se apliquen al selector body y otros elementos. */
+:root{
+
+  --color-primary: #1d4d8b;
+  --second-color:#FC2947;
+  --color-white:#eeeeee;
+  --other-color:#2b90e2;
+  --principal-font:'Montserrat', sans-serif;
+  --second-font:'Poppins', sans-serif;
+  --other-font: 'Raleway', sans-serif;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+ 
+  background-color: var(--color-white);
+
+}
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+
+
+/*hasta aca están definida los estilos  generales de la web*/
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color del pulgar */
+}
+
+/* *****header******* */
+
+header {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px;
+  height: 150px;
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+
+  background-position: center;
+  border-bottom: 1px solid var(--color-white);
+  
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo p{
+  color: var(--other-color);
+  font-size: 1em;
+  left: 13vh;
+  top: 7vh;
+  filter: contrast(10.5);
+}
+
+
+.logo img {
+  right: 30px;
+  width: 200px;
+  position: relative;
+  top: 3px;
+}
+
+.nav-header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header li {
+  margin: 0 10px;
+ 
+}
+
+
+header a:not(.logo-img){
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-white);
+
+  position: relative;
+  top: 5px;
+  right: 9px;
+
+  font-size: small;
+}
+
+/* menos a de logo */
+header a:hover:not(.logo-img){
+  color:var(--other-color);
+  
+}
+
+ion-icon{
+  position: relative;
+  left: 7px;
+}
+
+
+/* ***main*** */
+
+/* formulario contacto */
+
+/* un contenedor flex con dos items */
+
+.contenedor-flex {
+  display: flex;
+  height: 100vh;
+
+/* .img-form, .content-form {
+  flex-grow: 1;
+  flex-basis: 0;
+} */
+}
+
+/* contenedor imagen y titulo */
+.img-form {
+  flex: 1;
+  background-image: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg);
+  background-size: cover;
+  background-position: center;
+
+  height: 116%;
+
+}
+
+.img-text-form {
+
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: var(--color-white);
+  font-size: 5em;
+  letter-spacing: .5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+}
+
+/* formulario */
+
+.content-form{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-primary);
+  height: 116vh;
+}
+
+#contact{
+
+  width: 80%;
+  padding: 20px;
+  background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    top: 5px;
+    font-family: var(--second-font);
+    border-radius: 10px;
+
+    
+}
+
+#contact h6{
+
+  font-family: var(--second-font);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+
+/* inputs */
+.form_input{
+  position: relative;
+  width: 60%;
+  padding: 10px 5px;
+  margin: 0 0 30px 0;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  background: rgb(136 136 136 / 15%);
+  font-size: 1rem;
+  font-family: var(--second-font);
+  font-weight: 500;
+  opacity: 0.9;
+  border-radius: 10px;
+
+}
+
+.form_input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--other-color);
+}
+
+
+/* label de motivo de contacto */
+.form_label{
+  position: relative;
+    right: 20%;
+    font-family: var(--second-font);
+    font-size: 1em;
+    font-weight: 500;
+    opacity: 0.9;
+    color: #999;
+}
+
+/* selector */
+#select{
+  position: relative;
+    bottom: 30px;
+    left: 90px;
+    height: 35px;
+    border-radius: 10px;
+    background: rgb(136 136 136 / 15%);
+    width: 38%;
+}
+
+#select:focus{
+  outline: none;
+}
+
+.form_legend p{
+  position: relative;
+  bottom: 13px;
+  font-size: 1em;
+  color: #999;
+}
+
+/* checkbox */
+.checkbox{
+  position: relative;
+  bottom: 20px;
+  font-size: 17px;
+  left: 5px;
+}
+
+/* botón envío */
+
+.boton-env {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+
+}
+
+.btn-3 {
+background: var(--second-color);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, var(--other-color) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: var(--other-color);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: var(--other-color);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: var(--other-color);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+/* mensaje de envío con éxito */
+
+#mensaje{
+  position: relative;
+  top: 5px;
+}
+
+#mensaje p{
+  font-size: 18px;
+    color: var(--color-primary);
+    font-style: var(--second-font);
+}
+
+
+/* mensajes de error de validación jquery validation */
+
+.error-list {
+  color: var(--second-color);
+  font-size: 14px;
+  margin-top: 5px;
+  position: relative;
+  bottom: 15px;
+  font-style: italic;
+  list-style: disc;
+}
+
+.error-list-item {
+  margin-left: 20px;
+  padding: 5px;
+}
+
+/* ***footer*** */
+
+footer {
+  margin-top: 150px;
+   width: 100%;
+   height: 35vh;
+  color: aliceblue;
+  display: flex;
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+  background-position: revert;
+  background-size: cover;
+  border-top: 1px solid var(--color-white);
+
+}
+
+
+footer div{
+  text-align: center;
+  margin-top: 13vh;
+}
+
+
+footer div h3{
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.col-2{
+    flex-grow: 1;
+    margin-left: 150px;
+  }
+
+.col-1 a, .col-2 a, .col-3 a{
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  margin:10px 0 10px 0;
+}
+
+.col-1{
+    margin-left: 30vh;
+    font-size: 12px;
+
+}
+
+.col-1 a:hover{
+    color: var(--second-color);
+}
+
+.col-3{
+    margin-right: 30vh;
+    font-size: 12px;
+}
+
+.social-icons{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.social-icons a i{
+ 
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+} 
+
+
+/* ---responsividad AQUI---- */
+
+/*Version para escritorio*/
+
+/* @media (min-width: 720px){
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+
+    }
+
+} */
+
