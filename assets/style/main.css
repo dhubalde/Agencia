@@ -1,0 +1,514 @@
+@import url("assets/style/reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Monserrat*/
+/*letras carteles Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
+
+
+*{
+    margin: 0; /*le saca el margen a todo*/
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+    width: 8px; /* Grosor horizontal del scroll */
+    height: 10px; /* Grosor vertical del scroll */
+  }
+  
+  /* Cambiar el color del scroll */
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color del scroll */
+  }
+  
+  /* Cambiar el color de fondo del scroll */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del scroll */
+  }
+
+:root{
+    --color-primary: #1d4d8b;
+    --second-color:#DF2E38;
+    --color-white:#FAF7F0;
+    --other-color:#2b90e2;
+    --principal-font:'Montserrat', sans-serif;
+    --second-font:'Poppins', sans-serif;
+    --other-font: 'Raleway', sans-serif;
+  }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+
+      background: var(--color-white);
+  }
+
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+    width: 8px; /* Grosor horizontal del scroll */
+    height: 10px; /* Grosor vertical del scroll */
+  }
+  
+
+  /* Cambiar el color de fondo del scroll */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del scroll */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); /* Color del pulgar */
+  }
+
+/*hasta aca están definida los estilos  generales de la web*/
+/* ** header** */
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    height: 150px;
+
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+    background-position: center;
+
+    border-bottom: 1px solid var(--color-white);
+  }
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo p{
+    color: var(--other-color);
+    font-size: 1em;
+    left: 13vh;
+    top: 7vh;
+    filter: contrast(10.5);
+}
+
+
+  .logo img {
+    right: 30px;
+    width: 200px;
+    position: relative;
+    top: 3px;
+  }
+
+.nav-header ul {
+    display: flex;
+    flex-direction: row; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-header li {
+    margin: 0 10px;
+   
+  }
+  
+
+  header a:not(.logo-img){
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-white);
+    position: relative;
+    top: 5px;
+    right: 9px;
+    font-size: small;
+}
+
+/* menos a de logo */
+header a:hover:not(.logo-img){
+    color:var(--other-color);
+}
+
+ion-icon{
+  position: relative;
+  left: 7px;
+}
+
+
+/*** Main  ***/
+
+/* --video background de index -Griselda*/
+
+.video-container {
+  position: relative;
+  height: 75vh;
+  top: 20vh;
+
+  }
+  
+  .video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* La propiedad CSS object-fit se utiliza para controlar cómo se ajusta una imagen o un video dentro de su contenedor */
+    object-fit: cover;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 55%);
+    
+  }
+
+  .text-overlay h1{
+    color: white;
+}
+
+.text-overlay button{
+    font-size: 1.75em;
+} 
+
+button{ 
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  color: white;
+
+  background-color: var(--second-color);
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+
+button:hover{
+  background-color: rgb(9, 37, 59);
+}
+
+/* *** */
+
+#quienes-somos .container{
+    text-align: center;
+    padding: 50px 30px;
+}
+
+#quienes-somos .color-acento{
+    color: var(--second-color);
+    font-style: italic;
+}      
+
+#quienes-somos .texto{
+    margin-top: 50px;
+    
+}
+
+#img-container{
+
+  width: 80vh;
+  height: 50vh;
+  background-size: cover;
+  margin-top: 11vh;
+  background-position: center;
+
+}
+
+/* *** */
+
+#nuestros-viajes{
+
+    color: white;
+    text-align: center;
+
+}
+
+#nuestros-viajes .titulo{
+    position: relative;
+    margin-top: 35px;
+    top: 40vh;
+}
+
+/* tarjetas fed */
+
+.fedback {
+   
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 8px -4px, rgba(0, 0, 0, 0.12) 0px 5px 22px 4px, rgba(0, 0, 0, 0.14) 0px 12px 17px 2px;
+    padding: 0.5rem 2rem;
+    min-height: 290px;
+    max-height: 290px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    width: 100vw;
+}
+
+.fed-img {
+
+    min-width: 147px;
+    margin-right: 32px;
+    color: black;
+}
+
+.fed-img img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.name-fed{
+    font-size: 18px;
+    margin: 10px 10px;
+    font-family: var(--second-font);
+}
+
+.viaje-fed{
+    font-size: small;
+    font-style: italic;
+    color: var(--color-primary);
+}
+
+
+.fed-text {
+    text-align: left;
+    position: relative;
+}
+
+.fed-text p {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.87);
+    font-style: var(--second-font);
+}
+
+
+/*** footer***/
+
+footer {
+    margin-top: 180px;
+     width: 100%;
+     height: 35vh;
+    color: aliceblue;
+    display: flex;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+    background-position: revert;
+    background-size: cover;
+  
+  }
+  
+  footer div{
+  text-align: center;
+  margin-top: 12vh;
+  }
+  
+  footer div h3{
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .col-2{
+    flex-grow: 1;
+    margin-left: 100px;
+    font-size: 15px;
+  }
+  
+  .col-1 a, .col-2 a, .col-3 a{
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  margin:10px 0 10px 0;
+  }
+  
+  .col-1{
+    margin-left: 30vh;
+    font-size: 12px;
+  
+  }
+  
+  .col-1 a:hover{
+    color: var(--second-color);
+  }
+  
+  .col-3{
+    margin-right: 30vh;
+    font-size: 12px;
+  }
+  
+  
+  .social-icons{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  
+  }
+  
+  
+  .social-icons a i{
+  
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+  } 
+
+
+
+/* ******************************************************************** */
+/*version para escritorio*/
+
+@media (min-width: 720px){
+
+    header{
+        position: absolute;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    .nav-header ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .nav-header li {
+        margin: 0 10px;
+        font-size: 15px;
+      }
+
+
+    #hero h1 { 
+    font-size: 3.5em;
+    font-family: var(--second-font);
+    letter-spacing: 2px;
+}
+    }
+
+    .q-scontainer{
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 25vh;
+    }
+
+    #quienes-somos h2 {
+        margin-top: 50px;
+        margin-bottom: 35px;
+        font-size: 2.5em;
+        font-family: var(--second-font);
+        position: relative;
+        right: 25px;
+        letter-spacing: 2px;
+    }
+
+    .texto p{
+        font-family: var(--second-font);
+        margin-top: 10px;
+    }
+
+    #quienes-somos .texto{
+       
+        max-width: 100vh;
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+   
+
+    /* #quienes-somos .img-container {
+        background-image: url(../img/agencia-viajes.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+        margin: 27vh  10px 30px;
+
+        border-radius: 15px;
+        filter: contrast(0.5);
+
+    } */
+
+    #nuestros-viajes{
+        height: 90vh;
+    }
+
+    #nuestros-viajes .container{ 
+        display: flex; /*deja las cartas una al lado de la otra */
+        justify-content: center; /*se centran los programas*/
+        position: relative;
+        top: 50vh;
+
+        background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+        background-size: 500%;
+        animation: gradient 10s infinite;
+
+        padding: 60px 10px;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    #nuestros-viajes h2 {
+    font-size: 3.5em;
+    display: block;
+    margin-bottom: 0px;
+    color: rgb(49 49 49);
+    font-family: var(--second-font);
+    letter-spacing: 2px;
+    font-weight: 600;
+    
+    }    
+       
+
+
+@media (min-width: 1200px) {
+    #contacto{
+        background-position-x: calc(100wv - 800px);
+    }
+}
+
+
+
+

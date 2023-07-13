@@ -1,0 +1,405 @@
+/* fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat&display=swap'); /*Monserrat*/
+/*letras carteles Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+/* fuente secundaria Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;400&display=swap');
+
+
+/* @mixin es una característica de SASS/SCSS , se reemplaza por css básico  -Griselda */
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-primary: #1d4d8b;
+    --second-color:#DF2E38;
+    --color-white:#FAF7F0;
+    --other-color:#2b90e2;
+    --color-alternative: #0c0b0b3d;
+    --principal-font:'Montserrat', sans-serif;
+    --second-font:'Poppins', sans-serif;
+    --other-font: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-white);
+    position: relative;
+    line-height: 1.6;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  } 
+
+/* estilo del scroll */
+
+/* Cambiar el grosor del scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor horizontal del scroll */
+  height: 10px; /* Grosor vertical del scroll */
+}
+
+/* Cambiar el color del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color del scroll */
+}
+
+/* Cambiar el color de fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo del scroll */
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color del pulgar */
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    height: 150px;
+    background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+
+    background-position: center;
+    border-bottom: 1px solid var(--color-white);
+     
+  }
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo p{
+    color: var(--other-color);
+    font-size: 1em;
+    left: 13vh;
+    top: 7vh;
+    filter: contrast(10.5);
+}
+
+
+  .logo img {
+    right: 30px;
+    width: 200px;
+    position: relative;
+    top: 3px;
+  }
+  
+  .nav-header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-header li {
+    margin: 0 10px;
+   
+  }
+  
+  header a:not(.logo-img){
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-white);
+
+    position: relative;
+    top: 5px;
+    right: 9px;
+
+    font-size: small;
+}
+
+/* menos a de logo */
+header a:hover:not(.logo-img){
+    color:var(--other-color)
+  
+}
+
+ion-icon{
+  position: relative;
+  left: 7px;
+}
+
+
+/* tarjetas sobre nosotros */
+
+   #nosotros {
+    font-size: 1.3em;
+    padding: 100px 90px 10px 90px;
+    text-align: center;
+   
+  } 
+
+    /* se agrega estilo a titulo */
+    #nosotros h2{
+      font-size: 2em;
+    letter-spacing: 3px;
+    position: relative;
+    bottom: 40px;
+    color: var(--color-primary);
+      
+    }
+
+    .container{
+      border-right: 1px solid var(--color-primary);
+      border-left: 1px solid var(--color-primary);
+    }
+
+    .container p{
+      font-size: large;
+    text-align: start;
+    padding: 10px 10px ;
+    }
+
+
+    
+    .container-us {
+    position: relative;
+    /* @include flex-center;  flex se debe aplicar aquí -Griselda*/
+    display: flex;
+    z-index: 1;
+    flex-wrap: wrap;  
+    margin: 70px 0;
+    font-family: 'Poppins', sans-serif;
+    /*  se alinea los .card al centro -Griselda*/
+    justify-content: center;
+
+    background: linear-gradient(135deg, #00b7d4, #505488, #2f3f80, #161569, #5a4894, #a950a1, #ff7cae);
+	background-size: 500%;
+	animation: gradient 10s infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+    
+    .card {
+      display: inline-block;
+      width: 290px;
+      height: 410px;
+      background: var(--color-white);
+      margin: 20px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      border-radius: 15px;
+      text-align: center;
+
+    }
+    
+    /* se reemplaza sass/scss por css -Griselda */
+      .card:hover .content {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    .card:hover .social-icons li {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .content {
+    /* @include flex-center-column; se reemplaza por css básico -Griselda*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+    }
+
+    .content-box{
+      position: relative;
+      top: 5px;
+      padding: 15px 15px;
+    }
+
+    .content-box span{
+      font-weight: 300;
+      font-size: 15px;
+    }
+
+    .content-box h3{
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .img-box {
+        position: relative;
+        width: 160px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        /* se cambia color de borde  -Griselda */
+        border: 10px solid var(--other-color);
+        /* se desplaza avatar 10px  */
+        top: 10px;
+
+  }
+
+  .img-box__person-photo{
+    /* se agrega tamaño de la imagen igual que su contenedor  -Griselda */
+    width: 160px;
+    height: 150px;
+  }
+
+    .social-icons {
+        display: flex;
+        margin-left: 100px;
+        position: absolute;
+        list-style: none;
+        bottom: 40px;
+}
+
+.social-icons li {
+  margin-right: 15px;
+  transform: translateY(40px);
+  transition: .5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+  backface-visibility: hidden; 
+}
+   
+    .icon-white {
+    color: #fff;
+    font-size: 18px;
+   
+    }
+
+  
+/***** footer  ****/
+
+footer {
+ 
+  width: 100%;
+  padding: 60px 15%;
+  color: aliceblue;
+  display: flex;
+  height: 35vh;
+
+  background-image: url(https://media.staticontent.com/media/pictures/ac250e36-5700-4b60-8dac-934a961ff431), linear-gradient(182deg, rgb(49 49 49) 0%, var(--color-primary) 100%);
+  background-position: revert;
+  background-size: cover;
+}
+  
+  footer div{
+  text-align: center;
+  font-size: 12px;
+  }
+
+  footer div h3{
+    
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .col-1 a, .col-2 a, .col-3 a{
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    margin:5px 0px 5px 0px;
+    padding: 2px;
+  }
+
+  .col-2{
+    flex-grow: 1;
+    margin-left: 150px;
+  }
+
+  .col-1 a:hover{
+    color: var(--second-color);
+  }
+  
+   
+  .social_icons{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+ }
+  
+  .social_icons a i{
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+  } 
+
+  /* ******************************************************************** */
+/*version para escritorio*/
+
+@media (min-width: 720px){
+  body{
+    position: relative;
+    width: 100%;
+  }
+  
+  header{
+      position: relative;
+      width: 100%;
+  }
+
+  header .container{
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 80px;
+  }
+
+  header nav{
+      flex-direction: row;
+      padding-bottom: 0px;
+      padding-right: 20px;
+      z-index: 100;
+  }
+
+  .nav-header ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .nav-header li {
+      margin: 0 10px;
+      font-size: 15px;
+    }
+
+    main #nosotros {
+      font-size: 1.3em;
+      text-align: center;  
+    }    
+
+  footer {
+      justify-content: flex;
+      height: 300px;
+  }
+} 
+
+
+@media (min-width: 1200px) {
+  #contacto{
+      background-position-x: calc(100wv - 800px);
+  }
+}
+
+
+  
+ 
+    
